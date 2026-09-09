@@ -61,7 +61,9 @@ COUNTRY_NAMES = {
     "NL": "荷兰", "RU": "俄罗斯", "AU": "澳大利亚", "IN": "印度",
     "MY": "马来西亚", "TH": "泰国", "VN": "越南", "PH": "菲律宾",
     "ID": "印尼", "TR": "土耳其", "BR": "巴西", "AE": "阿联酋",
-    "ZA": "南非", "OTHER": "其他"
+    "ZA": "南非", "RO": "罗马尼亚", "LV": "拉脱维亚", "PL": "波兰",
+    "IL": "以色列", "AR": "阿根廷", "HU": "匈牙利", "CZ": "捷克",
+    "KZ": "哈萨克斯坦", "DK": "丹麦", "CY": "塞浦路斯", "OTHER": "其他"
 }
 
 RESIDENTIAL_ISPS = {
@@ -618,7 +620,7 @@ def inspect_egress_and_stability(proxy_name: str, country_db, asn_db) -> dict:
     return {"egress_ip": egress_ip, "country": country_code.upper(), "is_residential": is_residential}
 
 
-# ==================== 6. 首页 README 保护式更新（局部插桩，保留你的 Worker 教程与热度图） ====================
+# ==================== 6. 首页 README 保护式更新 ====================
 def render_flag(code: str) -> str:
     code = code.upper()
     if code == "OTHER": return "🌐"
@@ -627,7 +629,7 @@ def render_flag(code: str) -> str:
 
 def update_readme_safely(classified_nodes: list):
     """
-    通过正则精确定位并替换总订阅与分类表格，100% 完整保留用户原本的 Cloudflare Worker 教程与 Star History 曲线图
+    精确定位并替换总订阅、家宽分类表格与国家分类表格，完整保留 Cloudflare Worker 教程与 Star History 曲线图
     """
     if not os.path.exists("README.md"):
         return
@@ -650,7 +652,37 @@ def update_readme_safely(classified_nodes: list):
     sorted_countries = sorted(country_stats.items(), key=lambda x: x[1], reverse=True)
     sorted_res = sorted(res_country_stats.items(), key=lambda x: x[1], reverse=True)
 
-    # 1. 家宽表格构建（防止折行）
+    # 1. 顶部总订阅表格构建
+    all_v2_cdn = f"https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/v2ray.txt"
+    all_v2_raw = f"https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/v2ray.txt"
+    all_cl_cdn = f"https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/clash.yaml"
+    all_cl_raw = f"https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/clash.yaml"
+    all_sb_cdn = f"https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/singbox.json"
+    all_sb_raw = f"https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/singbox.json"
+
+    res_v2_cdn = f"https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/residential.txt"
+    res_v2_raw = f"https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/residential.txt"
+    res_cl_cdn = f"https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/residential-clash.yaml"
+    res_cl_raw = f"https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/residential-clash.yaml"
+    res_sb_cdn = f"https://fastly.jsdelivr.net/gh/{REPO_USER}/{REPO_NAME}@main/output/residential-singbox.json"
+    res_sb_raw = f"https://raw.githubusercontent.com/{REPO_USER}/{REPO_NAME}/main/output/residential-singbox.json"
+
+    all_v2_links = f"<nobr>[⚡CDN]({all_v2_cdn}) · [🌐Raw]({all_v2_raw})</nobr>"
+    all_cl_links = f"<nobr>[⚡CDN]({all_cl_cdn}) · [🌐Raw]({all_cl_raw})</nobr>"
+    all_sb_links = f"<nobr>[⚡CDN]({all_sb_cdn}) · [🌐Raw]({all_sb_raw})</nobr>"
+
+    res_total_v2_links = f"<nobr>[⚡CDN]({res_v2_cdn}) · [🌐Raw]({res_v2_raw})</nobr>"
+    res_total_cl_links = f"<nobr>[⚡CDN]({res_cl_cdn}) · [🌐Raw]({res_cl_raw})</nobr>"
+    res_total_sb_links = f"<nobr>[⚡CDN]({res_sb_cdn}) · [🌐Raw]({res_sb_raw})</nobr>"
+
+    new_all_table = (
+        "| 订阅类型 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |\n"
+        "| :--- | :---: | :--- | :--- | :--- |\n"
+        f"| <nobr>🚀 全部节点总订阅</nobr> | {total_nodes} | {all_v2_links} | {all_cl_links} | {all_sb_links} |\n"
+        f"| <nobr>🏠 真实家宽总订阅</nobr> | {total_res} | {res_total_v2_links} | {res_total_cl_links} | {res_total_sb_links} |"
+    )
+
+    # 2. 家宽表格构建（防止折行）
     res_rows = []
     if sorted_res:
         for c, count in sorted_res:
@@ -672,7 +704,7 @@ def update_readme_safely(classified_nodes: list):
     else:
         res_rows.append("| <nobr>暂无家宽</nobr> | 0 | - | - | - |")
 
-    # 2. 国家分类表格构建
+    # 3. 国家分类表格构建
     country_rows = []
     for c, count in sorted_countries:
         c_name = COUNTRY_NAMES.get(c, c)
@@ -694,12 +726,17 @@ def update_readme_safely(classified_nodes: list):
     new_res_table = "| 家宽地区 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |\n| :--- | :---: | :--- | :--- | :--- |\n" + "\n".join(res_rows)
     new_country_table = "| 地区代码 | 数量 | V2RayN 订阅 | Clash 订阅 | sing-box 订阅 |\n| :--- | :---: | :--- | :--- | :--- |\n" + "\n".join(country_rows)
 
-    # 3. 动态更新顶部总节点数徽章或表格中的数字
+    # 4. 动态更新顶部总节点数徽章或表格中的数字
     content = re.sub(r'(Total_Nodes-)(\d+)(-blue)', rf'\g<1>{total_nodes}\g<3>', content)
     content = re.sub(r'(Residential-)(\d+)(-orange)', rf'\g<1>{total_res}\g<3>', content)
     content = re.sub(r'(<td>|\*\*)(1211|\d+)(</td>|\*\*)', rf'\g<1>{total_nodes}\g<3>', content)
 
-    # 4. 精准替换家宽表格部分
+    # 5. 精准替换顶部总订阅表格部分
+    all_pattern = re.compile(r'(###?\s*⚡?\s*(?:全部节点汇总订阅|总订阅).*?\n+).*?(\n+---|###?\s*🏠|\Z)', re.DOTALL)
+    if all_pattern.search(content):
+        content = all_pattern.sub(rf'\g<1>{new_all_table}\n\n\g<2>', content, count=1)
+
+    # 6. 精准替换家宽表格部分
     res_pattern = re.compile(r'(###?\s*🏠?\s*按照家宽分类节点订阅.*?\n+).*?(\n+---|###?\s*🌍?|###?\s*🗺️?|###?\s*📌|\Z)', re.DOTALL)
     if res_pattern.search(content):
         content = res_pattern.sub(
@@ -707,8 +744,8 @@ def update_readme_safely(classified_nodes: list):
             content, count=1
         )
 
-    # 5. 精准替换国家分类表格部分
-    country_pattern = re.compile(r'(###?\s*🌍?|###?\s*🗺️?|###?\s*按照国家.*?分类节点订阅.*?\n+).*?(\n+---|###?\s*⚡|###?\s*📌|\Z)', re.DOTALL)
+    # 7. 精准替换国家分类表格部分
+    country_pattern = re.compile(r'(###?\s*🌍?|###?\s*🗺️?|###?\s*按照国家.*?分类节点订阅.*?\n+).*?(\n+---|###?\s*🔒|###?\s*⭐|\Z)', re.DOTALL)
     if country_pattern.search(content):
         content = country_pattern.sub(rf'\g<1>{new_country_table}\n\n\g<2>', content, count=1)
 
