@@ -18,12 +18,6 @@ import maxminddb
 from datetime import datetime, timezone
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# 自动补全 requests 所需的 SOCKS5 协议依赖，解决 0 节点的致命 Bug
-try:
-    import socks
-except ImportError:
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "pysocks"])
-
 SOURCE_URLS = [
     "https://wild-cloud-9893.heleimail.workers.dev",
     "https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/by-country/v2ray-base64-TW.txt",
@@ -501,22 +495,15 @@ def test_single_node_xray(node_tuple):
     with open(cfg_path, "w") as f:
         json.dump(config, f)
 
-    # 将 Popen 移入 try 块内，绝杀一切因外部异常导致线程瞬间崩溃、静默跳过的问题
-    proc = None
+    proc = subprocess.Popen(["./xray", "-c", cfg_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    time.sleep(0.35)
+
     success = False
     delay_ms = 0
     exit_ip = None
     is_confirmed_exit = False
     start_t = time.time()
-    
     try:
-        proc = subprocess.Popen(["./xray", "-c", cfg_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        time.sleep(0.35)
-        
-        # 判断进程是否在启动瞬间就失败
-        if proc.poll() is not None:
-            return None
-
         proxies = {
             "http": f"socks5h://127.0.0.1:{socks_port}",
             "https": f"socks5h://127.0.0.1:{socks_port}"
@@ -548,13 +535,8 @@ def test_single_node_xray(node_tuple):
     except Exception:
         success = False
     finally:
-        # 安全退出检测机制防止句柄泄露
-        if proc:
-            try:
-                proc.kill()
-                proc.wait(timeout=1.5)
-            except Exception:
-                pass
+        proc.kill()
+        proc.wait()
         try:
             if os.path.exists(cfg_path):
                 os.remove(cfg_path)
