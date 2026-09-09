@@ -3,79 +3,33 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: edge
-  name: vless-1192941729
+- client-fingerprint: chrome
+  name: vless-1167245811
   port: 443
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  server: 19a3f02e-tla000-tl6lcj-tng5.hk3.hyhuawei.com
+  server: 619c9ae2-tla000-tls5or-6gn6.hk3.hyhuawei.com
   servername: updates.cdn-apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1108734108
+  uuid: c12f73f6-e8c7-11ed-9246-f23c9164ca5d
+- client-fingerprint: qq
+  name: vless-1191331897
   port: 443
   reality-opts:
-    public-key: kdRZN4WiVlF32uFV6tMU8aMLFRHWw70oEqE3iKlnrl4
-    short-id: 5b88be779393c536
-  server: 27.0.232.125
-  servername: gateway.icloud.com
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  server: 619c9ae2-tla000-tls5or-6gn6.hk3.hyhuawei.com
+  servername: updates.cdn-apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 603f2593-b20b-4103-8967-9c67eecfe6bd
-- name: hysteria2-591633775
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.89
-  skip-cert-verify: true
-  sni: 202.146.222.89
-  type: hysteria2
-- client-fingerprint: random
-  flow: xtls-rprx-vision
-  name: vless-757466724
-  port: 443
-  reality-opts:
-    public-key: TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0
-    short-id: 14156e3ac23212cc
-  server: vj37-1936vtw.fincore.top
-  servername: www.bing.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 5e8e81ac-a1c4-4543-b81e-651bf9872b54
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1199169094
-  port: 443
-  reality-opts:
-    public-key: O8Av8GXWVqj7FOxUyStmrTLWv5EtvQ1ZnMOVVLb1V3s
-    short-id: 1bc2c1ef1c
-  server: 212.192.13.233
-  servername: www.cathaypacific.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: d742752c-4231-4695-801e-f06d77f0f277
-- name: hysteria2-721489368
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 202.146.222.174
-  skip-cert-verify: true
-  sni: t.me
-  type: hysteria2
+  uuid: c12f73f6-e8c7-11ed-9246-f23c9164ca5d
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1192941729
-  - vless-1108734108
-  - hysteria2-591633775
-  - vless-757466724
-  - vless-1199169094
-  - hysteria2-721489368
+  - vless-1167245811
+  - vless-1191331897
   type: select
 rules:
 - MATCH,PROXY

@@ -3,14 +3,14 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: edge
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1084908407
+  name: 🏳️ ShatakVPN 169133
   port: 40443
   reality-opts:
     public-key: d1gJntekIStCHyAwgJCuv-N4_BBx5dDQ7K6CeWmpMRo
     short-id: 84fc
-  server: preview.netraidly.ru
+  server: 5.253.42.163
   servername: deepl.com
   tls: true
   type: vless
@@ -19,7 +19,7 @@ proxies:
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1084908407
+  - 🏳️ ShatakVPN 169133
   type: select
 rules:
 - MATCH,PROXY

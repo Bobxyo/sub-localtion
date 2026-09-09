@@ -3,8 +3,8 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1084908407",
-      "server": "preview.netraidly.ru",
+      "tag": "🏳️ ShatakVPN 169133",
+      "server": "5.253.42.163",
       "server_port": 40443,
       "uuid": "15fd22d1-8931-4d41-af37-8ba6711e93fe",
       "flow": "xtls-rprx-vision",
@@ -13,7 +13,7 @@
         "server_name": "deepl.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "edge"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,

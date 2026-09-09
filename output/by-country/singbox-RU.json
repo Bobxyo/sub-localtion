@@ -2,12 +2,24 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1202230157",
-      "server": "130.49.189.158",
-      "server_port": 43558,
-      "method": "chacha20-ietf-poly1305",
-      "password": "/63vp7pdl1GXaTpa6kkWd2+3tq3/szSAWueVKo26xM8="
+      "type": "vless",
+      "tag": "🆔ar14n24b 🔒 VL-TCP- ❔ XX 142ms",
+      "server": "45.131.212.30",
+      "server_port": 443,
+      "uuid": "db9da8fb-c528-42ec-9b9e-e578cf934c04",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sellflow.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc"
+        }
+      }
     },
     {
       "type": "direct",

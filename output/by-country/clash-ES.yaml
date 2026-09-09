@@ -5,21 +5,21 @@ port: 7890
 proxies:
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1047296933
+  name: 🏳️ ShatakVPN 746286
   port: 443
   reality-opts:
-    public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
-    short-id: a3a578ab
-  server: 185.95.231.156
-  servername: www.apple.com
+    public-key: 3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA
+    short-id: fd8cf7e1173f0edb
+  server: 83.147.18.3
+  servername: www.cloudflare.com
   tls: true
   type: vless
   udp: true
-  uuid: 1f8cf47a-b66a-4916-979f-26edfcf44eea
+  uuid: 9f61cdf4-810d-4052-bbc7-2da0c8e20104
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1047296933
+  - 🏳️ ShatakVPN 746286
   type: select
 rules:
 - MATCH,PROXY

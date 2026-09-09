@@ -3,9 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: edge
+- client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 122089
+  name: 🏳️ ShatakVPN 760478
+  port: 443
+  reality-opts:
+    public-key: GBdkyDLfr0LIZo_94Xv8ycAKOmkjArYzwJAEMhuXX2c
+    short-id: 33acba1b
+  server: 138.124.180.137
+  servername: www.apple.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 5234b2b7-5e07-422c-8159-d62a676c00c6
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 382189
   port: 2053
   reality-opts:
     public-key: cGVu5j95KoeHBkWXveyTKolORbdvZm9g1T6yyo64ZBg
@@ -16,22 +29,39 @@ proxies:
   type: vless
   udp: true
   uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-- name: 🏳️ ShatakVPN 315633
-  network: ws
-  port: 2096
-  server: 89.36.161.222
+- name: hysteria2-745560342
+  password: GSPOBvG-ZwYcBFMr0ekFGO_Zga3wK6v_
+  port: 443
+  server: hy2-latvia2.unlimited-access.ru
+  skip-cert-verify: false
+  sni: hy2-latvia2.unlimited-access.ru
+  type: hysteria2
+- name: 🏳️ ShatakVPN 243417
+  password: GSPOBvG-ZwYcBFMr0ekFGO_Zga3wK6v_
+  port: 443
+  server: 85.159.228.22
+  skip-cert-verify: false
+  sni: hy2-latvia2.unlimited-access.ru
+  type: hysteria2
+- client-fingerprint: ios
+  grpc-opts:
+    grpc-service-name: grpc
+  name: vless-561641518
+  network: grpc
+  port: 2083
+  server: laoye.in-gect.fun
+  tls: true
   type: vless
   udp: true
   uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
-  ws-opts:
-    headers:
-      Host: laoye.in-gect.fun
-    path: /
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 122089
-  - 🏳️ ShatakVPN 315633
+  - 🏳️ ShatakVPN 760478
+  - 🏳️ ShatakVPN 382189
+  - hysteria2-745560342
+  - 🏳️ ShatakVPN 243417
+  - vless-561641518
   type: select
 rules:
 - MATCH,PROXY

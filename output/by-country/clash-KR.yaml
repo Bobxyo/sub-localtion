@@ -3,62 +3,9 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-547757559
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  port: 443
-  server: 3.36.93.74
-  skip-cert-verify: true
-  sni: speedtest.tinkoff.ru
-  type: hysteria2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: vless-1104491030
-  port: 13672
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.39.4.109
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-270700471
-  port: 13672
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.39.4.109
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- name: hysteria2-1093669534
-  password: 3d7634af8cb2c6cb4bac1c0efad8b43d
-  port: 50160
-  server: 152.67.200.82
-  skip-cert-verify: true
-  sni: vk.com
-  type: hysteria2
-- client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-233010793
-  port: 13672
-  reality-opts:
-    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
-    short-id: 48050fab
-  server: 3.39.4.109
-  servername: www.apple.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 814bd064-544d-4255-a070-5705c03f6da9
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1154177728
+  name: vless-1138146695
   port: 2053
   reality-opts:
     public-key: oBYxqt4GNTWrmvHRHM_6SAVj_yy95lXtQ0NLd1QWQDU
@@ -71,27 +18,22 @@ proxies:
   uuid: 48e84fcc-ecb1-48a3-a596-88fea84887f5
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 245673
-  port: 28482
+  name: vless-468901438
+  port: 18967
   reality-opts:
-    public-key: 8fsYG_Pg35aeg1E5Gc3HUaXou2OUQee4ukxVk99iR0s
-    short-id: fa1e592603c283
-  server: 43.202.46.25
-  servername: www.intel.com
+    public-key: k2hPp0tTW0Da-HK94wYpSCLbuK44LfGqC2MSJIM1Ti0
+    short-id: 48050fab
+  server: 3.39.4.109
+  servername: www.apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 83973343-90db-423d-a5f7-2e3b56aeb8f4
+  uuid: 814bd064-544d-4255-a070-5705c03f6da9
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-547757559
-  - vless-1104491030
-  - vless-270700471
-  - hysteria2-1093669534
-  - vless-233010793
-  - vless-1154177728
-  - 🏳️ ShatakVPN 245673
+  - vless-1138146695
+  - vless-468901438
   type: select
 rules:
 - MATCH,PROXY

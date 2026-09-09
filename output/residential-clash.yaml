@@ -3,29 +3,45 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: edge
-  name: vless-1192941729
+- client-fingerprint: chrome
+  name: vless-1167245811
   port: 443
   reality-opts:
     public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
-  server: 19a3f02e-tla000-tl6lcj-tng5.hk3.hyhuawei.com
+  server: 619c9ae2-tla000-tls5or-6gn6.hk3.hyhuawei.com
   servername: updates.cdn-apple.com
   tls: true
   type: vless
   udp: true
-  uuid: 2ec58858-976b-11ea-82ef-f23c9164ca5d
-- cipher: chacha20-ietf-poly1305
-  name: 🇹🇼 New Taipei City  NWT  Taiwan
-  password: b1ae0fce-9340-4f2e-882d-fdb2218e2e2b
-  port: 50099
-  server: r3mrcg001287h3p.cybervena.com
-  type: ss
+  uuid: c12f73f6-e8c7-11ed-9246-f23c9164ca5d
+- client-fingerprint: qq
+  name: vless-1191331897
+  port: 443
+  reality-opts:
+    public-key: bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4
+  server: 619c9ae2-tla000-tls5or-6gn6.hk3.hyhuawei.com
+  servername: updates.cdn-apple.com
+  tls: true
+  type: vless
   udp: true
+  uuid: c12f73f6-e8c7-11ed-9246-f23c9164ca5d
+- client-fingerprint: qq
+  name: vless-1175369236
+  port: 24215
+  reality-opts:
+    public-key: mdWKUPMVTtTbDqK10BPb89OcqBC2-Lx-4NOYtqc1GWE
+  server: 118.167.200.67
+  servername: addons.mozilla.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 19d5a678-8396-4e3b-93da-ece618d0e83a
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1192941729
-  - 🇹🇼 New Taipei City  NWT  Taiwan
+  - vless-1167245811
+  - vless-1191331897
+  - vless-1175369236
   type: select
 rules:
 - MATCH,PROXY

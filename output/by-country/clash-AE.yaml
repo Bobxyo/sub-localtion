@@ -1,0 +1,51 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: freegrpc
+  name: vless-1141368039
+  network: grpc
+  port: 2087
+  server: 31.56.189.27
+  servername: srv-21bac9.vless.monster
+  tls: true
+  type: vless
+  udp: true
+  uuid: df9f5aca-eda0-428f-a752-e53866153d12
+- client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: freegrpc
+  name: 🔒 VL-GRPC-TLS 🇦🇪 AE-31.56.189.27 2087
+  network: grpc
+  port: 2087
+  server: 31.56.189.27
+  servername: srv-21bac9.vless.monster
+  tls: true
+  type: vless
+  udp: true
+  uuid: df9f5aca-eda0-428f-a752-e53866153d12
+- client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: freegrpc
+  name: vless-1157879756
+  network: grpc
+  port: 2087
+  server: 31.56.189.27
+  servername: srv-21bac9.vless.monster
+  tls: true
+  type: vless
+  udp: true
+  uuid: df9f5aca-eda0-428f-a752-e53866153d12
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1141368039
+  - 🔒 VL-GRPC-TLS 🇦🇪 AE-31.56.189.27 2087
+  - vless-1157879756
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

@@ -3,15 +3,37 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🆔ar14n24b 🔓 VL-WS-N/A ❔ XX 736ms",
-      "server": "usejh2.neobo-tooth.ru",
+      "tag": "🏳️ ShatakVPN 676839",
+      "server": "45.144.28.39",
       "server_port": 2096,
       "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
       "transport": {
         "type": "ws",
         "path": "/",
+        "headers": {
+          "Host": "usejh2.neobo-tooth.ru"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 899912",
+      "server": "152.228.162.19",
+      "server_port": 80,
+      "uuid": "25f86cb1-2140-4085-abcb-c3a0ea7a4be0",
+      "transport": {
+        "type": "ws",
+        "path": "/vless/",
         "headers": {}
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇫🇷 France",
+      "server": "51.83.192.80",
+      "server_port": 8388,
+      "method": "aes-256-gcm",
+      "password": "itzvpn@321"
     },
     {
       "type": "direct",

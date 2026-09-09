@@ -3,25 +3,17 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: 🏳️ ShatakVPN 397760
+- name: hysteria2-1027317456
   password: YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc
   port: 443
-  server: 144.31.93.126
+  server: 144.31.49.47
   skip-cert-verify: true
   sni: admin.wwwinternetvideo.click
   type: hysteria2
-- cipher: aes-256-cfb
-  name: shadowsocks-738053629
-  password: N7j3pdTYkKmsy8CR
-  port: 9095
-  server: 217.30.10.44
-  type: ss
-  udp: true
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 397760
-  - shadowsocks-738053629
+  - hysteria2-1027317456
   type: select
 rules:
 - MATCH,PROXY

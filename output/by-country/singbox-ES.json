@@ -3,22 +3,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1047296933",
-      "server": "185.95.231.156",
+      "tag": "🏳️ ShatakVPN 746286",
+      "server": "83.147.18.3",
       "server_port": 443,
-      "uuid": "1f8cf47a-b66a-4916-979f-26edfcf44eea",
+      "uuid": "9f61cdf4-810d-4052-bbc7-2da0c8e20104",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.apple.com",
+        "server_name": "www.cloudflare.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To",
-          "short_id": "a3a578ab"
+          "public_key": "3iVJAIGPx6JMlhlRmfpGrHkSmLpHJ4CPvBBH7KsFrFA",
+          "short_id": "fd8cf7e1173f0edb"
         }
       }
     },

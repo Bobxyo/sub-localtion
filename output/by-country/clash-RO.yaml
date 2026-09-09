@@ -3,33 +3,23 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-1209964823
-  password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
-  port: 8443
-  server: 205.237.109.176
-  skip-cert-verify: true
-  sni: hopp-netherland-new.dynuddns.net
-  type: hysteria2
-- name: hysteria2-923321834
-  password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
-  port: 8443
-  server: 205.237.109.164
-  skip-cert-verify: true
-  sni: hopp-netherland-new.dynuddns.net
-  type: hysteria2
-- name: 🏳️ ShatakVPN 530134
-  password: Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s
-  port: 8443
-  server: 205.237.109.163
-  skip-cert-verify: true
-  sni: hopp-netherland-new.dynuddns.net
-  type: hysteria2
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1209548107
+  port: 443
+  reality-opts:
+    public-key: _IBXb9NfhsnS21XbU9PIl73ExvrjXGXVLO0Za1ui5Fo
+    short-id: f93c9d5127e622e4
+  server: pl.cloudtechone.org
+  servername: pl.cloudtechone.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2b2ea9d8-501e-4b79-8fd9-19bff6ed5cf5
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-1209964823
-  - hysteria2-923321834
-  - 🏳️ ShatakVPN 530134
+  - vless-1209548107
   type: select
 rules:
 - MATCH,PROXY

@@ -3,22 +3,16 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1104470805",
-      "server": "156.67.63.231",
-      "server_port": 443,
-      "uuid": "b052df40-d51c-456c-9bd6-57af01a87e4e",
-      "flow": "xtls-rprx-vision",
+      "tag": "🔒 VL-TCP-TLS 🇹🇷 TR-195.162.69.203 8443",
+      "server": "195.162.69.203",
+      "server_port": 8443,
+      "uuid": "953358cb-82ba-4296-960d-6d2ec3468f4c",
       "tls": {
         "enabled": true,
-        "server_name": "sync-bridge.org",
+        "server_name": "195-162-69-203.sslip.io",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "PTqeBbbr2xJ1L3V1PyYjKjxanMKKqJHU-wtnpYmFQCI",
-          "short_id": "5606d4a25c99e7af"
         }
       }
     },

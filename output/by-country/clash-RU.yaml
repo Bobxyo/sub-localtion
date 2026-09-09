@@ -3,17 +3,22 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-1202230157
-  password: /63vp7pdl1GXaTpa6kkWd2+3tq3/szSAWueVKo26xM8=
-  port: 43558
-  server: 130.49.189.158
-  type: ss
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🆔ar14n24b 🔒 VL-TCP- ❔ XX 142ms
+  port: 443
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  server: 45.131.212.30
+  servername: sellflow.org
+  tls: true
+  type: vless
   udp: true
+  uuid: db9da8fb-c528-42ec-9b9e-e578cf934c04
 proxy-groups:
 - name: PROXY
   proxies:
-  - shadowsocks-1202230157
+  - 🆔ar14n24b 🔒 VL-TCP- ❔ XX 142ms
   type: select
 rules:
 - MATCH,PROXY

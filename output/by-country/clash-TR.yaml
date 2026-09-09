@@ -4,22 +4,18 @@ mode: rule
 port: 7890
 proxies:
 - client-fingerprint: chrome
-  flow: xtls-rprx-vision
-  name: vless-1104470805
-  port: 443
-  reality-opts:
-    public-key: PTqeBbbr2xJ1L3V1PyYjKjxanMKKqJHU-wtnpYmFQCI
-    short-id: 5606d4a25c99e7af
-  server: 156.67.63.231
-  servername: sync-bridge.org
+  name: 🔒 VL-TCP-TLS 🇹🇷 TR-195.162.69.203 8443
+  port: 8443
+  server: 195.162.69.203
+  servername: 195-162-69-203.sslip.io
   tls: true
   type: vless
   udp: true
-  uuid: b052df40-d51c-456c-9bd6-57af01a87e4e
+  uuid: 953358cb-82ba-4296-960d-6d2ec3468f4c
 proxy-groups:
 - name: PROXY
   proxies:
-  - vless-1104470805
+  - 🔒 VL-TCP-TLS 🇹🇷 TR-195.162.69.203 8443
   type: select
 rules:
 - MATCH,PROXY

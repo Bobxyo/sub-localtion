@@ -2,48 +2,46 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-1016364146",
-      "server": "15.223.122.197",
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 439435",
+      "server": "209.200.246.148",
       "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "uuid": "ca52e2b6-fb9f-4dac-b6dc-49da9923f251",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "t.me",
-        "insecure": true
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "uTmb-ytXsx8p0fkBz7A76SHpWk7_oVutIA4LGTE8BQk",
+          "short_id": "f98843107912e782"
+        }
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-166",
-      "server": "137.184.174.93",
-      "server_port": 8080,
-      "method": "rc4-md5",
-      "password": "14fFPrbezE3HDZzsMOr6"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 QC  Canada",
-      "server": "51.222.141.125",
-      "server_port": 445,
-      "method": "aes-256-gcm",
-      "password": "zDNVedRFPQexG9v"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇨🇦 Vancouver  BC  Canada",
-      "server": "149.22.95.183",
-      "server_port": 443,
-      "method": "aes-128-gcm",
-      "password": "shadowsocks"
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-1118951746",
-      "server": "51.222.200.165",
-      "server_port": 5000,
-      "method": "aes-256-gcm",
-      "password": "Y6R9pAtvxxzmGC"
+      "type": "vless",
+      "tag": "vless-46267",
+      "server": "130.107.73.148",
+      "server_port": 41373,
+      "uuid": "a71c8954-66a8-4321-bedb-2336230d81ce",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU",
+          "short_id": "0e"
+        }
+      }
     },
     {
       "type": "shadowsocks",
@@ -52,6 +50,147 @@
       "server_port": 445,
       "method": "aes-256-gcm",
       "password": "zDNVedRFPQexG9v"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1122309334",
+      "server": "130.94.115.231",
+      "server_port": 2087,
+      "uuid": "8a51f3d9-30cc-44e6-8d31-700211a29066",
+      "transport": {
+        "type": "ws",
+        "path": "/721740e567c7",
+        "headers": {}
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-1136106230",
+      "server": "51.222.141.125",
+      "server_port": 445,
+      "method": "aes-256-gcm",
+      "password": "zDNVedRFPQexG9v"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-470978189",
+      "server": "216.152.147.28",
+      "server_port": 443,
+      "uuid": "d9e4721d-cdac-44c7-bc91-117367eac194",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "kjiuPmjM4IutdZudHfcPZHEwcrBEFY4qBLlvfC6A_Ss",
+          "short_id": "b9f8d3f8"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-720888904",
+      "server": "130.107.73.148",
+      "server_port": 41373,
+      "uuid": "a71c8954-66a8-4321-bedb-2336230d81ce",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU",
+          "short_id": "0e"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇨🇦 QC  Canada",
+      "server": "51.222.12.127",
+      "server_port": 445,
+      "method": "aes-256-gcm",
+      "password": "zDNVedRFPQexG9v"
+    },
+    {
+      "type": "vless",
+      "tag": "vless-91983783",
+      "server": "158.69.112.254",
+      "server_port": 443,
+      "uuid": "661f395d-b153-4199-a04b-693f5fe7f261",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.speedtest.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y",
+          "short_id": "3d3c1e645f763ee3"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 493464",
+      "server": "130.107.73.148",
+      "server_port": 41373,
+      "uuid": "a71c8954-66a8-4321-bedb-2336230d81ce",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "google.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "m0GsZOAwvAJEaqh9aH6qfOmBKo0KW0jY_tJEC6KaDEU",
+          "short_id": "0e"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-177993885",
+      "server": "158.69.112.254",
+      "server_port": 443,
+      "uuid": "661f395d-b153-4199-a04b-693f5fe7f261",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.speedtest.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wo417FrFdjy7ZhccQ-VWGZEKcoCHSEfyWcJT1pIVc1Y",
+          "short_id": "3d3c1e645f763ee3"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "[openproxylist.com] CA 15366239",
+      "server": "15.235.75.71",
+      "server_port": 8388,
+      "method": "chacha20-ietf-poly1305",
+      "password": "FD3rCuOsxOay"
     },
     {
       "type": "direct",

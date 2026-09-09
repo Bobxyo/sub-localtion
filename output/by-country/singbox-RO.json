@@ -2,39 +2,24 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-1209964823",
-      "server": "205.237.109.176",
-      "server_port": 8443,
-      "password": "Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s",
+      "type": "vless",
+      "tag": "vless-1209548107",
+      "server": "pl.cloudtechone.org",
+      "server_port": 443,
+      "uuid": "2b2ea9d8-501e-4b79-8fd9-19bff6ed5cf5",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "hopp-netherland-new.dynuddns.net",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-923321834",
-      "server": "205.237.109.164",
-      "server_port": 8443,
-      "password": "Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s",
-      "tls": {
-        "enabled": true,
-        "server_name": "hopp-netherland-new.dynuddns.net",
-        "insecure": true
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🏳️ ShatakVPN 530134",
-      "server": "205.237.109.163",
-      "server_port": 8443,
-      "password": "Oz_Kx9342gefwJ89x3_M9z32kzf9KJq003_s",
-      "tls": {
-        "enabled": true,
-        "server_name": "hopp-netherland-new.dynuddns.net",
-        "insecure": true
+        "server_name": "pl.cloudtechone.org",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "_IBXb9NfhsnS21XbU9PIl73ExvrjXGXVLO0Za1ui5Fo",
+          "short_id": "f93c9d5127e622e4"
+        }
       }
     },
     {
