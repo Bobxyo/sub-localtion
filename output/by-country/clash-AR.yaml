@@ -5,7 +5,7 @@ port: 7890
 proxies:
 - client-fingerprint: firefox
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 644391
+  name: 🏳️ ShatakVPN 740211
   port: 443
   reality-opts:
     public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
@@ -15,39 +15,11 @@ proxies:
   tls: true
   type: vless
   udp: true
-  uuid: be77dc02-5753-4018-8115-2e91f8b92823
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 983565
-  port: 443
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  server: 38.180.186.202
-  servername: zvukipro.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: b132e352-7a63-4477-b31f-67939a886767
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 114130
-  port: 443
-  reality-opts:
-    public-key: SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY
-    short-id: fd55b698ee8c3629
-  server: 149.33.19.143
-  servername: zvukipro.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 7554d102-a926-4ac6-9f5d-1ad2264b431c
+  uuid: 8695f319-5c61-4933-afed-a17dab92d9bb
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🏳️ ShatakVPN 644391
-  - 🏳️ ShatakVPN 983565
-  - 🏳️ ShatakVPN 114130
+  - 🏳️ ShatakVPN 740211
   type: select
 rules:
 - MATCH,PROXY

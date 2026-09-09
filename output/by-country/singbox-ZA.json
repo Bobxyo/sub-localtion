@@ -3,11 +3,11 @@
   "outbounds": [
     {
       "type": "shadowsocks",
-      "tag": "🇧🇷 Osasco  SP  Brazil",
-      "server": "216.128.168.190",
-      "server_port": 8388,
-      "method": "aes-256-gcm",
-      "password": "owVdNnQcdPgthSyX"
+      "tag": "🆔v2ray1_ng 🔒 SS-TCP-TLS ❔ XX 269ms",
+      "server": "20.164.211.25",
+      "server_port": 443,
+      "method": "chacha20-ietf-poly1305",
+      "password": "BhYMkBpjAjE6ixSw"
     },
     {
       "type": "direct",

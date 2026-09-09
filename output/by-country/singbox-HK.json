@@ -3,8 +3,8 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "vless-1197775769",
-      "server": "58.153.148.126",
+      "tag": "vless-1192941729",
+      "server": "19a3f02e-tla000-tl6lcj-tng5.hk3.hyhuawei.com",
       "server_port": 443,
       "uuid": "2ec58858-976b-11ea-82ef-f23c9164ca5d",
       "tls": {
@@ -12,7 +12,7 @@
         "server_name": "updates.cdn-apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
@@ -22,70 +22,22 @@
     },
     {
       "type": "vless",
-      "tag": "vless-1212481642",
-      "server": "58.153.148.126",
+      "tag": "vless-1108734108",
+      "server": "27.0.232.125",
       "server_port": 443,
-      "uuid": "40fb1315-191a-11ed-b0ca-f23c91cfbbc9",
+      "uuid": "603f2593-b20b-4103-8967-9c67eecfe6bd",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "updates.cdn-apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 931943",
-      "server": "58.153.148.126",
-      "server_port": 443,
-      "uuid": "c12f73f6-e8c7-11ed-9246-f23c9164ca5d",
-      "tls": {
-        "enabled": true,
-        "server_name": "updates.cdn-apple.com",
+        "server_name": "gateway.icloud.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-721489367",
-      "server": "202.146.222.29",
-      "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
-      "tls": {
-        "enabled": true,
-        "server_name": "t.me",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "vless-1167244965",
-      "server": "c302b802-tla000-u10a65-1os43.hk3.hyhuawei.com",
-      "server_port": 443,
-      "uuid": "96c798f6-4645-11ee-b8a1-f23c9164ca5d",
-      "tls": {
-        "enabled": true,
-        "server_name": "updates.cdn-apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "bE6ws6dFPflj8WVJMGwtso0WOaiSmBOHM2muQO2Uul4"
+          "public_key": "kdRZN4WiVlF32uFV6tMU8aMLFRHWw70oEqE3iKlnrl4",
+          "short_id": "5b88be779393c536"
         }
       }
     },
@@ -98,6 +50,60 @@
       "tls": {
         "enabled": true,
         "server_name": "202.146.222.89",
+        "insecure": true
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-757466724",
+      "server": "vj37-1936vtw.fincore.top",
+      "server_port": 443,
+      "uuid": "5e8e81ac-a1c4-4543-b81e-651bf9872b54",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.bing.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "TP_bpIPUtjdxxGA9j7mpsHtSDfM2HMSZFNWW9MtDPT0",
+          "short_id": "14156e3ac23212cc"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "vless-1199169094",
+      "server": "212.192.13.233",
+      "server_port": 443,
+      "uuid": "d742752c-4231-4695-801e-f06d77f0f277",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.cathaypacific.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "O8Av8GXWVqj7FOxUyStmrTLWv5EtvQ1ZnMOVVLb1V3s",
+          "short_id": "1bc2c1ef1c"
+        }
+      }
+    },
+    {
+      "type": "hysteria2",
+      "tag": "hysteria2-721489368",
+      "server": "202.146.222.174",
+      "server_port": 443,
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "tls": {
+        "enabled": true,
+        "server_name": "t.me",
         "insecure": true
       }
     },

@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "outbounds": [
+    {
+      "type": "trojan",
+      "tag": "🏳️ ShatakVPN 103592",
+      "server": "46.29.142.57",
+      "server_port": 4443,
+      "password": "C0ldyfh-vpnjantit.com",
+      "tls": {
+        "enabled": true,
+        "server_name": "hu2.vpnjantit.com"
+      }
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    }
+  ]
+}

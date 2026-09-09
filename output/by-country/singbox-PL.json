@@ -2,20 +2,24 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🔒 VL-TCP-TLS 🇵🇱 PL-50.7.249.170 443",
-      "server": "50.7.249.170",
+      "type": "hysteria2",
+      "tag": "🏳️ ShatakVPN 397760",
+      "server": "144.31.93.126",
       "server_port": 443,
-      "uuid": "cd3bb7d9-7df3-4644-ac05-c260990ac277",
-      "flow": "xtls-rprx-vision",
+      "password": "YutbgyXL1mGaSlBXDoEucWvYbrDCINgUcQ6R6_At5Pjr2xCc",
       "tls": {
         "enabled": true,
-        "server_name": "pl1-ded.moritech.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        }
+        "server_name": "admin.wwwinternetvideo.click",
+        "insecure": true
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "shadowsocks-738053629",
+      "server": "217.30.10.44",
+      "server_port": 9095,
+      "method": "aes-256-cfb",
+      "password": "N7j3pdTYkKmsy8CR"
     },
     {
       "type": "direct",

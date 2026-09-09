@@ -3,21 +3,9 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- client-fingerprint: ios
-  grpc-opts:
-    grpc-service-name: grpc
-  name: 🔒 VL-GRPC-TLS 🇱🇻 LV-89.36.161.222 2083
-  network: grpc
-  port: 2083
-  server: 89.36.161.222
-  servername: laoye.in-gect.fun
-  tls: true
-  type: vless
-  udp: true
-  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
 - client-fingerprint: edge
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 154203
+  name: 🏳️ ShatakVPN 122089
   port: 2053
   reality-opts:
     public-key: cGVu5j95KoeHBkWXveyTKolORbdvZm9g1T6yyo64ZBg
@@ -28,11 +16,22 @@ proxies:
   type: vless
   udp: true
   uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+- name: 🏳️ ShatakVPN 315633
+  network: ws
+  port: 2096
+  server: 89.36.161.222
+  type: vless
+  udp: true
+  uuid: 70e20b2e-3b1f-4c25-9a3d-9240570391bb
+  ws-opts:
+    headers:
+      Host: laoye.in-gect.fun
+    path: /
 proxy-groups:
 - name: PROXY
   proxies:
-  - 🔒 VL-GRPC-TLS 🇱🇻 LV-89.36.161.222 2083
-  - 🏳️ ShatakVPN 154203
+  - 🏳️ ShatakVPN 122089
+  - 🏳️ ShatakVPN 315633
   type: select
 rules:
 - MATCH,PROXY

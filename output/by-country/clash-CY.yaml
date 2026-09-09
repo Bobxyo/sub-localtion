@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: edge
+  flow: xtls-rprx-vision
+  name: vless-1084908407
+  port: 40443
+  reality-opts:
+    public-key: d1gJntekIStCHyAwgJCuv-N4_BBx5dDQ7K6CeWmpMRo
+    short-id: 84fc
+  server: preview.netraidly.ru
+  servername: deepl.com
+  tls: true
+  type: vless
+  udp: true
+  uuid: 15fd22d1-8931-4d41-af37-8ba6711e93fe
+proxy-groups:
+- name: PROXY
+  proxies:
+  - vless-1084908407
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

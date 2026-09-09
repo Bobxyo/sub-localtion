@@ -1,0 +1,26 @@
+allow-lan: false
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- client-fingerprint: firefox
+  flow: xtls-rprx-vision
+  name: 🇱🇻 拉脱维亚 | LVA
+  port: 443
+  reality-opts:
+    public-key: _IBXb9NfhsnS21XbU9PIl73ExvrjXGXVLO0Za1ui5Fo
+    short-id: f93c9d5127e622e4
+  server: nl.cloudtechone.org
+  servername: nl.cloudtechone.org
+  tls: true
+  type: vless
+  udp: true
+  uuid: 2b2ea9d8-501e-4b79-8fd9-19bff6ed5cf5
+proxy-groups:
+- name: PROXY
+  proxies:
+  - 🇱🇻 拉脱维亚 | LVA
+  type: select
+rules:
+- MATCH,PROXY
+socks-port: 7891

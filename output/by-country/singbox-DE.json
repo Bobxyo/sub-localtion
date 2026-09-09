@@ -2,136 +2,65 @@
   "version": 1,
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "hysteria2-730511436",
-      "server": "replay.wwwinternetvideo.click",
-      "server_port": 443,
-      "password": "2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f",
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 857245",
+      "server": "89.169.53.176",
+      "server_port": 4443,
+      "uuid": "20dd9433-389e-4573-ba7b-689619cf13da",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "replay.wwwinternetvideo.click",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 418524",
-      "server": "163.8.195.241",
-      "server_port": 2087,
-      "uuid": "56ba5d34-ef22-4ba6-8090-4188b807df54",
-      "transport": {
-        "type": "ws",
-        "path": "/29c8fed7ca22",
-        "headers": {}
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇩🇪 Frankfurt am Main  HE  Germany",
-      "server": "185.226.172.8",
-      "server_port": 8008,
-      "method": "aes-256-gcm",
-      "password": "XKFKl2rULjIp74"
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 261048",
-      "server": "93.152.217.41",
-      "server_port": 40443,
-      "uuid": "969bcce0-de8a-4b02-8cf8-d00d2d2ca7a5",
-      "tls": {
-        "enabled": true,
-        "server_name": "deepl.com",
+        "server_name": "gateway.icloud.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "VG-FwQBMFzPcemJ_JqtkbO-2WKLmQp2h0CmAj-DfLkA",
-          "short_id": "5b97"
+          "public_key": "YIyohkkCU5kw6J5iZYZkhILyDwlfftFPDTkbITlrAUw",
+          "short_id": "df3aff719526dc5a"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "vless-1201852784",
-      "server": "eu-central-de2.hanvpn.biz",
-      "server_port": 443,
-      "uuid": "d9d0f208-d582-41d5-bb7b-742671402810",
+      "tag": "vless-1166145116",
+      "server": "31.56.189.224",
+      "server_port": 3443,
+      "uuid": "92089155-6602-4122-86d4-fe6de20e8c4d",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "eu-central-de2.hanvpn.biz",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "w0J3H-DEyHEK-Nj7bst_5sQqzcPl700ybHpqq5mFz0U",
-          "short_id": "12a3b7681806bc97"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "shadowsocks-209",
-      "server": "209.46.102.22",
-      "server_port": 8388,
-      "method": "chacha20-ietf-poly1305",
-      "password": "1hhrqrokj3ag"
-    },
-    {
-      "type": "hysteria2",
-      "tag": "hysteria2-757486810",
-      "server": "replay.wwwinternetvideo.click",
-      "server_port": 443,
-      "password": "2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f",
-      "tls": {
-        "enabled": true,
-        "server_name": "replay.wwwinternetvideo.click",
-        "insecure": true
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 906347",
-      "server": "207.241.172.254",
-      "server_port": 4777,
-      "uuid": "9222652c-be81-4171-9d07-ebcdbd2a82ab",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "amp-api-edge.apps.apple.com",
+        "server_name": "special.aeternavpn.space",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "8ZL2JgDP9gHkgGTbGF-uK8omfWkFplZnCH0N2_U18Uo",
-          "short_id": "01115788253bc845"
+          "public_key": "-6SjfnZXAYm69euKQ3XNhq0nC7No7YE4qfdc2qx0Xwo",
+          "short_id": "a1b2c3d4"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "vless-1214976202",
-      "server": "172.236.207.245",
-      "server_port": 53719,
-      "uuid": "251e9d36-3eec-474f-9eb8-fe508e28ced6",
+      "tag": "🏳️ ShatakVPN 141350",
+      "server": "144.31.168.95",
+      "server_port": 443,
+      "uuid": "423b1d79-08c4-403f-9d5e-c541f791b55f",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "play-fe.googleapis.com",
+        "server_name": "eu-central.cendora.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "9XG-o5CJH3_h4x6FDeGs-JsE1LzyJSyw5d-xi6LvVTc",
-          "short_id": "5d1caa44e652126d"
+          "public_key": "b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI",
+          "short_id": "00bca5982f82d083"
         }
       }
     },

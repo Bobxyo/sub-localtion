@@ -3,26 +3,7 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🔒 VL-GRPC-TLS 🇱🇻 LV-89.36.161.222 2083",
-      "server": "89.36.161.222",
-      "server_port": 2083,
-      "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
-      "tls": {
-        "enabled": true,
-        "server_name": "laoye.in-gect.fun",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "ios"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "grpc"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🏳️ ShatakVPN 154203",
+      "tag": "🏳️ ShatakVPN 122089",
       "server": "89.36.161.222",
       "server_port": 2053,
       "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
@@ -38,6 +19,20 @@
           "enabled": true,
           "public_key": "cGVu5j95KoeHBkWXveyTKolORbdvZm9g1T6yyo64ZBg",
           "short_id": "d26f4703cdd30f4e"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🏳️ ShatakVPN 315633",
+      "server": "89.36.161.222",
+      "server_port": 2096,
+      "uuid": "70e20b2e-3b1f-4c25-9a3d-9240570391bb",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "laoye.in-gect.fun"
         }
       }
     },

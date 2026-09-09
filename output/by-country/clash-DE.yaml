@@ -3,106 +3,51 @@ log-level: info
 mode: rule
 port: 7890
 proxies:
-- name: hysteria2-730511436
-  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
-  port: 443
-  server: replay.wwwinternetvideo.click
-  skip-cert-verify: false
-  sni: replay.wwwinternetvideo.click
-  type: hysteria2
-- name: 🏳️ ShatakVPN 418524
-  network: ws
-  port: 2087
-  server: 163.8.195.241
-  type: vless
-  udp: true
-  uuid: 56ba5d34-ef22-4ba6-8090-4188b807df54
-  ws-opts:
-    headers: {}
-    path: /29c8fed7ca22
-- cipher: aes-256-gcm
-  name: 🇩🇪 Frankfurt am Main  HE  Germany
-  password: XKFKl2rULjIp74
-  port: 8008
-  server: 185.226.172.8
-  type: ss
-  udp: true
-- client-fingerprint: chrome
-  name: 🏳️ ShatakVPN 261048
-  port: 40443
-  reality-opts:
-    public-key: VG-FwQBMFzPcemJ_JqtkbO-2WKLmQp2h0CmAj-DfLkA
-    short-id: 5b97
-  server: 93.152.217.41
-  servername: deepl.com
-  tls: true
-  type: vless
-  udp: true
-  uuid: 969bcce0-de8a-4b02-8cf8-d00d2d2ca7a5
-- client-fingerprint: firefox
-  flow: xtls-rprx-vision
-  name: vless-1201852784
-  port: 443
-  reality-opts:
-    public-key: w0J3H-DEyHEK-Nj7bst_5sQqzcPl700ybHpqq5mFz0U
-    short-id: 12a3b7681806bc97
-  server: eu-central-de2.hanvpn.biz
-  servername: eu-central-de2.hanvpn.biz
-  tls: true
-  type: vless
-  udp: true
-  uuid: d9d0f208-d582-41d5-bb7b-742671402810
-- cipher: chacha20-ietf-poly1305
-  name: shadowsocks-209
-  password: 1hhrqrokj3ag
-  port: 8388
-  server: 209.46.102.22
-  type: ss
-  udp: true
-- name: hysteria2-757486810
-  password: 2691cbe7c20cced8b0aeb12c812d09077e5b3eec7669fb8f
-  port: 443
-  server: replay.wwwinternetvideo.click
-  skip-cert-verify: true
-  sni: replay.wwwinternetvideo.click
-  type: hysteria2
 - client-fingerprint: chrome
   flow: xtls-rprx-vision
-  name: 🏳️ ShatakVPN 906347
-  port: 4777
+  name: 🏳️ ShatakVPN 857245
+  port: 4443
   reality-opts:
-    public-key: 8ZL2JgDP9gHkgGTbGF-uK8omfWkFplZnCH0N2_U18Uo
-    short-id: 01115788253bc845
-  server: 207.241.172.254
-  servername: amp-api-edge.apps.apple.com
+    public-key: YIyohkkCU5kw6J5iZYZkhILyDwlfftFPDTkbITlrAUw
+    short-id: df3aff719526dc5a
+  server: 89.169.53.176
+  servername: gateway.icloud.com
   tls: true
   type: vless
   udp: true
-  uuid: 9222652c-be81-4171-9d07-ebcdbd2a82ab
+  uuid: 20dd9433-389e-4573-ba7b-689619cf13da
+- client-fingerprint: chrome
+  flow: xtls-rprx-vision
+  name: vless-1166145116
+  port: 3443
+  reality-opts:
+    public-key: -6SjfnZXAYm69euKQ3XNhq0nC7No7YE4qfdc2qx0Xwo
+    short-id: a1b2c3d4
+  server: 31.56.189.224
+  servername: special.aeternavpn.space
+  tls: true
+  type: vless
+  udp: true
+  uuid: 92089155-6602-4122-86d4-fe6de20e8c4d
 - client-fingerprint: firefox
-  name: vless-1214976202
-  port: 53719
+  flow: xtls-rprx-vision
+  name: 🏳️ ShatakVPN 141350
+  port: 443
   reality-opts:
-    public-key: 9XG-o5CJH3_h4x6FDeGs-JsE1LzyJSyw5d-xi6LvVTc
-    short-id: 5d1caa44e652126d
-  server: 172.236.207.245
-  servername: play-fe.googleapis.com
+    public-key: b-Cm9hX-3UHsS1L_lnUB6AMjuKhlN1IDdBbZ506itjI
+    short-id: 00bca5982f82d083
+  server: 144.31.168.95
+  servername: eu-central.cendora.ru
   tls: true
   type: vless
   udp: true
-  uuid: 251e9d36-3eec-474f-9eb8-fe508e28ced6
+  uuid: 423b1d79-08c4-403f-9d5e-c541f791b55f
 proxy-groups:
 - name: PROXY
   proxies:
-  - hysteria2-730511436
-  - 🏳️ ShatakVPN 418524
-  - 🇩🇪 Frankfurt am Main  HE  Germany
-  - 🏳️ ShatakVPN 261048
-  - vless-1201852784
-  - shadowsocks-209
-  - hysteria2-757486810
-  - 🏳️ ShatakVPN 906347
-  - vless-1214976202
+  - 🏳️ ShatakVPN 857245
+  - vless-1166145116
+  - 🏳️ ShatakVPN 141350
   type: select
 rules:
 - MATCH,PROXY
