@@ -83,4 +83,12 @@
               ★MITM证书校验 ─→ ★六信号家宽识别 ─→ ★roundtrip保真导出 ─→ README
 ```
 
-> 标 ★ 为新增/重写环节。CI 调度不变：GitHub Actions 每 6 小时自动运行（支持手动触发），出口 IP 为美国 Azure。
+## 七、本轮新增修复 (2026-09-11)
+
+| # | 问题现象 | 根因（实测取证） | 修复 |
+|---|---|---|---|
+| 11 | 美国家宽 #2 实为荷兰 Zenlayer 机房（ping 荷兰阿姆斯特丹，ip.sb 显示美国） | ip-api 对该 IP 判 `proxy=true, hosting=false`（收购 legacy DSL 段的云边网络），rDNS 带 `dsl...speakeasy.net` 被关键词误判家宽；**旧代码没检查 proxy 标志** | ① ip-api `proxy=true` → 硬否决家宽（conf 88）② AS62610 Zenlayer 等 12 个云边 ASN 入黑名单 ③ **ipapi.is 免费交叉源二次否决**（其判 AS62610 = Bunny Communications/Zenlayer，公司名含云商词即否决）—— 单测 4/4：假家宽被否决、真家宽（SK Broadband AS9318）不误杀 |
+| 12 | 家宽台湾 CDN 订阅只更新出 2 个，RAW 却有 4 个 | jsdelivr 边缘节点缓存滞后（CDN 缓存的是几小时前的旧文件），**不是订阅内容 bug** | CI 每次跑完调用 `purge.jsdelivr.net` **主动刷新全部订阅文件的 CDN 缓存**（实测 TW.txt purge 后 CDN 立即 2→4 与 RAW 一致） |
+| 13 | 家宽总量偏少（8 个） | ① 旧版 4 协议引擎时代 hy2/tuic 家宽全灭 ② 严判据（Scamalytics ≥75 降级 + fraud ≥90 剔除 + ipapi.is 否决）宁缺毋滥，免费池里真家宽本来就稀缺 | 属**预期行为**：真家宽在免费节点池是稀缺资源；本次修复误判（#11）后，假家宽不再挤占真家宽名额 |
+
+> 关键结论：**免费节点池里"家宽"大多数是伪装的**（机房收购家宽 IP 段、rDNS 带.dsl/.pppoe 关键词、ip-api proxy 标志）。本版用四道闸门过滤：ip-api hosting/proxy 字段 → ASN 黑白名单 → ipapi.is 交叉源 → Scamalytics 欺诈分。

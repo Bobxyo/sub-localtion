@@ -170,6 +170,11 @@ DATACENTER_ASNS = {
     200651, 202685, 210644, 205628, 51852, 204544, 397373, 140224,  # 小型 IDC
     54866,  # Parsebian/HydraTransit 类
     45899,  # VNPT 云? 标记为 IDC
+    # ★ 实测漏网: 收购家宽段/伪装 DSL rDNS 的云边网络 (ip-api proxy=true 案例补充)
+    62610,  # Zenlayer (AS62610, rDNS 带 dsl.speakeasy.net 但 proxy=true)
+    60205,  # 62610 关联段
+    8342,  # Deltacomputers/Evrasia 类
+    9009, 47692, 62041, 56630, 57502,  # Serverius/ProXmedia/Clouvider 类
 }
 
 # 民用宽带 ASN 白名单 (离线兜底; 关键国家主流运营商)
@@ -1461,6 +1466,11 @@ def classify_network_type(ip: str, country: str, asn, org: str, ip_api_rec: dict
 
     if hosting_flag:
         return "datacenter", 90
+    # ★ proxy/VPN/Tor 出口标志 (ip-api) — 硬否决家宽/民用
+    # 实测 AS62610 Zenlayer (收购 speakeasy DSL legacy 段): hosting=false 但 proxy=true
+    # 此类"机房收购家宽段"是假家宽主要形态, rDNS 带 dsl/pppoe 也不能信
+    if proxy_flag:
+        return "datacenter", 88
     if mobile_flag:
         return "mobile", 85
 
@@ -1801,6 +1811,22 @@ def scamalytics_fraud_score(ip: str) -> int:
         return -1
 
 
+def ipapi_is_verify(ip: str) -> dict:
+    """ipapi.is 免费交叉源 (1000 req/天, 无 key)
+    实测对 AS62610 Zenlayer (收购 speakeasy DSL 段伪装家宽) 能给出
+    company=Bunny Communications; 对真家宽 (SK Broadband) 给运营商名。
+    仅用其 company/asn 字段做家宽候选的二次否决。失败返回 {}"""
+    try:
+        r = DIRECT_SESSION.get(f"https://api.ipapi.is/?q={ip}", timeout=10)
+        if r.status_code != 200:
+            return {}
+        j = r.json()
+        return {"company": j.get("company") or "", "asn": j.get("asn") or "",
+                "country": j.get("country") or ""}
+    except Exception:
+        return {}
+
+
 def classify_and_export(test_results: list):
     print("[*] 出口 IP 情报与分类 ...")
     # 收集全部出口 IP
@@ -1915,6 +1941,41 @@ def classify_and_export(test_results: list):
                 scam_scores[ip] = score
         got = sum(1 for v in scam_scores.values() if v >= 0)
         print(f"[+] Scamalytics 评分获得: {got}/{len(scam_candidates)}")
+
+    # ── ipapi.is 交叉核验 (只查家宽候选, 免费 1000 次/天) ──
+    # ip-api 判 hosting/proxy 也有漏 (伪装家宽: 收购 DSL 段的云边网络)。
+    # ipapi.is 独立数据源: company 含 IDC 词 → 否决家宽
+    ipapi_verify = {}
+    verify_candidates = set()
+    for n in safe_nodes:
+        if n["net_type"] in ("residential", "mobile") and n["exit_ip"]:
+            verify_candidates.add(n["exit_ip"])
+    if verify_candidates:
+        print(f"[*] ipapi.is 交叉核验: {len(verify_candidates)} 个家宽候选 ...")
+        def _verify(ip):
+            return ip, ipapi_is_verify(ip)
+        with ThreadPoolExecutor(max_workers=4) as ex:
+            for ip, info in ex.map(_verify, verify_candidates):
+                ipapi_verify[ip] = info
+        # 否决: company/asn 含机房词
+        vetoed = 0
+        for n in safe_nodes:
+            if n["net_type"] not in ("residential", "mobile"):
+                continue
+            info = ipapi_verify.get(n["exit_ip"]) or {}
+            comp_asn = (info.get("company", "") + " " + info.get("asn", "")).lower()
+            if any(kw in comp_asn for kw in (
+                "zenlayer", "bunny", "cloudflare", "akamai", "fastly",
+                "amazon", "google llc", "microsoft", "digitalocean", "vultr",
+                "hetzner", "ovh", "contabo", "leaseweb", "datacamp",
+                "serverius", "clouvider", "m247", "gcore", "g-core",
+                "choopa", "linode", "alibaba", "tencent", "huawei cloud",
+            )):
+                n["net_type"] = "datacenter"
+                n["confidence"] = 85
+                vetoed += 1
+        if vetoed:
+            print(f"[*] ipapi.is 否决假家宽: {vetoed} 个 (云商收购家宽段伪装)")
 
     # 风险分 >= 75 的家宽候选降级为普通 (fraud 池/被滥用 IP 绝不入家宽区)
     downgraded = 0
@@ -2368,6 +2429,25 @@ def main():
         return
     total, res = export_all(unique_nodes, residential, non_residential)
     update_readme(total, res)
+
+    # ★ CDN 缓存刷新: jsdelivr 边缘节点缓存滞后导致 "CDN 订阅比 RAW 少节点"
+    #    (实测 TW CDN=2 vs RAW=4, purge 后立即一致) — CI 每次跑完主动刷新
+    try:
+        repo_name = os.environ.get("GITHUB_REPOSITORY", "").strip()
+        if repo_name and "/" in repo_name:
+            purged, failed = 0, 0
+            for f in glob.glob(os.path.join(BASEDIR, "output", "**", "*.*"), recursive=True):
+                rel = os.path.relpath(f, BASEDIR).replace("\\", "/")
+                try:
+                    DIRECT_SESSION.get(
+                        f"https://purge.jsdelivr.net/gh/{repo_name}@main/{rel}",
+                        timeout=10)
+                    purged += 1
+                except Exception:
+                    failed += 1
+            print(f"[+] jsdelivr CDN 缓存刷新: {purged} 个文件 ({failed} 失败)")
+    except Exception as e:
+        print(f"[!] CDN 刷新跳过: {e}")
 
     # 统计报告
     elapsed = time.time() - t_start
