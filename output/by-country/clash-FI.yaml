@@ -5,18 +5,12 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - xiaohe
-  server: 171.22.129.56
-  port: 2053
+  server: 138.124.15.120
+  port: 8388
   udp: true
-  type: vless
-  uuid: 9f5b9ca7-d0bb-4e50-a3ca-acf5968027fc
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: AKUQO-fKsD19FFBxNq5XTFCRXWDZfes4zJjRINY1KUI
-    short-id: beff3ff061a64cfd
-  servername: fi-one.quiet-rogue.site
-  client-fingerprint: firefox
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: ZjQ1N
 proxy-groups:
 - name: PROXIES
   type: select
