@@ -1,0 +1,43 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇬🇷 希腊 (Greece) 01 - xiaohe
+  server: uk-tube-01.stre4m.net
+  port: 443
+  udp: true
+  type: vless
+  uuid: f85ba8bb-a3da-4389-a67a-2b0afde7bbc1
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: SbVKOEMjK0sIlbwg4akyBg5mL5KZwwB-ed4eEE7YnRc
+  servername: jobinvest.ru
+  client-fingerprint: firefox
+- name: 🇬🇷 希腊 (Greece) 02 - xiaohe
+  server: 185.126.238.87
+  port: 2083
+  udp: true
+  type: vless
+  uuid: 7668f678-faee-40cc-9b56-9c39dc773388
+  network: grpc
+  grpc-opts:
+    grpc-service-name: security.debian.org
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇬🇷 希腊 (Greece) 01 - xiaohe
+  - 🇬🇷 希腊 (Greece) 02 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇬🇷 希腊 (Greece) 01 - xiaohe
+  - 🇬🇷 希腊 (Greece) 02 - xiaohe
+rules:
+- MATCH,PROXIES
