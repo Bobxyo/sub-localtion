@@ -19,7 +19,7 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇮🇪 爱尔兰 (Ireland) 03 - xiaohe
-  server: 176.34.73.210
+  server: 3.254.74.220
   port: 443
   udp: true
   type: ss

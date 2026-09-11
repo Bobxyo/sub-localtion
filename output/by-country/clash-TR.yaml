@@ -5,17 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
-  server: 151.241.226.201
-  port: 2053
+  server: 195.162.69.203
+  port: 8443
   udp: true
   type: vless
-  uuid: e691b034-dfc9-4f22-80aa-6d4f6404a4df
+  uuid: 953358cb-82ba-4296-960d-6d2ec3468f4c
   tls: true
-  reality-opts:
-    public-key: k5COjpopVNGzEuMb457zCrrZegSdBX-d8bg0G6HDsE4
-    short-id: 9bd613c48251f0db
-  servername: www.apple.com
-  client-fingerprint: chrome
+  servername: 195-162-69-203.sslip.io
+  skip-cert-verify: false
+  client-fingerprint: firefox
 - name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   server: sinavm.soft10.ir
   port: 443

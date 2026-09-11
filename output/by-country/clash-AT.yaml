@@ -11,17 +11,32 @@ proxies:
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇦🇹 奥地利 (Austria) 02 - xiaohe
+  server: 188.225.24.89
+  port: 8449
+  udp: true
+  type: vless
+  uuid: fdaafea8-afc7-4ece-9dc4-1e2609c43913
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: XF3wXFapd311fC0M0APxbrf3cIaGnyKU7BR4Pv_l7Rs
+    short-id: 15954a1c5a3d5bfc
+  servername: akashi.vk-portal.net
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇹 奥地利 (Austria) 01 - xiaohe
+  - 🇦🇹 奥地利 (Austria) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇹 奥地利 (Austria) 01 - xiaohe
+  - 🇦🇹 奥地利 (Austria) 02 - xiaohe
 rules:
 - MATCH,PROXIES

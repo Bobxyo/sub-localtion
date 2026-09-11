@@ -7,7 +7,7 @@
       "type": "vless",
       "tag": "🇸🇨 塞舌尔 (Seychelles) 01 - xiaohe",
       "server": "104.18.46.46",
-      "server_port": 2086,
+      "server_port": 2052,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
@@ -20,36 +20,22 @@
     {
       "type": "vless",
       "tag": "🇸🇨 塞舌尔 (Seychelles) 02 - xiaohe",
-      "server": "172.64.154.8",
+      "server": "188.114.97.6",
       "server_port": 8880,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
-        "path": "/?ed=2560security=tls",
+        "path": "/",
         "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
+          "Host": "zb1zi.s3nx.dyz.hh.vavava.kdns.fr"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇸🇨 塞舌尔 (Seychelles) 03 - xiaohe",
-      "server": "104.18.46.46",
-      "server_port": 80,
-      "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
-      "transport": {
-        "type": "ws",
-        "path": "/?ed=2560security=tls",
-        "headers": {
-          "Host": "8nj2r.2k8t.f88.hh.vavava.kdns.fr"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇸🇨 塞舌尔 (Seychelles) 04 - xiaohe",
-      "server": "172.64.42.85",
-      "server_port": 8880,
+      "server": "172.64.52.6",
+      "server_port": 2095,
       "uuid": "47fcef29-ab4e-4aa6-932b-d95a18f28a4e",
       "transport": {
         "type": "ws",
@@ -61,20 +47,20 @@
     },
     {
       "type": "hysteria2",
-      "tag": "🇸🇨 塞舌尔 (Seychelles) 05 - xiaohe",
+      "tag": "🇸🇨 塞舌尔 (Seychelles) 04 - xiaohe",
       "server": "82.38.60.15",
       "server_port": 8080,
       "password": "VB92_Ka9qwef143K_L23K1hz3_bF_Hz62uT_Bn1_sC",
       "tls": {
         "enabled": true,
         "server_name": "hopp-us.yyuyy.com",
-        "insecure": true
+        "insecure": false
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇸🇨 塞舌尔 (Seychelles) 06 - xiaohe",
-      "server": "185.79.138.71",
+      "tag": "🇸🇨 塞舌尔 (Seychelles) 05 - xiaohe",
+      "server": "138.124.0.168",
       "server_port": 8080,
       "password": "h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT",
       "tls": {
@@ -85,7 +71,7 @@
     },
     {
       "type": "vless",
-      "tag": "🇸🇨 塞舌尔 (Seychelles) 07 - xiaohe",
+      "tag": "🇸🇨 塞舌尔 (Seychelles) 06 - xiaohe",
       "server": "156.226.168.221",
       "server_port": 35193,
       "uuid": "35cbae61-ee10-4cb9-abb8-4950b35e9851",
@@ -95,7 +81,7 @@
         "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
@@ -114,8 +100,7 @@
         "🇸🇨 塞舌尔 (Seychelles) 03 - xiaohe",
         "🇸🇨 塞舌尔 (Seychelles) 04 - xiaohe",
         "🇸🇨 塞舌尔 (Seychelles) 05 - xiaohe",
-        "🇸🇨 塞舌尔 (Seychelles) 06 - xiaohe",
-        "🇸🇨 塞舌尔 (Seychelles) 07 - xiaohe"
+        "🇸🇨 塞舌尔 (Seychelles) 06 - xiaohe"
       ]
     },
     {
@@ -127,8 +112,7 @@
         "🇸🇨 塞舌尔 (Seychelles) 03 - xiaohe",
         "🇸🇨 塞舌尔 (Seychelles) 04 - xiaohe",
         "🇸🇨 塞舌尔 (Seychelles) 05 - xiaohe",
-        "🇸🇨 塞舌尔 (Seychelles) 06 - xiaohe",
-        "🇸🇨 塞舌尔 (Seychelles) 07 - xiaohe"
+        "🇸🇨 塞舌尔 (Seychelles) 06 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

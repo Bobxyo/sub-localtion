@@ -8,14 +8,14 @@
       "tag": "🇳🇴 挪威 (Norway) 01 - xiaohe",
       "server": "151.242.168.125",
       "server_port": 390,
-      "uuid": "b02ff150-ee30-46e0-9ea1-adbfd7762a06",
+      "uuid": "7b363f9c-3df9-4b60-a789-9cd36be0bdfe",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
         "server_name": "bowandbead.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "ios"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
@@ -25,28 +25,18 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇳🇴 挪威 (Norway) 02 - xiaohe",
-      "server": "185.213.23.63",
-      "server_port": 990,
-      "method": "chacha20-ietf-poly1305",
-      "password": "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇳🇴 挪威 (Norway) 01 - xiaohe",
-        "🇳🇴 挪威 (Norway) 02 - xiaohe"
+        "🇳🇴 挪威 (Norway) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇳🇴 挪威 (Norway) 01 - xiaohe",
-        "🇳🇴 挪威 (Norway) 02 - xiaohe"
+        "🇳🇴 挪威 (Norway) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

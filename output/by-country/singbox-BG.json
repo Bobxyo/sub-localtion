@@ -5,21 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe",
-      "server": "178.236.16.98",
-      "server_port": 35728,
-      "uuid": "a00d89f6-ab7e-4e30-a5e5-54c701d62c93",
+      "tag": "🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe",
+      "server": "prep.wwwinternetvideo.click",
+      "server_port": 443,
+      "uuid": "1c332eae-7e02-4acd-996d-4eb3e652401c",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "yahoo.com",
+        "server_name": "yandex.ru",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "vhUFNoFcvtZAVMo8y5K5eU2V43m5q6yjmWIhp5RkFng",
-          "short_id": "69a2"
+          "public_key": "uitO4Z8t9TplwwYaqwLqh5rfxDh_X8bOBiNuPbzvaEM",
+          "short_id": "bbe46bd8f6b96839"
         }
       }
     },
@@ -28,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe"
+        "🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe"
+        "🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

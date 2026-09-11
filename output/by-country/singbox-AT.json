@@ -12,18 +12,41 @@
       "password": "ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4="
     },
     {
+      "type": "vless",
+      "tag": "🇦🇹 奥地利 (Austria) 02 - xiaohe",
+      "server": "188.225.24.89",
+      "server_port": 8449,
+      "uuid": "fdaafea8-afc7-4ece-9dc4-1e2609c43913",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "akashi.vk-portal.net",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "XF3wXFapd311fC0M0APxbrf3cIaGnyKU7BR4Pv_l7Rs",
+          "short_id": "15954a1c5a3d5bfc"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇹 奥地利 (Austria) 01 - xiaohe"
+        "🇦🇹 奥地利 (Austria) 01 - xiaohe",
+        "🇦🇹 奥地利 (Austria) 02 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇹 奥地利 (Austria) 01 - xiaohe"
+        "🇦🇹 奥地利 (Austria) 01 - xiaohe",
+        "🇦🇹 奥地利 (Austria) 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
