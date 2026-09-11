@@ -10,23 +10,15 @@ proxies:
   udp: true
   type: hysteria2
   password: 8fb328f0-d8e0-4b11-a6db-3dadfc4f02a3
-  sni: kz03hy01.tcp-reset-club.net
-  skip-cert-verify: false
+  sni: 46.247.41.120
+  skip-cert-verify: true
 - name: 🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe
-  server: 91.224.87.22
-  port: 9882
+  server: 94.198.220.183
+  port: 64674
   udp: true
-  type: vless
-  uuid: 5d16ac22-6eea-426f-b778-6f4c2961faef
-  tls: true
-  reality-opts:
-    public-key: bnRIb3Er1i-K6NGGByCO9UbGfOvu43ZoiK7ulPd1SzU
-    short-id: aa
-  servername: dl.google.com
-  client-fingerprint: qq
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpc-tunnel
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: s8LbJCgUiGXeCKVc63tHJP
 proxy-groups:
 - name: PROXIES
   type: select

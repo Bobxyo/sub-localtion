@@ -6,7 +6,7 @@
     {
       "type": "shadowsocks",
       "tag": "🇮🇪 爱尔兰 (Ireland) 01 - xiaohe",
-      "server": "3.254.74.220",
+      "server": "108.129.176.139",
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05"
@@ -14,14 +14,38 @@
     {
       "type": "shadowsocks",
       "tag": "🇮🇪 爱尔兰 (Ireland) 02 - xiaohe",
-      "server": "63.32.92.226",
+      "server": "52.211.103.59",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 03 - xiaohe",
+      "server": "3.254.74.220",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 04 - xiaohe",
+      "server": "176.34.73.210",
+      "server_port": 443,
+      "method": "aes-256-cfb",
+      "password": "amazonskr05"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 05 - xiaohe",
+      "server": "34.244.71.63",
       "server_port": 443,
       "method": "aes-256-cfb",
       "password": "amazonskr05"
     },
     {
       "type": "vless",
-      "tag": "🇮🇪 爱尔兰 (Ireland) 03 - xiaohe",
+      "tag": "🇮🇪 爱尔兰 (Ireland) 06 - xiaohe",
       "server": "3.9.135.156",
       "server_port": 51847,
       "uuid": "391a01e9-b664-407b-9158-610fab3f5920",
@@ -41,14 +65,6 @@
       }
     },
     {
-      "type": "shadowsocks",
-      "tag": "🇮🇪 爱尔兰 (Ireland) 04 - xiaohe",
-      "server": "108.129.176.139",
-      "server_port": 443,
-      "method": "aes-256-cfb",
-      "password": "amazonskr05"
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
@@ -56,7 +72,9 @@
         "🇮🇪 爱尔兰 (Ireland) 01 - xiaohe",
         "🇮🇪 爱尔兰 (Ireland) 02 - xiaohe",
         "🇮🇪 爱尔兰 (Ireland) 03 - xiaohe",
-        "🇮🇪 爱尔兰 (Ireland) 04 - xiaohe"
+        "🇮🇪 爱尔兰 (Ireland) 04 - xiaohe",
+        "🇮🇪 爱尔兰 (Ireland) 05 - xiaohe",
+        "🇮🇪 爱尔兰 (Ireland) 06 - xiaohe"
       ]
     },
     {
@@ -66,7 +84,9 @@
         "🇮🇪 爱尔兰 (Ireland) 01 - xiaohe",
         "🇮🇪 爱尔兰 (Ireland) 02 - xiaohe",
         "🇮🇪 爱尔兰 (Ireland) 03 - xiaohe",
-        "🇮🇪 爱尔兰 (Ireland) 04 - xiaohe"
+        "🇮🇪 爱尔兰 (Ireland) 04 - xiaohe",
+        "🇮🇪 爱尔兰 (Ireland) 05 - xiaohe",
+        "🇮🇪 爱尔兰 (Ireland) 06 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
