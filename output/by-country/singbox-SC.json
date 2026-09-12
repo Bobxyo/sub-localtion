@@ -12,7 +12,7 @@
       "tls": {
         "enabled": true,
         "server_name": "hopp-legend-se.roxa.org",
-        "insecure": true
+        "insecure": false
       }
     },
     {

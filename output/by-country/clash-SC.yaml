@@ -11,7 +11,7 @@ proxies:
   type: hysteria2
   password: h_B9x3942fJ9x_Kpx3914KQ_nZ934HFg_rT
   sni: hopp-legend-se.roxa.org
-  skip-cert-verify: true
+  skip-cert-verify: false
 - name: 🇸🇨 塞舌尔 (Seychelles) 02 - xiaohe
   server: hk3n.wxgqlfx.vip
   port: 35193
