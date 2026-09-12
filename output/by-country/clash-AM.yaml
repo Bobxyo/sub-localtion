@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇲 亚美尼亚 (Armenia) 01 - xiaohe
-  server: 104.24.30.89
+  server: 172.67.67.178
   port: 443
   udp: true
   type: vless
