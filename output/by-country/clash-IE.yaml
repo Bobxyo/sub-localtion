@@ -12,20 +12,13 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇮🇪 爱尔兰 (Ireland) 02 - xiaohe
-  server: 108.129.176.139
-  port: 443
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: amazonskr05
-- name: 🇮🇪 爱尔兰 (Ireland) 03 - xiaohe
   server: 3.254.74.220
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇮🇪 爱尔兰 (Ireland) 04 - xiaohe
+- name: 🇮🇪 爱尔兰 (Ireland) 03 - xiaohe
   server: 3.9.135.156
   port: 51847
   udp: true
@@ -38,6 +31,13 @@ proxies:
     short-id: 0eec442e7b34d2f2
   servername: www.tesla.com
   client-fingerprint: chrome
+- name: 🇮🇪 爱尔兰 (Ireland) 04 - xiaohe
+  server: 52.211.103.59
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
 proxy-groups:
 - name: PROXIES
   type: select
