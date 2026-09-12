@@ -1084,11 +1084,22 @@ def _alloc_socks_port() -> int:
         return s.getsockname()[1]
 
 
-def build_test_config(outbound: dict, socks_port: int) -> dict:
+def build_test_config(outbound: dict, socks_port: int, chain_relay: dict = None) -> dict:
     node = dict(outbound)
     node["tag"] = "node"
 
     outbounds = [node, {"type": "direct", "tag": "direct"}, {"type": "block", "tag": "block"}]
+
+    # ══ 链式前置 (家宽链式复测用) ═════════════════════════════════════
+    # chain_relay: 已验证存活的 sing-box outbound dict — node 经它转发 (detour 双跳)
+    # 模拟用户 v2rayN "链式/前置代理" 场景: 前置 → 家宽节点 → 目标
+    if chain_relay:
+        relay = dict(chain_relay)
+        relay["tag"] = "chain-relay"
+        # relay 自身剥 detour (避免与 node 的 detour 循环)
+        relay.pop("detour", None)
+        outbounds.append(relay)
+        node["detour"] = "chain-relay"
 
     # ══ 前置代理 (链式) ═════════════════════════════════════════════
     # 模拟 GitHub Actions 海外视角:
@@ -1097,7 +1108,7 @@ def build_test_config(outbound: dict, socks_port: int) -> dict:
     #   - GitHub Actions: FRONT_PROXY 为空 → 直连 (Azure US 本就是海外视角)
     # 用法: 环境变量 FRONT_PROXY=socks5://127.0.0.1:10808
     front = os.environ.get("FRONT_PROXY", "").strip()
-    if front:
+    if front and not chain_relay:
         # 解析 socks5://host:port → socks outbound
         m = re.match(r"^(socks5h?|http)://([^:]+):(\d+)$", front)
         if m:
@@ -1145,7 +1156,15 @@ def test_single_node(item, keep_alive_check=True):
     task_id = uuid.uuid4().hex[:10]
     cfg_path = os.path.join(RUNTIME_DIR, f"sb_{task_id}.json")
 
-    config = build_test_config(outbound, socks_port)
+    # ★ 链式前置 (chain relay): 注入已验证存活节点作前置 (chain_retest 用, 模拟 v2rayN 链式)
+    chain_out = None
+    chain_json = os.environ.get("CHAIN_RELAY_OUT", "").strip()
+    if chain_json:
+        try:
+            chain_out = json.loads(chain_json)
+        except Exception:
+            chain_out = None
+    config = build_test_config(outbound, socks_port, chain_relay=chain_out)
     with open(cfg_path, "w", encoding="utf-8") as f:
         json.dump(config, f)
 
@@ -1353,6 +1372,102 @@ def run_liveness_test(candidates: list) -> list:
     stalled = sum(1 for r in results if r["is_stalled"])
     print(f"[+] 测活完成: 真活 {len(alive)} | 断流淘汰 {stalled} | MITM 风险 {mitm}")
     return results  # 保留全部信息, 分类阶段再决定去留
+
+
+# ═══════════════════════════════════════════N═══════════════════════
+# 阶段 B2: 家宽链式复测 (chain relay retest)
+# ════════════════════════════════════════════════════════════════════
+
+def chain_retest(test_results: list) -> list:
+    """家宽链式复测: 模拟用户 v2rayN 链式 (前置 → 家宽节点 → 目标)
+
+    实测背景: 用户反馈家宽节点在 v2rayN 链式代理下仅 ~50% 可用。
+    根因: 单跳测活通过 ≠ 双跳可用 (部分节点不允许"已被代理的流量"再入,
+    或 UDP/QUIC 节点无法过 socks 链)。解决: CI 里用最快存活节点当前置,
+    对家宽候选做双跳复测 — 双跳通过的才进家宽专区。
+
+    流程: 先跑一遍轻量分类拿到家宽候选 → 取最快存活节点做 relay →
+    家宽候选逐个双跳复测 → 双跳也活的保留, 双跳死的降级普通区。
+    返回: 更新 net_type 后的 test_results (原对象原地修改)。
+    """
+    # 1) 轻量分类拿家宽候选 (复用 classify_and_export 的候选判定, 但不导出)
+    #    家宽候选 = ip-api/mmdb 六信号判 residential/mobile 的节点
+    ip_api_info = {}
+    all_exit_ips = list({r["exit_ip"] for r in test_results if r.get("exit_ip")})
+    if all_exit_ips:
+        try:
+            ip_api_info = ip_api_batch_lookup(all_exit_ips)
+        except Exception as e:
+            print(f"[!] 链式复测: ip-api 批量失败 ({e}), 跳过链式复测")
+            return test_results
+
+    res_candidates = {}
+    for r in test_results:
+        if not (r.get("alive") and not r.get("is_stalled")):
+            continue
+        rec = ip_api_info.get(r.get("exit_ip"), {})
+        t, c = classify_network_type(r["exit_ip"], r.get("exit_country_online"),
+                                     r.get("exit_asn_online"),
+                                     r.get("exit_asn_org_online"), rec or None)
+        if t in ("residential", "mobile") and c >= 60:
+            res_candidates[(r["server"].lower(), r["port"], r["proto"])] = r
+
+    if not res_candidates:
+        print("[*] 链式复测: 无家宽候选, 跳过")
+        return test_results
+    print(f"[*] 链式复测: {len(res_candidates)} 个家宽候选")
+
+    # 2) 选 relay: 全体存活节点里延迟最低、非家宽候选自己 (避免自己套自己)
+    alive_sorted = sorted(
+        [r for r in test_results if r.get("alive") and not r.get("is_stalled")],
+        key=lambda x: x.get("latency_ms", 99999))
+    relay_result = None
+    for r in alive_sorted:
+        if (r["server"].lower(), r["port"], r["proto"]) not in res_candidates:
+            relay_result = r
+            break
+    if not relay_result:
+        print("[!] 链式复测: 无可用 relay 节点, 跳过")
+        return test_results
+    relay_out = relay_result.get("outbound")
+    if not relay_out:
+        # 重新解析 relay 的 raw 拿 outbound
+        p = parse_node_uri(relay_result["raw"])
+        if p:
+            relay_out = p[0]
+    if not relay_out:
+        print("[!] 链式复测: relay outbound 构建失败, 跳过")
+        return test_results
+    # relay 必须剥离 detour (前置链复用时防循环)
+    relay_out = dict(relay_out)
+    relay_out.pop("detour", None)
+    print(f"[*] 链式 relay: {relay_result['proto']} {relay_result['server']}:{relay_result['port']} "
+          f"(延迟 {relay_result['latency_ms']}ms)")
+
+    # 3) 家宽候选逐个双跳复测 (注入 CHAIN_RELAY_OUT, test_single_node 自动加 detour)
+    os.environ["CHAIN_RELAY_OUT"] = json.dumps(relay_out)
+    chain_alive, chain_dead = [], []
+    try:
+        for key, r in res_candidates.items():
+            item = (r["raw"], r.get("outbound") or (parse_node_uri(r["raw"]) or [None])[0],
+                    r["server"], r["port"], r["proto"])
+            if not item[1]:
+                chain_dead.append(r)
+                continue
+            recheck = test_single_node(item)
+            if recheck and recheck.get("alive") and not recheck.get("is_stalled"):
+                chain_alive.append(r)
+            else:
+                chain_dead.append(r)
+    finally:
+        os.environ.pop("CHAIN_RELAY_OUT", None)
+
+    # 4) 双跳失败的 → 降级普通区 (不从订阅删除, 用户直连场景仍可能可用)
+    for r in chain_dead:
+        r["_chain_failed"] = True
+
+    print(f"[+] 链式复测完成: 双跳可用 {len(chain_alive)} | 双跳失败降级 {len(chain_dead)}")
+    return test_results
 
 
 # ═══════════════════════════════════════════N═══════════════════════
@@ -2001,10 +2116,19 @@ def classify_and_export(test_results: list):
     print(f"[*] 去重: {len(safe_nodes)} → {len(unique_nodes)} (剔除重复 {dup_dropped})")
 
     # 去重: 出口IP+端口 唯一化, 家宽区严格防同IP刷屏
+    # ★ 链式复测 (chain_retest) 双跳失败的家宽候选 → 不进家宽专区 (降级普通)
+    chain_failed_raws = set()
+    for r in test_results:
+        if r.get("_chain_failed"):
+            chain_failed_raws.add(r.get("raw"))
     residential = []
     res_seen_ip = set()
     for n in unique_nodes:
         if n["net_type"] in ("residential", "mobile") and n["confidence"] >= 60:
+            if n.get("raw") in chain_failed_raws:
+                n["net_type"] = "datacenter"
+                n["confidence"] = 70
+                continue
             if n["exit_ip"] and n["exit_ip"] not in res_seen_ip:
                 res_seen_ip.add(n["exit_ip"])
                 residential.append(n)
@@ -2022,6 +2146,8 @@ def classify_and_export(test_results: list):
     unique_nodes.sort(key=lambda x: (0 if x in residential else 1, x["latency_ms"]))
     residential.sort(key=lambda x: x["latency_ms"])
     non_residential.sort(key=lambda x: x["latency_ms"])
+    # ★ 链式复测双跳失败的家宽 → 降级普通区 (v2rayN 链式场景不可靠)
+    #    保留在总订阅/国家订阅里 (直连场景仍可用), 只是退出家宽专区
 
     # 重建 outbound (测活阶段的 outbound 已验证可用); 剥离测试专用字段 (detour 等绝不入订阅)
     for n in unique_nodes:
@@ -2419,7 +2545,11 @@ def main():
             print(f"[+] 重复节点回填: +{backfilled} (继承代表测活结果)")
         test_results = expanded
 
-    # 5. 分类 + 导出 (无真活节点时保留上次 output, 不写空订阅覆盖线上数据)
+    # 5. ★ 家宽链式复测: 用最快存活节点做前置双跳复测家宽候选
+    #    (模拟用户 v2rayN 链式场景, 双跳失败的家宽降级普通区 — 提高链式可用率)
+    test_results = chain_retest(test_results)
+
+    # 6. 分类 + 导出 (无真活节点时保留上次 output, 不写空订阅覆盖线上数据)
     if not test_results:
         print("[!] 全部节点测活失败 — 保留上次 output, 不覆盖订阅文件")
         return
