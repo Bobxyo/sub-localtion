@@ -5,19 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🌐 其他地区 (Other) 01 - xiaohe
-  server: 172.67.151.109
-  port: 443
+  server: 104.21.57.84
+  port: 8443
   udp: true
-  type: vless
-  uuid: 50414e45-4c5f-5a45-5553-635698a6bb9c
+  type: vmess
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
   tls: true
-  servername: jdzit4e4urks.xwzohsebujps.workers.dev
+  servername: v2ray1.dozapp.xyz
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /stream/PANEL_ZEUS/635698a6bb9c/loc-0
+    path: /lMnsZUN4/
     headers:
-      Host: jdzit4e4urks.xwzohsebujps.workers.dev
+      Host: v2ray1.dozapp.xyz
 proxy-groups:
 - name: PROXIES
   type: select
