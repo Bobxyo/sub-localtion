@@ -22,20 +22,14 @@
     {
       "type": "vless",
       "tag": "🇮🇹 意大利 (Italy) 03 - xiaohe",
-      "server": "57.131.38.163",
-      "server_port": 2053,
-      "uuid": "d4b08cd6-0903-411a-9dac-45dbdf5c9712",
-      "tls": {
-        "enabled": true,
-        "server_name": "www.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc",
-          "short_id": "5b8a942318178e7b"
+      "server": "57.131.32.191",
+      "server_port": 80,
+      "uuid": "1e280316-0408-47c4-b058-05b8f1f17f02",
+      "transport": {
+        "type": "ws",
+        "path": "/vless/",
+        "headers": {
+          "Host": "ov-italy1.09vpn.com"
         }
       }
     },
