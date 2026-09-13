@@ -64,7 +64,7 @@ SOURCE_URLS = [
   "https://raw.githubusercontent.com/coldwater-10/V2ray-Config/main/Sub1.txt",
   "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt",
   "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt",
-  "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/all_extracted_configs.txt",
+#  "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/all_extracted_configs.txt",
   "https://raw.githubusercontent.com/hello-world-1989/cn-news/main/end-gfw-together",
   "https://raw.githubusercontent.com/vless-reality/vless-reality.github.io/refs/heads/main/.github/links/v2.txt",
   "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
