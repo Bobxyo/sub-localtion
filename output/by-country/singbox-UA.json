@@ -6,23 +6,25 @@
     {
       "type": "vless",
       "tag": "🇺🇦 乌克兰 (Ukraine) 01 - xiaohe",
-      "server": "172.67.67.178",
-      "server_port": 443,
-      "uuid": "aebe5a70-0ca3-46ce-8208-8b5bab1346ce",
+      "server": "89.47.55.9",
+      "server_port": 8443,
+      "uuid": "4350213a-b4e7-262a-0bd7-bd16957cf71a",
       "tls": {
         "enabled": true,
-        "server_name": "rAyAn-007.nAsTaRaN.DpDnS.OrG",
-        "insecure": false,
+        "server_name": "www.sony.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "TWaatavWGcWV-E7c4AXmBXypLKJzm6eR3FGG61spayQ",
+          "short_id": ""
         }
       },
       "transport": {
-        "type": "ws",
-        "headers": {
-          "Host": "rAyAn-007.nAsTaRaN.DpDnS.OrG"
-        }
+        "type": "grpc",
+        "service_name": "TunService"
       }
     },
     {
