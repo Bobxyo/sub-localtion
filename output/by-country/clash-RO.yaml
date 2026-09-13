@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇴 罗马尼亚 (Romania) 01 - xiaohe
-  server: 205.237.109.165
+  server: 205.237.109.164
   port: 8443
   udp: true
   type: hysteria2
@@ -13,25 +13,14 @@ proxies:
   sni: hopp-netherland-new.dynuddns.net
   skip-cert-verify: true
 - name: 🇷🇴 罗马尼亚 (Romania) 02 - xiaohe
-  server: 162.249.126.2
+  server: 85.204.107.184
   port: 8443
   udp: true
   type: hysteria2
-  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
-  sni: hopp-germany-new.ddnsguru.com
-  skip-cert-verify: true
-- name: 🇷🇴 罗马尼亚 (Romania) 03 - xiaohe
-  server: 194.5.248.93
-  port: 443
-  udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: roma1.moritech.net
+  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
+  sni: hopp-romania-new.roxa.org
   skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 04 - xiaohe
+- name: 🇷🇴 罗马尼亚 (Romania) 03 - xiaohe
   server: 185.156.44.99
   port: 443
   udp: true
@@ -39,26 +28,7 @@ proxies:
   password: gf1:gfhysteria2024
   sni: www.amazon.com
   skip-cert-verify: true
-- name: 🇷🇴 罗马尼亚 (Romania) 05 - xiaohe
-  server: 85.204.107.183
-  port: 8443
-  udp: true
-  type: hysteria2
-  password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
-  sni: hopp-romania-new.roxa.org
-  skip-cert-verify: false
-- name: 🇷🇴 罗马尼亚 (Romania) 06 - xiaohe
-  server: roma3.moritech.net
-  port: 443
-  udp: true
-  type: vless
-  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
-  flow: xtls-rprx-vision
-  tls: true
-  servername: roma3.moritech.net
-  skip-cert-verify: false
-  client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 07 - xiaohe
+- name: 🇷🇴 罗马尼亚 (Romania) 04 - xiaohe
   server: 46.28.67.55
   port: 443
   udp: true
@@ -71,7 +41,26 @@ proxies:
     short-id: d06d78e974491b6e
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇷🇴 罗马尼亚 (Romania) 08 - xiaohe
+- name: 🇷🇴 罗马尼亚 (Romania) 05 - xiaohe
+  server: 194.5.248.93
+  port: 443
+  udp: true
+  type: vless
+  uuid: cd3bb7d9-7df3-4644-ac05-c260990ac277
+  flow: xtls-rprx-vision
+  tls: true
+  servername: roma1.moritech.net
+  skip-cert-verify: false
+  client-fingerprint: chrome
+- name: 🇷🇴 罗马尼亚 (Romania) 06 - xiaohe
+  server: 162.249.126.6
+  port: 8443
+  udp: true
+  type: hysteria2
+  password: 9Me_Jx935gnHx13_Nx45M_NYXe037js_Be4z
+  sni: hopp-germany-new.ddnsguru.com
+  skip-cert-verify: false
+- name: 🇷🇴 罗马尼亚 (Romania) 07 - xiaohe
   server: hy2-new.aspidnet.xyz
   port: 443
   udp: true
@@ -93,7 +82,6 @@ proxy-groups:
   - 🇷🇴 罗马尼亚 (Romania) 05 - xiaohe
   - 🇷🇴 罗马尼亚 (Romania) 06 - xiaohe
   - 🇷🇴 罗马尼亚 (Romania) 07 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -106,6 +94,5 @@ proxy-groups:
   - 🇷🇴 罗马尼亚 (Romania) 05 - xiaohe
   - 🇷🇴 罗马尼亚 (Romania) 06 - xiaohe
   - 🇷🇴 罗马尼亚 (Romania) 07 - xiaohe
-  - 🇷🇴 罗马尼亚 (Romania) 08 - xiaohe
 rules:
 - MATCH,PROXIES

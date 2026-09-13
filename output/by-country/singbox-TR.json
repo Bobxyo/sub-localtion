@@ -6,30 +6,6 @@
     {
       "type": "vless",
       "tag": "🇹🇷 土耳其 (Turkey) 01 - xiaohe",
-      "server": "202.133.90.93",
-      "server_port": 8444,
-      "uuid": "0b39a009-2a2a-4035-ba87-cc82894f8e21",
-      "tls": {
-        "enabled": true,
-        "server_name": "connect3.nyxserver.ir",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇹🇷 土耳其 (Turkey) 02 - xiaohe",
-      "server": "188.132.174.236",
-      "server_port": 1080,
-      "method": "chacha20-ietf-poly1305",
-      "password": "rSeYcig_XBy8q3k33NpK3A"
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 03 - xiaohe",
       "server": "156.67.63.231",
       "server_port": 443,
       "uuid": "b052df40-d51c-456c-9bd6-57af01a87e4e",
@@ -50,91 +26,23 @@
     },
     {
       "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 04 - xiaohe",
-      "server": "45.74.159.233",
-      "server_port": 56659,
-      "uuid": "12af43c3-84b4-4248-878b-b75f35835487",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 - xiaohe",
+      "server": "13.143.137.164",
+      "server_port": 9443,
+      "uuid": "953358cb-82ba-4296-960d-6d2ec3468f4c",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "amp-api-edge.apps.apple.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "qLggZ7qospn6X7UEO1zSoohNXK4Y1EX7Hx2sJeWfvw0",
-          "short_id": "9aa3a3f599f3d5d0"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 05 - xiaohe",
-      "server": "partaa2.api3-max.ru",
-      "server_port": 443,
-      "uuid": "97ecaad4-452c-45ec-b591-d68d3308aad4",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "partaa2.api3-max.ru",
-        "insecure": false,
+        "server_name": "plaincanvas.videoclothing.xyz",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
-        }
-      }
-    },
-    {
-      "type": "hysteria2",
-      "tag": "🇹🇷 土耳其 (Turkey) 06 - xiaohe",
-      "server": "me17.msjia8844.site",
-      "server_port": 7443,
-      "password": "M8LP9DztTr3znqCkmf-r08CQLBLLFK1r",
-      "tls": {
-        "enabled": true,
-        "server_name": "me17.msjia8844.site",
-        "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "u3Soh9_Ui0UmcuY6vk0ug8Lq"
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 07 - xiaohe",
-      "server": "158.94.216.50",
-      "server_port": 32306,
-      "uuid": "f1505323-ecb6-4152-9a5b-d37b3ae1cacf",
-      "tls": {
-        "enabled": true,
-        "server_name": "play-apps-features.googleusercontent.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
         },
         "reality": {
           "enabled": true,
-          "public_key": "5iqitmx5fd71pubTxlrX0sd-ei7palcgVL7vtKToJGA",
-          "short_id": "61614f026070554f"
+          "public_key": "dZ0rhO_PL67-Ciwc6CHQgtde3a5EUUuReA7M-lRNCDQ",
+          "short_id": "e336c9a786fae301"
         }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇷 土耳其 (Turkey) 08 - xiaohe",
-      "server": "shop.neexbyte.ir",
-      "server_port": 8443,
-      "uuid": "464bc502-f963-45b6-81e3-e33d18427506",
-      "tls": {
-        "enabled": true,
-        "server_name": "",
-        "insecure": false
-      },
-      "transport": {
-        "type": "ws"
       }
     },
     {
@@ -143,13 +51,7 @@
       "outbounds": [
         "auto",
         "🇹🇷 土耳其 (Turkey) 01 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 02 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 03 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 04 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 05 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 06 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 07 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 08 - xiaohe"
+        "🇹🇷 土耳其 (Turkey) 02 - xiaohe"
       ]
     },
     {
@@ -157,13 +59,7 @@
       "tag": "auto",
       "outbounds": [
         "🇹🇷 土耳其 (Turkey) 01 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 02 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 03 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 04 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 05 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 06 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 07 - xiaohe",
-        "🇹🇷 土耳其 (Turkey) 08 - xiaohe"
+        "🇹🇷 土耳其 (Turkey) 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

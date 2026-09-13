@@ -5,8 +5,8 @@
   "outbounds": [
     {
       "type": "trojan",
-      "tag": "🇮🇷 IR 01 - xiaohe",
-      "server": "167.82.76.7",
+      "tag": "🇮🇶 IQ 01 - xiaohe",
+      "server": "199.232.78.101",
       "server_port": 443,
       "password": "MiTiVPN",
       "tls": {
@@ -23,8 +23,9 @@
       },
       "transport": {
         "type": "ws",
+        "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
         "headers": {
-          "Host": "mitivpn---ss--s---mitivpn-33.global.ssl.fastly.net"
+          "Host": "mitivpn---ss--s---mitivpn-11.global.ssl.fastly.net"
         }
       }
     },
@@ -33,14 +34,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇷 IR 01 - xiaohe"
+        "🇮🇶 IQ 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇷 IR 01 - xiaohe"
+        "🇮🇶 IQ 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

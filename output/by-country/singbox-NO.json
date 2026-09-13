@@ -27,27 +27,6 @@
     {
       "type": "vless",
       "tag": "🇳🇴 挪威 (Norway) 02 - xiaohe",
-      "server": "151.242.169.119",
-      "server_port": 443,
-      "uuid": "b9c5e5d7-aad1-4537-b1e3-29132a2c76d0",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "yidio.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY",
-          "short_id": "fd55b698ee8c3629"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇳🇴 挪威 (Norway) 03 - xiaohe",
       "server": "46.29.238.88",
       "server_port": 40443,
       "uuid": "db320947-adfb-400d-b60b-383b8324bffe",
@@ -66,13 +45,64 @@
       }
     },
     {
+      "type": "vless",
+      "tag": "🇳🇴 挪威 (Norway) 03 - xiaohe",
+      "server": "151.242.169.119",
+      "server_port": 443,
+      "uuid": "0d4e04b1-5ab5-4525-bbd4-ffce30149bee",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "yidio.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "SiSky02wHz-S0TDHKFTdYhnrlT8Y3CfRsekZlcdLXDY",
+          "short_id": "fd55b698ee8c3629"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇳🇴 挪威 (Norway) 04 - xiaohe",
+      "server": "185.213.23.63",
+      "server_port": 990,
+      "method": "chacha20-ietf-poly1305",
+      "password": "ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44="
+    },
+    {
+      "type": "vless",
+      "tag": "🇳🇴 挪威 (Norway) 05 - xiaohe",
+      "server": "aldebaran.yokkastars.com",
+      "server_port": 40443,
+      "uuid": "ed91e79c-f6bf-4fba-8cc0-6d45acaec22b",
+      "tls": {
+        "enabled": true,
+        "server_name": "deepl.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "qq"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "dvx6zPztKbgHpYaW6J4OZQC74Uy0JS6HUVdDfbjG5V4",
+          "short_id": "7606"
+        }
+      }
+    },
+    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇳🇴 挪威 (Norway) 01 - xiaohe",
         "🇳🇴 挪威 (Norway) 02 - xiaohe",
-        "🇳🇴 挪威 (Norway) 03 - xiaohe"
+        "🇳🇴 挪威 (Norway) 03 - xiaohe",
+        "🇳🇴 挪威 (Norway) 04 - xiaohe",
+        "🇳🇴 挪威 (Norway) 05 - xiaohe"
       ]
     },
     {
@@ -81,7 +111,9 @@
       "outbounds": [
         "🇳🇴 挪威 (Norway) 01 - xiaohe",
         "🇳🇴 挪威 (Norway) 02 - xiaohe",
-        "🇳🇴 挪威 (Norway) 03 - xiaohe"
+        "🇳🇴 挪威 (Norway) 03 - xiaohe",
+        "🇳🇴 挪威 (Norway) 04 - xiaohe",
+        "🇳🇴 挪威 (Norway) 05 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇦🇱 AL 01 - xiaohe
+  server: cacx.serverkingomz.ir
+  port: 20411
+  udp: true
+  type: vless
+  uuid: 0edb8deb-baee-4af4-ba7a-9567aedf0bb4
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: m_AGb3cF9l3FztNvZVAHlUu-mGB_hhUFxOWJ_PeTcSQ
+    short-id: 7063a76e8a8ab275
+  servername: benlysta.com
+  client-fingerprint: chrome
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇦🇱 AL 01 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇦🇱 AL 01 - xiaohe
+rules:
+- MATCH,PROXIES

@@ -5,44 +5,13 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - xiaohe
-  server: fin.pinkmoon.pro
-  port: 443
+  server: 65.109.215.118
+  port: 1080
   udp: true
-  type: vless
-  uuid: 827a0eb0-21bf-4bce-96ef-0a7bac5d68f5
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk
-    short-id: 8ffa160e608bf539
-  servername: fin.pinkmoon.pro
-  client-fingerprint: chrome
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: rSeYcig_XBy8q3k33NpK3A
 - name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
-  server: 37.143.129.244
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0e6de971-69e8-4536-b06d-8b6eae57021b
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: 5HArul2NDXfFUxijHj1xiPCfH-77zuuRxylT1vWIvUY
-    short-id: 48fd192dc4e46bc0
-  servername: gateway.icloud.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
-  server: 185.79.138.71
-  port: 448
-  udp: true
-  type: vless
-  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
-  tls: true
-  reality-opts:
-    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
-    short-id: cd21e552537c7c0b
-  servername: www.samsung.com
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
   server: 31.77.199.182
   port: 443
   udp: true
@@ -55,34 +24,85 @@ proxies:
     short-id: abcd1234
   servername: fi2.yservice.help
   client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
+  server: 37.143.129.244
+  port: 443
+  udp: true
+  type: vless
+  uuid: 0e6de971-69e8-4536-b06d-8b6eae57021b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 5HArul2NDXfFUxijHj1xiPCfH-77zuuRxylT1vWIvUY
+    short-id: 48fd192dc4e46bc0
+  servername: gateway.icloud.com
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
+  server: 185.79.138.71
+  port: 448
+  udp: true
+  type: vless
+  uuid: 0b0915d7-6800-4580-a44b-77d84f105e6a
+  tls: true
+  reality-opts:
+    public-key: CsDgNRcCwCkPIslfZpKTIK71KFpIFNsotbdzKcZVoH8
+    short-id: cd21e552537c7c0b
+  servername: www.samsung.com
+  client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 05 - xiaohe
-  server: fl.windconnect.pro
+  server: 31.76.80.75
   port: 443
   udp: true
   type: vless
-  uuid: af00e0c4-decf-48f2-9013-56abe9c9efcd
+  uuid: 827a0eb0-21bf-4bce-96ef-0a7bac5d68f5
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: 40Tmrw44FhOyoqCQiOfR2kCgxEPXrBLLv6oYFvjbGUI
-    short-id: 3c6ec7b2d73a28b6
-  servername: fl.windconnect.pro
-  client-fingerprint: safari
+    public-key: DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk
+    short-id: 8ffa160e608bf539
+  servername: fin.pinkmoon.pro
+  client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 06 - xiaohe
-  server: 9vn9y5jkil2l.fate-rehan.ir
-  port: 443
+  server: 2.26.100.192
+  port: 445
   udp: true
   type: vless
-  uuid: 1a67126c-b9c4-4e78-b96e-eabd4002ab0c
+  uuid: 40205ae5-d30f-4216-b2e0-0506dbbd382e
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: bdtDRp63jl4nMZRPN2wNlKJ6Yt77SF1uSrfkQ8NBKks
-    short-id: 9ec76c42649e1923
-  servername: play.google.com
+    public-key: Ku60WZ3HEdE07DoEBJ5I9o_fjcN_bhdK8bTW3RJjBmM
+    short-id: c226283c4de5b1ad
+  servername: ads.x5.ru
   client-fingerprint: firefox
 - name: 🇫🇮 芬兰 (Finland) 07 - xiaohe
-  server: 2.26.89.16
+  server: 144.31.212.181
+  port: 443
+  udp: true
+  type: vless
+  uuid: 827a0eb0-21bf-4bce-96ef-0a7bac5d68f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk
+    short-id: 8ffa160e608bf539
+  servername: fin.pinkmoon.pro
+  client-fingerprint: firefox
+- name: 🇫🇮 芬兰 (Finland) 08 - xiaohe
+  server: fin.pinkmoon.pro
+  port: 443
+  udp: true
+  type: vless
+  uuid: 827a0eb0-21bf-4bce-96ef-0a7bac5d68f5
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: DS9mX6cMb5wvwFzga8yN2NLbs7soXM7038_P23yPKwk
+    short-id: 8ffa160e608bf539
+  servername: fin.pinkmoon.pro
+  client-fingerprint: qq
+- name: 🇫🇮 芬兰 (Finland) 09 - xiaohe
+  server: app-ms-35.ecom-ai-solutions.com
   port: 443
   udp: true
   type: vless
@@ -93,16 +113,8 @@ proxies:
     public-key: NA5eMfdHkl_L80S75uxQwUirS9nvZ80V2u1s71KeXkc
     short-id: 2de63d3fd7261b7e
   servername: assets-ms-35.ecom-ai-solutions.com
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 08 - xiaohe
-  server: fr.vpn.legendaah.xyz
-  port: 36723
-  udp: true
-  type: hysteria2
-  password: Krab9Hyst2_Rk7pQ2xL
-  sni: 127.0.0.1
-  skip-cert-verify: true
-- name: 🇫🇮 芬兰 (Finland) 09 - xiaohe
+  client-fingerprint: chrome
+- name: 🇫🇮 芬兰 (Finland) 10 - xiaohe
   server: 2.26.100.192
   port: 2087
   udp: true
@@ -117,19 +129,6 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: grpc
-- name: 🇫🇮 芬兰 (Finland) 10 - xiaohe
-  server: 2.26.100.192
-  port: 445
-  udp: true
-  type: vless
-  uuid: 40205ae5-d30f-4216-b2e0-0506dbbd382e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: Ku60WZ3HEdE07DoEBJ5I9o_fjcN_bhdK8bTW3RJjBmM
-    short-id: c226283c4de5b1ad
-  servername: ads.x5.ru
-  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select

@@ -19,33 +19,18 @@ proxies:
   cipher: aes-256-gcm
   password: itzvpn@321
 - name: 🇮🇹 意大利 (Italy) 03 - xiaohe
-  server: 91.201.65.122
-  port: 9070
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: bf7v334KKDV3YDhH
-- name: 🇮🇹 意大利 (Italy) 04 - xiaohe
-  server: 82.118.16.187
-  port: 443
+  server: 57.131.38.163
+  port: 2053
   udp: true
   type: vless
-  uuid: dc2259c4-388e-4285-ba18-df619b6672b6
-  flow: xtls-rprx-vision
+  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
   tls: true
   reality-opts:
-    public-key: R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU
-    short-id: cd6065902eea7a02
-  servername: www.cloudflare.com
+    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
+    short-id: 5b8a942318178e7b
+  servername: www.apple.com
   client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 05 - xiaohe
-  server: 91.201.65.122
-  port: 9053
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: SBM7R883jBmnqe6C
-- name: 🇮🇹 意大利 (Italy) 06 - xiaohe
+- name: 🇮🇹 意大利 (Italy) 04 - xiaohe
   server: 82.118.16.189
   port: 443
   udp: true
@@ -58,18 +43,32 @@ proxies:
     short-id: 37fbf155c7a9f3ff
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 07 - xiaohe
-  server: 57.131.38.163
-  port: 2053
+- name: 🇮🇹 意大利 (Italy) 05 - xiaohe
+  server: 82.118.16.187
+  port: 443
   udp: true
   type: vless
-  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
+  uuid: dc2259c4-388e-4285-ba18-df619b6672b6
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
-    short-id: 5b8a942318178e7b
-  servername: www.apple.com
-  client-fingerprint: chrome
+    public-key: R5ycsjJ-v024902dMSqTsSdqxUwCFEXMebdBEWFt9VU
+    short-id: cd6065902eea7a02
+  servername: www.cloudflare.com
+  client-fingerprint: ''
+- name: 🇮🇹 意大利 (Italy) 06 - xiaohe
+  server: 172.238.232.239
+  port: 32833
+  udp: true
+  type: vless
+  uuid: 167ed405-7de9-4bff-b1ea-6e3d49c76b0b
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: PaTDdYBrlh1xBixdI0igvRRkf0vnUwMRzi-4oDyfS20
+    short-id: a0a305ccc8e94aa8
+  servername: www.intel.com
+  client-fingerprint: firefox
 proxy-groups:
 - name: PROXIES
   type: select
@@ -81,7 +80,6 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 04 - xiaohe
   - 🇮🇹 意大利 (Italy) 05 - xiaohe
   - 🇮🇹 意大利 (Italy) 06 - xiaohe
-  - 🇮🇹 意大利 (Italy) 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -93,6 +91,5 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 04 - xiaohe
   - 🇮🇹 意大利 (Italy) 05 - xiaohe
   - 🇮🇹 意大利 (Italy) 06 - xiaohe
-  - 🇮🇹 意大利 (Italy) 07 - xiaohe
 rules:
 - MATCH,PROXIES
