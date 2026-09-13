@@ -18,6 +18,12 @@ proxies:
   servername: sync-bridge.org
   client-fingerprint: chrome
 - name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
+  server: add.life-pro.ir
+  port: 8082
+  udp: true
+  type: vless
+  uuid: 79f98593-6a21-4783-a425-3d5609a79df1
+- name: 🇹🇷 土耳其 (Turkey) 03 - xiaohe
   server: 13.143.137.164
   port: 9443
   udp: true
@@ -29,7 +35,34 @@ proxies:
     public-key: dZ0rhO_PL67-Ciwc6CHQgtde3a5EUUuReA7M-lRNCDQ
     short-id: e336c9a786fae301
   servername: plaincanvas.videoclothing.xyz
-  client-fingerprint: firefox
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 04 - xiaohe
+  server: 188.132.174.236
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: rSeYcig_XBy8q3k33NpK3A
+- name: 🇹🇷 土耳其 (Turkey) 05 - xiaohe
+  server: 158.94.216.50
+  port: 32306
+  udp: true
+  type: vless
+  uuid: f1505323-ecb6-4152-9a5b-d37b3ae1cacf
+  tls: true
+  reality-opts:
+    public-key: 5iqitmx5fd71pubTxlrX0sd-ei7palcgVL7vtKToJGA
+    short-id: 61614f026070554f
+  servername: play-apps-features.googleusercontent.com
+  client-fingerprint: edge
+- name: 🇹🇷 土耳其 (Turkey) 06 - xiaohe
+  server: 188.132.174.236
+  port: 2086
+  udp: true
+  type: vmess
+  uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
+  alterId: 0
+  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -37,6 +70,10 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 04 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 05 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -44,5 +81,9 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 04 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 05 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 06 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -5,27 +5,20 @@
   "outbounds": [
     {
       "type": "trojan",
-      "tag": "🇮🇶 IQ 01 - xiaohe",
-      "server": "199.232.78.101",
+      "tag": "🇮🇩 印尼 (Indonesia) 01 - xiaohe",
+      "server": "edu.ruangguru.com",
       "server_port": 443,
-      "password": "MiTiVPN",
+      "password": "018b8e7b-7813-4dcb-84a5-3c98f1521e00",
       "tls": {
         "enabled": true,
-        "server_name": "ssl.fastly.com",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "id1.nathaya.web.id",
+        "insecure": false
       },
       "transport": {
         "type": "ws",
-        "path": "/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/NLSus---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN/---@MiTiVPN---@MiTiVPN",
+        "path": "/trojan",
         "headers": {
-          "Host": "mitivpn---ss--s---mitivpn-11.global.ssl.fastly.net"
+          "Host": "id1.nathaya.web.id"
         }
       }
     },
@@ -34,14 +27,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇮🇶 IQ 01 - xiaohe"
+        "🇮🇩 印尼 (Indonesia) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇮🇶 IQ 01 - xiaohe"
+        "🇮🇩 印尼 (Indonesia) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

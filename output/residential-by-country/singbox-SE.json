@@ -5,23 +5,26 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇦🇱 AL 01 - xiaohe",
-      "server": "cacx.serverkingomz.ir",
-      "server_port": 20411,
-      "uuid": "0edb8deb-baee-4af4-ba7a-9567aedf0bb4",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇸🇪 瑞典 (Sweden) 01 (移动家宽) - xiaohe",
+      "server": "170.168.99.8",
+      "server_port": 8443,
+      "uuid": "4350213a-b4e7-262a-0bd7-bd16957cf71a",
       "tls": {
         "enabled": true,
-        "server_name": "benlysta.com",
+        "server_name": "cdn.steamstatic.com",
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "m_AGb3cF9l3FztNvZVAHlUu-mGB_hhUFxOWJ_PeTcSQ",
-          "short_id": "7063a76e8a8ab275"
+          "public_key": "R8Mogel1wypEIpcUXnGmG1cuzT9POghNhqJcw4-CLx0",
+          "short_id": ""
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "TunService"
       }
     },
     {
@@ -29,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇱 AL 01 - xiaohe"
+        "🇸🇪 瑞典 (Sweden) 01 (移动家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇱 AL 01 - xiaohe"
+        "🇸🇪 瑞典 (Sweden) 01 (移动家宽) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
