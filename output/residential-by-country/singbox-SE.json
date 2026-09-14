@@ -8,7 +8,7 @@
       "tag": "🇸🇪 瑞典 (Sweden) 01 (移动家宽) - xiaohe",
       "server": "170.168.99.8",
       "server_port": 8443,
-      "uuid": "4350213a-b4e7-262a-0bd7-bd16957cf71a",
+      "uuid": "dca76b88-b038-e82b-45e1-1d76b476d7ca",
       "tls": {
         "enabled": true,
         "server_name": "cdn.steamstatic.com",

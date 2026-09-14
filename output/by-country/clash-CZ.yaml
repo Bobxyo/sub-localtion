@@ -1,0 +1,33 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇿 捷克 (Czech) 01 - xiaohe
+  server: 188.130.208.210
+  port: 443
+  udp: true
+  type: vless
+  uuid: 08b6dd4b-08df-4aa2-9580-92a3360cf07c
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: x_sc52Wgwr7bsogvKRA5hHHS5PJpdocqZNW_Up1mty8
+    short-id: 59ab2fc39ec55bc7
+  servername: edge-cz1.lovely.ceo
+  client-fingerprint: firefox
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇿 捷克 (Czech) 01 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇿 捷克 (Czech) 01 - xiaohe
+rules:
+- MATCH,PROXIES
