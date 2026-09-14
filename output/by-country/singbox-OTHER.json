@@ -5,23 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇨🇿 捷克 (Czech) 01 - xiaohe",
-      "server": "188.130.208.210",
+      "tag": "🌐 其他地区 (Other) 01 - xiaohe",
+      "server": "ccs2g.pai50288.uk",
       "server_port": 443,
-      "uuid": "08b6dd4b-08df-4aa2-9580-92a3360cf07c",
-      "flow": "xtls-rprx-vision",
+      "uuid": "8be461cb-a0df-47cf-bc0d-4d9e6a22fa74",
       "tls": {
         "enabled": true,
-        "server_name": "edge-cz1.lovely.ceo",
+        "server_name": "ccs2g.pai50288.uk",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "x_sc52Wgwr7bsogvKRA5hHHS5PJpdocqZNW_Up1mty8",
-          "short_id": "59ab2fc39ec55bc7"
+          "fingerprint": "chrome"
         }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/pai50288"
       }
     },
     {
@@ -29,14 +28,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇨🇿 捷克 (Czech) 01 - xiaohe"
+        "🌐 其他地区 (Other) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇨🇿 捷克 (Czech) 01 - xiaohe"
+        "🌐 其他地区 (Other) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
