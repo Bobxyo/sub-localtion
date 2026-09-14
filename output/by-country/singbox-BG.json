@@ -37,17 +37,17 @@
       "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 03 - xiaohe",
       "server": "213.183.63.60",
-      "server_port": 9028,
+      "server_port": 9066,
       "method": "aes-256-cfb",
-      "password": "9eeJ2fwnZA5Fxgz8"
+      "password": "2KUaE2a8NWTvuCZ3"
     },
     {
       "type": "shadowsocks",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 04 - xiaohe",
       "server": "213.183.63.60",
-      "server_port": 9066,
+      "server_port": 9028,
       "method": "aes-256-cfb",
-      "password": "2KUaE2a8NWTvuCZ3"
+      "password": "9eeJ2fwnZA5Fxgz8"
     },
     {
       "type": "vless",
@@ -73,29 +73,6 @@
     {
       "type": "vless",
       "tag": "🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe",
-      "server": "108.165.233.223",
-      "server_port": 443,
-      "uuid": "2388e166-3890-33ae-f77e-efac00000001",
-      "tls": {
-        "enabled": true,
-        "server_name": "netlivpn4813.ddhshhshs.workers.dev",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN",
-        "headers": {
-          "Host": "netlivpn4813.ddhshhshs.workers.dev"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇧🇬 保加利亚 (Bulgaria) 07 - xiaohe",
       "server": "144.31.50.236",
       "server_port": 443,
       "uuid": "1c332eae-7e02-4acd-996d-4eb3e652401c",
@@ -124,8 +101,7 @@
         "🇧🇬 保加利亚 (Bulgaria) 03 - xiaohe",
         "🇧🇬 保加利亚 (Bulgaria) 04 - xiaohe",
         "🇧🇬 保加利亚 (Bulgaria) 05 - xiaohe",
-        "🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe",
-        "🇧🇬 保加利亚 (Bulgaria) 07 - xiaohe"
+        "🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe"
       ]
     },
     {
@@ -137,8 +113,7 @@
         "🇧🇬 保加利亚 (Bulgaria) 03 - xiaohe",
         "🇧🇬 保加利亚 (Bulgaria) 04 - xiaohe",
         "🇧🇬 保加利亚 (Bulgaria) 05 - xiaohe",
-        "🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe",
-        "🇧🇬 保加利亚 (Bulgaria) 07 - xiaohe"
+        "🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
