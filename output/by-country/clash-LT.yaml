@@ -13,26 +13,12 @@ proxies:
   password: 37Z4TFCYhfxcpc9Q
 - name: 🇱🇹 立陶宛 (Lithuania) 02 - xiaohe
   server: 195.238.126.20
-  port: 9078
+  port: 9008
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: JCJpbRbQZNw9XFZG
+  password: y9VURyNzJWNRYEGQ
 - name: 🇱🇹 立陶宛 (Lithuania) 03 - xiaohe
-  server: 195.238.126.20
-  port: 9011
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: M3t2ZEQcMGRWBjRa
-- name: 🇱🇹 立陶宛 (Lithuania) 04 - xiaohe
-  server: 195.238.126.20
-  port: 9002
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: b8KkNDjEd5QqFyRm
-- name: 🇱🇹 立陶宛 (Lithuania) 05 - xiaohe
   server: 84.32.215.117
   port: 443
   udp: true
@@ -45,6 +31,18 @@ proxies:
     short-id: 4fa44664f6a566d3
   servername: lt.aether-runet.top
   client-fingerprint: firefox
+- name: 🇱🇹 立陶宛 (Lithuania) 04 - xiaohe
+  server: 181.214.147.216
+  port: 443
+  udp: true
+  type: vless
+  uuid: 8e403675-d020-4801-9520-9cba4bbfda0e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 66DIn_CbsE4-fWeWpy3vrRLP-XN8D-axun3jbZzuPmk
+  servername: lith.2clash.ru
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -54,7 +52,6 @@ proxy-groups:
   - 🇱🇹 立陶宛 (Lithuania) 02 - xiaohe
   - 🇱🇹 立陶宛 (Lithuania) 03 - xiaohe
   - 🇱🇹 立陶宛 (Lithuania) 04 - xiaohe
-  - 🇱🇹 立陶宛 (Lithuania) 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -64,6 +61,5 @@ proxy-groups:
   - 🇱🇹 立陶宛 (Lithuania) 02 - xiaohe
   - 🇱🇹 立陶宛 (Lithuania) 03 - xiaohe
   - 🇱🇹 立陶宛 (Lithuania) 04 - xiaohe
-  - 🇱🇹 立陶宛 (Lithuania) 05 - xiaohe
 rules:
 - MATCH,PROXIES
