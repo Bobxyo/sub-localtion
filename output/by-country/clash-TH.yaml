@@ -13,7 +13,7 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇹🇭 泰国 (Thailand) 02 - xiaohe
-  server: v2ray.simspeedup.com
+  server: 103.86.49.57
   port: 80
   udp: true
   type: vless
@@ -22,7 +22,7 @@ proxies:
   ws-opts:
     path: /ws
     headers:
-      Host: v2ray.simspeedup.com
+      Host: aIs.SpEeDtEsT.nEt
 proxy-groups:
 - name: PROXIES
   type: select
