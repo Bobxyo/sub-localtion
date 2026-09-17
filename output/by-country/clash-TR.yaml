@@ -26,16 +26,16 @@ proxies:
   servername: sync-bridge.org
   client-fingerprint: chrome
 - name: 🇹🇷 土耳其 (Turkey) 03 - xiaohe
-  server: max.karmatel.ir
-  port: 55519
+  server: helixgaming.ir
+  port: 80
   udp: true
   type: vless
-  uuid: a2b9a1b7-f12f-4503-a9f6-c78ec565a6bf
+  uuid: c0e453eb-33ac-4206-8423-3e1286c2ba7a
   network: ws
   ws-opts:
     path: /
     headers:
-      Host: play-apps-features.googleusercontent.com
+      Host: play.google.com
 - name: 🇹🇷 土耳其 (Turkey) 04 - xiaohe
   server: 151.241.226.201
   port: 2053
@@ -48,6 +48,25 @@ proxies:
     short-id: 9e419c0759b54d6f
   servername: www.apple.com
   client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 05 - xiaohe
+  server: content3.movieham.ir
+  port: 5494
+  udp: true
+  type: vless
+  uuid: 7e0faccc-1d74-4ddf-bbdf-7258e155115d
+  tls: true
+  reality-opts:
+    public-key: SzDv43wbpLLk6ADfHa8P6lsHTEa1d3zf6BSzVtdsHSc
+    short-id: dfa0ae38b2eba4c8
+  servername: play.google.com
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 06 - xiaohe
+  server: 153.52.92.81
+  port: 1080
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: IXa3ylzS_jBOAsQy071tIQ
 proxy-groups:
 - name: PROXIES
   type: select
@@ -57,6 +76,8 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 04 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 05 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -66,5 +87,7 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 04 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 05 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 06 - xiaohe
 rules:
 - MATCH,PROXIES
