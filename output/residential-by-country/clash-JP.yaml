@@ -5,19 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇯🇵 日本 (Japan) 01 (家宽) - xiaohe
-  server: 108.160.136.71
-  port: 443
+  server: 36.151.187.225
+  port: 12887
   udp: true
   type: vless
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  uuid: 16b3793b-3335-4832-b1fd-877b2c5e15d6
+  flow: xtls-rprx-vision
   tls: true
-  servername: cdn8848.776676.xyz
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: cdn8848.776676.xyz
+  reality-opts:
+    public-key: a3H5ffQkcW4xELeJEGQ8FsaXLG4sGomkB7_ms0d5xzc
+    short-id: b48d22a492
+  servername: www.spotify.com
+  client-fingerprint: edge
 proxy-groups:
 - name: PROXIES
   type: select
