@@ -6,15 +6,6 @@ log-level: info
 proxies:
 - name: 🇧🇬 保加利亚 (Bulgaria) 01 - xiaohe
   server: 192.145.31.5
-  port: 8443
-  udp: true
-  type: vless
-  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
-  tls: true
-  servername: neth9.lunariai.ru
-  skip-cert-verify: true
-- name: 🇧🇬 保加利亚 (Bulgaria) 02 - xiaohe
-  server: 192.145.31.5
   port: 443
   udp: true
   type: vless
@@ -22,6 +13,16 @@ proxies:
   network: ws
   ws-opts:
     path: /
+- name: 🇧🇬 保加利亚 (Bulgaria) 02 - xiaohe
+  server: 192.145.31.5
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 9f73cf9a-c68f-4e6d-90f0-e66b64f52f8a
+  tls: true
+  servername: neth9.lunariai.ru
+  skip-cert-verify: false
+  client-fingerprint: chrome
 - name: 🇧🇬 保加利亚 (Bulgaria) 03 - xiaohe
   server: 213.183.63.60
   port: 9064
@@ -43,21 +44,6 @@ proxies:
   servername: www.apple.com
   client-fingerprint: chrome
 - name: 🇧🇬 保加利亚 (Bulgaria) 05 - xiaohe
-  server: 108.165.233.223
-  port: 443
-  udp: true
-  type: vless
-  uuid: 2388e166-3890-33ae-f77e-efac00000001
-  tls: true
-  servername: netlivpn4813.ddhshhshs.workers.dev
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN-NetliVPN
-    headers:
-      Host: netlivpn4813.ddhshhshs.workers.dev
-- name: 🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe
   server: 144.31.50.236
   port: 443
   udp: true
@@ -80,7 +66,6 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 03 - xiaohe
   - 🇧🇬 保加利亚 (Bulgaria) 04 - xiaohe
   - 🇧🇬 保加利亚 (Bulgaria) 05 - xiaohe
-  - 🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -91,6 +76,5 @@ proxy-groups:
   - 🇧🇬 保加利亚 (Bulgaria) 03 - xiaohe
   - 🇧🇬 保加利亚 (Bulgaria) 04 - xiaohe
   - 🇧🇬 保加利亚 (Bulgaria) 05 - xiaohe
-  - 🇧🇬 保加利亚 (Bulgaria) 06 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -12,52 +12,56 @@
       "password": "b1ae0fce-9340-4f2e-882d-fdb2218e2e2b"
     },
     {
-      "type": "vmess",
+      "type": "hysteria2",
       "tag": "🇹🇼 中国台湾 (Taiwan) 02 - xiaohe",
-      "server": "165.154.195.38",
-      "server_port": 35034,
-      "uuid": "959a8caf-4cea-43d0-a548-3628e7ddfafc",
-      "security": "auto"
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 03 - xiaohe",
-      "server": "35.201.230.136",
+      "server": "103.115.109.49",
       "server_port": 443,
-      "uuid": "18eef0d3-35b3-4a5f-97a1-7b5264530dd8",
-      "flow": "xtls-rprx-vision",
+      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "www.cloudflare.com",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "safari"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "Uq9Q8VXK9VkVOJ1M5PfORTqMhjjGoIS40-V0tAG_1FM",
-          "short_id": "5e13a6d43d0644c9"
-        }
+        "server_name": "https://t.me/wangcai2🇨🇳",
+        "insecure": true
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 04 - xiaohe",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 03 - xiaohe",
       "server": "160.187.100.109",
       "server_port": 443,
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "160.187.100.109",
+        "server_name": "127.0.0.1",
         "insecure": true
       }
     },
     {
       "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 04 - xiaohe",
+      "server": "34.80.164.239",
+      "server_port": 21776,
+      "uuid": "b0399730-1618-4727-8ddd-2baf94ab90d6",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "www.tesla.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "nm6jFiI7_auZ15UMqpeEbiITrK4OR2rfFTqXhe5pMFA",
+          "short_id": "79b6f82800c68925"
+        }
+      }
+    },
+    {
+      "type": "vless",
       "tag": "🇹🇼 中国台湾 (Taiwan) 05 - xiaohe",
-      "server": "104.199.134.231",
-      "server_port": 28364,
-      "uuid": "3a62a0c2-ba80-43a9-b757-9aca88b0552e",
+      "server": "35.221.158.209",
+      "server_port": 32981,
+      "uuid": "41b96ee9-ee5e-455f-9753-187a9dead97a",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
@@ -68,20 +72,41 @@
         },
         "reality": {
           "enabled": true,
-          "public_key": "NPhCET0GkjSZuKg4vWsPHLvjYGHW9w99Ucxvavu0-1I",
-          "short_id": "7241c359c2dfab"
+          "public_key": "JSn0GPz1WOSTUDBxN_XYnhgb2Jpjc2LpfBTzX1j3V2E",
+          "short_id": "70f4b7a4c40636"
         }
       }
     },
     {
-      "type": "hysteria2",
+      "type": "vless",
       "tag": "🇹🇼 中国台湾 (Taiwan) 06 - xiaohe",
-      "server": "103.115.109.49",
+      "server": "35.201.230.136",
       "server_port": 443,
-      "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
+      "uuid": "18eef0d3-35b3-4a5f-97a1-7b5264530dd8",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "https://t.me/wangcai2🇨🇳",
+        "server_name": "www.cloudflare.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "random"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Uq9Q8VXK9VkVOJ1M5PfORTqMhjjGoIS40-V0tAG_1FM",
+          "short_id": "5e13a6d43d0644c9"
+        }
+      }
+    },
+    {
+      "type": "anytls",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 07 - xiaohe",
+      "server": "6ivh.pnuqcnp.cn",
+      "server_port": 443,
+      "password": "9sK2mP8xQ7vL3nZ6",
+      "tls": {
+        "enabled": true,
+        "server_name": "images.ctfassets.net",
         "insecure": true
       }
     },
@@ -95,7 +120,8 @@
         "🇹🇼 中国台湾 (Taiwan) 03 - xiaohe",
         "🇹🇼 中国台湾 (Taiwan) 04 - xiaohe",
         "🇹🇼 中国台湾 (Taiwan) 05 - xiaohe",
-        "🇹🇼 中国台湾 (Taiwan) 06 - xiaohe"
+        "🇹🇼 中国台湾 (Taiwan) 06 - xiaohe",
+        "🇹🇼 中国台湾 (Taiwan) 07 - xiaohe"
       ]
     },
     {
@@ -107,7 +133,8 @@
         "🇹🇼 中国台湾 (Taiwan) 03 - xiaohe",
         "🇹🇼 中国台湾 (Taiwan) 04 - xiaohe",
         "🇹🇼 中国台湾 (Taiwan) 05 - xiaohe",
-        "🇹🇼 中国台湾 (Taiwan) 06 - xiaohe"
+        "🇹🇼 中国台湾 (Taiwan) 06 - xiaohe",
+        "🇹🇼 中国台湾 (Taiwan) 07 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
