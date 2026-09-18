@@ -4,27 +4,16 @@
   },
   "outbounds": [
     {
-      "type": "trojan",
+      "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 01 - xiaohe",
-      "server": "199.232.78.160",
-      "server_port": 443,
-      "password": "MiTiVPN",
-      "tls": {
-        "enabled": true,
-        "server_name": "ssl.fastly.com",
-        "insecure": false,
-        "alpn": [
-          "http/1.1"
-        ],
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
+      "server": "104.17.148.22",
+      "server_port": 80,
+      "uuid": "7201b2cd-0675-4c1a-9c76-07ca14ffcf08",
       "transport": {
         "type": "ws",
+        "path": "/eyJqdW5rIjoiTlZxbGYyajQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119",
         "headers": {
-          "Host": "mitivpn---ss--s---mitivpn-55e.global.ssl.fastly.net"
+          "Host": "6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev"
         }
       }
     },

@@ -5,16 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - xiaohe
-  server: 199.232.78.160
-  port: 443
+  server: 104.17.148.22
+  port: 80
   udp: true
-  type: trojan
-  password: MiTiVPN
-  sni: ssl.fastly.com
-  skip-cert-verify: false
+  type: vless
+  uuid: 7201b2cd-0675-4c1a-9c76-07ca14ffcf08
   network: ws
   ws-opts:
-    path: /
+    path: /eyJqdW5rIjoiTlZxbGYyajQiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119
+    headers:
+      Host: 6crihfknlqjdu3yuzco9phspq86dbp6q.christanmoccasin.workers.dev
 proxy-groups:
 - name: PROXIES
   type: select
