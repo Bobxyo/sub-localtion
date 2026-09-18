@@ -5,34 +5,37 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
-  server: 104.17.147.22
-  port: 443
+  server: 91.228.227.211
+  port: 23957
+  udp: true
+  type: vmess
+  uuid: 92987ab8-0a53-4a16-8d6c-295d5df86404
+  alterId: 0
+  cipher: auto
+- name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
+  server: helixgaming.ir
+  port: 80
   udp: true
   type: vless
-  uuid: 5ef04ae8-8d7c-0a66-13f4-6e3f00000003
-  tls: true
-  servername: relay.lunetcloud.ir
-  skip-cert-verify: false
-  client-fingerprint: chrome
+  uuid: c0e453eb-33ac-4206-8423-3e1286c2ba7a
   network: ws
   ws-opts:
-    path: /lunetnetwork
+    path: /
     headers:
-      Host: relay.lunetcloud.ir
-- name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
-  server: 156.67.63.231
-  port: 443
+      Host: play.google.com
+- name: 🇹🇷 土耳其 (Turkey) 03 - xiaohe
+  server: 151.241.226.201
+  port: 2053
   udp: true
   type: vless
-  uuid: b052df40-d51c-456c-9bd6-57af01a87e4e
-  flow: xtls-rprx-vision
+  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
   tls: true
   reality-opts:
-    public-key: PTqeBbbr2xJ1L3V1PyYjKjxanMKKqJHU-wtnpYmFQCI
-    short-id: 5606d4a25c99e7af
-  servername: sync-bridge.org
-  client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 03 - xiaohe
+    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
+    short-id: 9e419c0759b54d6f
+  servername: www.apple.com
+  client-fingerprint: firefox
+- name: 🇹🇷 土耳其 (Turkey) 04 - xiaohe
   server: 78.135.73.47
   port: 443
   udp: true
@@ -45,43 +48,6 @@ proxies:
     short-id: f46cd3ea3d1eb72d
   servername: www.datadoghq.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 04 - xiaohe
-  server: helixgaming.ir
-  port: 80
-  udp: true
-  type: vless
-  uuid: c0e453eb-33ac-4206-8423-3e1286c2ba7a
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: play.google.com
-- name: 🇹🇷 土耳其 (Turkey) 05 - xiaohe
-  server: 151.241.226.201
-  port: 2053
-  udp: true
-  type: vless
-  uuid: 0eed6293-8cf1-4e77-ac10-9c3d50d0b2f8
-  tls: true
-  reality-opts:
-    public-key: bYW_MmB_CUHrsyoCAUKviI2LZdHf63yY2yOPXbih104
-    short-id: 9e419c0759b54d6f
-  servername: www.apple.com
-  client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 06 - xiaohe
-  server: 153.52.92.81
-  port: 1080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: IXa3ylzS_jBOAsQy071tIQ
-- name: 🇹🇷 土耳其 (Turkey) 07 - xiaohe
-  server: 139.28.240.68
-  port: 1080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: rSeYcig_XBy8q3k33NpK3A
 proxy-groups:
 - name: PROXIES
   type: select
@@ -91,9 +57,6 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 04 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 05 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 06 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -103,8 +66,5 @@ proxy-groups:
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 04 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 05 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 06 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 07 - xiaohe
 rules:
 - MATCH,PROXIES

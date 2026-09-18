@@ -6,6 +6,27 @@
     {
       "type": "vless",
       "tag": "🇦🇪 阿联酋 (UAE) 01 - xiaohe",
+      "server": "31.58.181.88",
+      "server_port": 8443,
+      "uuid": "257c666f-9440-443c-9cef-d3b5b57d65cb",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "tradingview.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc",
+          "short_id": ""
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇦🇪 阿联酋 (UAE) 02 - xiaohe",
       "server": "31.56.189.27",
       "server_port": 2087,
       "uuid": "df9f5aca-eda0-428f-a752-e53866153d12",
@@ -25,28 +46,27 @@
     },
     {
       "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 02 - xiaohe",
-      "server": "31.58.181.88",
-      "server_port": 8443,
-      "uuid": "86562a3a-b318-4e10-a78b-bd8906d013ad",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇦🇪 阿联酋 (UAE) 03 - xiaohe",
+      "server": "89.125.147.199",
+      "server_port": 443,
+      "uuid": "cabd9303-ae32-4d25-86b9-26b312d0f044",
       "tls": {
         "enabled": true,
-        "server_name": "tradingview.com",
+        "server_name": "maps.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": ""
         },
         "reality": {
           "enabled": true,
-          "public_key": "AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc",
-          "short_id": ""
+          "public_key": "iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg",
+          "short_id": "f6c7c139b9c938db"
         }
       }
     },
     {
       "type": "hysteria2",
-      "tag": "🇦🇪 阿联酋 (UAE) 03 - xiaohe",
+      "tag": "🇦🇪 阿联酋 (UAE) 04 - xiaohe",
       "server": "130.49.161.70",
       "server_port": 443,
       "password": "p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR",
@@ -61,32 +81,9 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇦🇪 阿联酋 (UAE) 04 - xiaohe",
-      "server": "104.17.147.22",
-      "server_port": 443,
-      "uuid": "5ef04ae8-8d7c-0a66-13f4-6e3f00000005",
-      "tls": {
-        "enabled": true,
-        "server_name": "relay.lunetcloud.ir",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/lunetnetwork",
-        "headers": {
-          "Host": "relay.lunetcloud.ir"
-        }
-      }
-    },
-    {
       "type": "hysteria2",
       "tag": "🇦🇪 阿联酋 (UAE) 05 - xiaohe",
-      "server": "85.204.107.178",
+      "server": "85.204.107.171",
       "server_port": 8080,
       "password": "Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0",
       "tls": {

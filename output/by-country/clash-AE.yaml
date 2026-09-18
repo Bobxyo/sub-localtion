@@ -5,6 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - xiaohe
+  server: 31.58.181.88
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 257c666f-9440-443c-9cef-d3b5b57d65cb
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
+  servername: tradingview.com
+  client-fingerprint: firefox
+- name: 🇦🇪 阿联酋 (UAE) 02 - xiaohe
   server: 31.56.189.27
   port: 2087
   udp: true
@@ -17,19 +29,19 @@ proxies:
   network: grpc
   grpc-opts:
     grpc-service-name: freegrpc
-- name: 🇦🇪 阿联酋 (UAE) 02 - xiaohe
-  server: 31.58.181.88
-  port: 8443
+- name: 🇦🇪 阿联酋 (UAE) 03 - xiaohe
+  server: 89.125.147.199
+  port: 443
   udp: true
   type: vless
-  uuid: 86562a3a-b318-4e10-a78b-bd8906d013ad
-  flow: xtls-rprx-vision
+  uuid: cabd9303-ae32-4d25-86b9-26b312d0f044
   tls: true
   reality-opts:
-    public-key: AERbWB2uslqIzm1hSlOZZEH3Y9qg_zlWRRyLfh97kXc
-  servername: tradingview.com
-  client-fingerprint: firefox
-- name: 🇦🇪 阿联酋 (UAE) 03 - xiaohe
+    public-key: iQJ8UdFw-lUWa9mXugescYHkmwNH96nuj_z-LAZvfxg
+    short-id: f6c7c139b9c938db
+  servername: maps.apple.com
+  client-fingerprint: ''
+- name: 🇦🇪 阿联酋 (UAE) 04 - xiaohe
   server: 130.49.161.70
   port: 443
   udp: true
@@ -39,23 +51,8 @@ proxies:
   skip-cert-verify: false
   obfs: salamander
   obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-- name: 🇦🇪 阿联酋 (UAE) 04 - xiaohe
-  server: 104.17.147.22
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5ef04ae8-8d7c-0a66-13f4-6e3f00000005
-  tls: true
-  servername: relay.lunetcloud.ir
-  skip-cert-verify: false
-  client-fingerprint: chrome
-  network: ws
-  ws-opts:
-    path: /lunetnetwork
-    headers:
-      Host: relay.lunetcloud.ir
 - name: 🇦🇪 阿联酋 (UAE) 05 - xiaohe
-  server: 85.204.107.178
+  server: 85.204.107.171
   port: 8080
   udp: true
   type: hysteria2
