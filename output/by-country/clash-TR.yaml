@@ -5,19 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
-  server: tr-ist-5.blook.network
-  port: 443
-  udp: true
-  type: vless
-  uuid: 5cce930c-f933-4cd2-9bbe-11acd1453161
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: HabIMykoF6jIw0rAgi_t3xm_hdWTLFKIpODwNJFjznE
-    short-id: 4c97
-  servername: tr-ist-5.blook.network
-  client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   server: 151.241.226.201
   port: 2053
   udp: true
@@ -29,20 +16,7 @@ proxies:
     short-id: 9e419c0759b54d6f
   servername: www.apple.com
   client-fingerprint: firefox
-- name: 🇹🇷 土耳其 (Turkey) 03 - xiaohe
-  server: tr.plus-hit.ru
-  port: 443
-  udp: true
-  type: vless
-  uuid: 84a794a5-2420-4ca7-8e08-8d21571f36f3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: d3yQvdpwFHpLkl0ZbTnMH4uihCTKn4CAHy0W6so0VTI
-    short-id: 7c8e3d4a9b1f26d3
-  servername: tr.plus-hit.ru
-  client-fingerprint: random
-- name: 🇹🇷 土耳其 (Turkey) 04 - xiaohe
+- name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
   server: 78.135.73.47
   port: 443
   udp: true
@@ -62,8 +36,6 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -71,7 +43,5 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 04 - xiaohe
 rules:
 - MATCH,PROXIES

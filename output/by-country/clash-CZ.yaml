@@ -5,8 +5,34 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - xiaohe
-  server: 2.27.244.164
-  port: 8443
+  server: 95.85.230.35
+  port: 443
+  udp: true
+  type: vless
+  uuid: bbfd1f68-ec64-452f-8404-9e2bcf1df951
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: mJ-0fJDvKp0rhuyUvs1bw4RasRRM-BEOAl9iAZ8gXy0
+  servername: de.oblaco.bet
+  client-fingerprint: ''
+- name: 🇨🇿 捷克 (Czech) 02 - xiaohe
+  server: 188.166.49.168
+  port: 2083
+  udp: true
+  type: vless
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: cdn8848.776676.xyz
+- name: 🇨🇿 捷克 (Czech) 03 - xiaohe
+  server: 164.92.147.213
+  port: 2087
   udp: true
   type: vless
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
@@ -16,7 +42,7 @@ proxies:
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /channels/act
+    path: /city/my?ed=2560
     headers:
       Host: cdn8848.776676.xyz
 proxy-groups:
@@ -25,11 +51,15 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
+  - 🇨🇿 捷克 (Czech) 02 - xiaohe
+  - 🇨🇿 捷克 (Czech) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
+  - 🇨🇿 捷克 (Czech) 02 - xiaohe
+  - 🇨🇿 捷克 (Czech) 03 - xiaohe
 rules:
 - MATCH,PROXIES
