@@ -6,25 +6,25 @@ log-level: info
 proxies:
 - name: 🇱🇻 拉脱维亚 (Latvia) 01 - xiaohe
   server: 185.135.86.175
-  port: 9017
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: HAVAdE3nXhqA5nHp
-- name: 🇱🇻 拉脱维亚 (Latvia) 02 - xiaohe
-  server: 185.135.86.175
-  port: 9094
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: rpgbNnU9rDDU4aWZ
-- name: 🇱🇻 拉脱维亚 (Latvia) 03 - xiaohe
-  server: 185.135.86.175
   port: 9068
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: mwgRg9hRq3b4Qnwb
+- name: 🇱🇻 拉脱维亚 (Latvia) 02 - xiaohe
+  server: 185.135.86.175
+  port: 9034
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: Yg4MbdXFQ9HFFVY6
+- name: 🇱🇻 拉脱维亚 (Latvia) 03 - xiaohe
+  server: 185.135.86.175
+  port: 9017
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: HAVAdE3nXhqA5nHp
 - name: 🇱🇻 拉脱维亚 (Latvia) 04 - xiaohe
   server: 185.135.86.175
   port: 9086
@@ -40,13 +40,6 @@ proxies:
   cipher: aes-256-cfb
   password: hbtvgUz5uNYyB3Rf
 - name: 🇱🇻 拉脱维亚 (Latvia) 06 - xiaohe
-  server: 185.135.86.175
-  port: 9034
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: Yg4MbdXFQ9HFFVY6
-- name: 🇱🇻 拉脱维亚 (Latvia) 07 - xiaohe
   server: 138.124.180.137
   port: 443
   udp: true
@@ -59,6 +52,19 @@ proxies:
     short-id: 33acba1b
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇱🇻 拉脱维亚 (Latvia) 07 - xiaohe
+  server: filetransver-pro.com
+  port: 443
+  udp: true
+  type: vless
+  uuid: 1fa3ded2-4946-45ac-9f39-2a0e501e3d1f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: mk-fkkWvUHz2ubIOkr8kfDeglXowdCI3Z4OssjWIIwg
+    short-id: 2b145d99dc39e2cc
+  servername: filetransver-pro.com
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
