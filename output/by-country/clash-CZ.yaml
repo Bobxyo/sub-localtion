@@ -5,6 +5,47 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇿 捷克 (Czech) 01 - xiaohe
+  server: 104.17.147.22
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4ccf70f9-7632-4b5a-9557-10d2dd347bb2
+  tls: true
+  servername: TO6R63-KKChIGHQM2.VxZ0DDUq7tO7su0cDqF.WoRKeRs.DeV
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/G4J8aNAVZt9KdOjjcfZDFDRI1Obr5E0?ed=2560
+    headers:
+      Host: to6r63-kkchighqm2.vxz0dduq7to7su0cdqf.workers.dev
+- name: 🇨🇿 捷克 (Czech) 02 - xiaohe
+  server: 188.114.97.8
+  port: 8443
+  udp: true
+  type: vless
+  uuid: d4d2d3f3-9dec-4e8f-8daf-145ecac96e66
+  tls: true
+  servername: cRIMSON-LeAf-7E45.hzhdUuEBFjDCB.workERs.DEv
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiODgwQ1AwWDV0MnFTRWE1cCIsInByb3RvY29sIjoidmwiLCJtb2RlIjoicHJveHlpcCIsInBhbmVsSVBzIjpbXX0=
+    headers:
+      Host: crimson-leaf-7e45.hzhduuebfjdcb.workers.dev
+- name: 🇨🇿 捷克 (Czech) 03 - xiaohe
+  server: www.speedtest.net
+  port: 443
+  udp: true
+  type: trojan
+  password: Telegram_healer_config
+  sni: 30f67sbq8jjwmt7gytfc14.0m68-qz3hqyfnlar6n3iq.workers.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /tr/D0RNup7f2Tt0Tna3gVu5OvfMJYJjD?ed=2560
+- name: 🇨🇿 捷克 (Czech) 04 - xiaohe
   server: 95.85.230.35
   port: 443
   udp: true
@@ -22,11 +63,17 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
+  - 🇨🇿 捷克 (Czech) 02 - xiaohe
+  - 🇨🇿 捷克 (Czech) 03 - xiaohe
+  - 🇨🇿 捷克 (Czech) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇨🇿 捷克 (Czech) 01 - xiaohe
+  - 🇨🇿 捷克 (Czech) 02 - xiaohe
+  - 🇨🇿 捷克 (Czech) 03 - xiaohe
+  - 🇨🇿 捷克 (Czech) 04 - xiaohe
 rules:
 - MATCH,PROXIES

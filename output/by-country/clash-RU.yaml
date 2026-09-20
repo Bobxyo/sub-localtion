@@ -5,6 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇷🇺 俄罗斯 (Russia) 01 - xiaohe
+  server: 104.21.69.37
+  port: 443
+  udp: true
+  type: vless
+  uuid: 911b84e1-d046-4fbf-bfc0-c168791115ef
+  tls: true
+  servername: 12ygbae0k3gn0z0f.mehrshadhaddadi8.workers.dev
+  skip-cert-verify: true
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/uWq9DFRgj8BwQiSXmZ46
+    headers:
+      Host: 12ygbae0k3gn0z0f.mehrshadhaddadi8.workers.dev
+- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
   server: 94.249.187.46
   port: 2086
   udp: true
@@ -12,7 +27,33 @@ proxies:
   uuid: f6361af8-bb8f-4609-bf5d-3fc0f688f47b
   alterId: 0
   cipher: auto
-- name: 🇷🇺 俄罗斯 (Russia) 02 - xiaohe
+- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
+  server: 130.49.189.158
+  port: 43558
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: 5dLyPJpSV+QyXFRj+S0dt6xFKHxtcXEkRO/TzJGzryU=
+- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
+  server: msk.frkn.org
+  port: 443
+  udp: true
+  type: hysteria2
+  password: f317b5d6-d399-4d3d-a051-89d674ae953c
+  sni: msk.frkn.org
+  skip-cert-verify: false
+- name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
+  server: 66.90.90.13
+  port: 8443
+  udp: true
+  type: vless
+  uuid: 151077fd-f4a0-4622-bfd2-1ee2c121a544
+  flow: xtls-rprx-vision
+  tls: true
+  servername: dsapi-v2-6aaeee8a.adhil.uk
+  skip-cert-verify: false
+  client-fingerprint: ios
+- name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
   server: 130.49.189.158
   port: 45433
   udp: true
@@ -25,30 +66,7 @@ proxies:
     short-id: 5e101cd5
   servername: addons.mozilla.org
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 03 - xiaohe
-  server: msk.frkn.org
-  port: 443
-  udp: true
-  type: hysteria2
-  password: f317b5d6-d399-4d3d-a051-89d674ae953c
-  sni: msk.frkn.org
-  skip-cert-verify: false
-- name: 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
-  server: 46.8.200.91
-  port: 443
-  udp: true
-  type: vless
-  uuid: 0a2dde28-70da-4863-a06f-35d007d94d35
-  tls: true
-  servername: cf3.rumedia-cdn.com
-  skip-cert-verify: false
-  client-fingerprint: firefox
-  network: ws
-  ws-opts:
-    path: /casc
-    headers:
-      Host: cf3.rumedia-cdn.com
-- name: 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
+- name: 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
   server: 45.12.75.242
   port: 26424
   udp: true
@@ -60,13 +78,6 @@ proxies:
     short-id: 23103e1e
   servername: ya.ru
   client-fingerprint: chrome
-- name: 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
-  server: 94.249.187.46
-  port: 1080
-  udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: rSeYcig_XBy8q3k33NpK3A
 proxy-groups:
 - name: PROXIES
   type: select
@@ -78,6 +89,7 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -89,5 +101,6 @@ proxy-groups:
   - 🇷🇺 俄罗斯 (Russia) 04 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 05 - xiaohe
   - 🇷🇺 俄罗斯 (Russia) 06 - xiaohe
+  - 🇷🇺 俄罗斯 (Russia) 07 - xiaohe
 rules:
 - MATCH,PROXIES
