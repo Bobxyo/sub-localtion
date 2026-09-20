@@ -64,7 +64,6 @@ SOURCE_URLS = [
   "https://raw.githubusercontent.com/coldwater-10/V2ray-Config/main/Sub1.txt",
   "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/sub1.txt",
   "https://raw.githubusercontent.com/MatinGhanbari/v2ray-configs/main/subscriptions/v2ray/all_sub.txt",
-#  "https://raw.githubusercontent.com/ebrasha/free-v2ray-public-list/refs/heads/main/all_extracted_configs.txt",
   "https://raw.githubusercontent.com/hello-world-1989/cn-news/main/end-gfw-together",
   "https://raw.githubusercontent.com/vless-reality/vless-reality.github.io/refs/heads/main/.github/links/v2.txt",
   "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/v2ray.txt",
@@ -99,7 +98,23 @@ SOURCE_URLS = [
   "https://cdn.jsdelivr.net/gh/free18/v2ray@main/v.txt",
   "https://nodesfree.github.io/v2raynode/subscribe/v2ray.txt",
   "https://jiedianvpn.github.io/uploads/2026/09/0-20260912.txt",
-  "https://node.nodeclash.com/uploads/2026/09/0-20260912.txt"
+  "https://node.nodeclash.com/uploads/2026/09/0-20260912.txt",
+  "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/all_configs.txt",
+  "https://raw.githubusercontent.com/Surfboardv2ray/TGParse/main/splitted/mixed",
+  "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/refs/heads/main/Protocols/vless.txt",
+  "https://raw.githubusercontent.com/ninjastrikers/v2ray-configs/main/All.txt",
+  "https://raw.githubusercontent.com/Alirewa/V2ray-Configs/main/config.txt",
+  "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/best.txt",
+  "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs.txt",
+  "https://raw.githubusercontent.com/Danialsamadi/v2go/main/AllConfigsSub.txt",
+  "https://raw.githubusercontent.com/ninjastrikers/v2ray-configs/main/Sub1.txt",
+  "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Splitted-By-Protocol/vless.txt",
+  "https://raw.githubusercontent.com/Danialsamadi/v2go/main/Sub1.txt",
+  "https://raw.githubusercontent.com/VovaplusEXP/p-configs/main/Splitted-By-Protocol-Base64/vless.txt",
+  "https://raw.githubusercontent.com/iboxz/free-v2ray-collector/main/main/mix.txt",
+  "https://raw.githubusercontent.com/morpheusadam/v2ray-config/main/subs/bundles/lite.txt",
+  "https://raw.githubusercontent.com/ermaozi/get_subscribe/main/subscribe/clash.yml",
+  "https://raw.githubusercontent.com/PrinceVSFX/Hysteria2-Configs/main/Configs_list.txt"
 ]
 
 OUTPUT_DIR = "output"
