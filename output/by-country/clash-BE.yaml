@@ -5,40 +5,30 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇧🇪 比利时 (Belgium) 01 - xiaohe
-  server: 172.67.155.136
-  port: 2086
+  server: 64.225.110.247
+  port: 2083
   udp: true
   type: vless
-  uuid: 73796e63-0000-4000-8000-000000000007
+  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
+  tls: true
+  servername: cdn8848.776676.xyz
+  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /sync
+    path: /acg/buy/ajax
     headers:
-      Host: vqrlof-pwa5a7-onfjlv.zedbazi061.workers.dev
-- name: 🇧🇪 比利时 (Belgium) 02 - xiaohe
-  server: 104.21.64.198
-  port: 2095
-  udp: true
-  type: vless
-  uuid: 73796e63-0000-4000-8000-000000000008
-  network: ws
-  ws-opts:
-    path: /sync
-    headers:
-      Host: vqrlof-pwa5a7-onfjlv.zedbazi061.workers.dev
+      Host: cdn8848.776676.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇧🇪 比利时 (Belgium) 01 - xiaohe
-  - 🇧🇪 比利时 (Belgium) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇧🇪 比利时 (Belgium) 01 - xiaohe
-  - 🇧🇪 比利时 (Belgium) 02 - xiaohe
 rules:
 - MATCH,PROXIES
