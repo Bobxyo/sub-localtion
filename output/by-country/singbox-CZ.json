@@ -6,43 +6,31 @@
     {
       "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 01 - xiaohe",
-      "server": "gerwai1488.vvzzkontaktezzvv.garden",
+      "server": "172.67.147.209",
       "server_port": 443,
-      "uuid": "4bdeee92-97e8-414d-bef6-ec1d5e2ab73b",
-      "flow": "xtls-rprx-vision",
+      "uuid": "38d6b629-64c2-4c31-a10d-26eb3a2a053d",
       "tls": {
         "enabled": true,
-        "server_name": "gerwai1488.vvzzkontaktezzvv.garden",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "EYfpgja4VjpLUnWHtDJQ1XZk6xL5j4rXwf80Sw6keV0",
-          "short_id": "0c13e8822e7f58aa"
+        "server_name": "lhns3ww2-cxq-gj1vvobkepig4nopkc.hqu4v38hi9iftcp6mzfmx-3bmx.workers.dev",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vl/cxl8Wn1ylnsk63nJ0?ed=2560",
+        "headers": {
+          "Host": "lhns3ww2-cxq-gj1vvobkepig4nopkc.hqu4v38hi9iftcp6mzfmx-3bmx.workers.dev"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇨🇿 捷克 (Czech) 02 - xiaohe",
-      "server": "cepchik.nxxzxaw.beer",
-      "server_port": 443,
-      "uuid": "4bdeee92-97e8-414d-bef6-ec1d5e2ab73b",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "cepchik.nxxzxaw.beer",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "WU5baXUzRH9BceiYI8MPBmDMEloTFImx2vvE5uh1yjM",
-          "short_id": "f19e02a2fb573c18"
-        }
+      "server": "153.76.185.148",
+      "server_port": 3090,
+      "uuid": "1552d599-a036-4389-a5c0-bf14dfaddc1a",
+      "transport": {
+        "type": "grpc",
+        "service_name": "vless"
       }
     },
     {
