@@ -5,7 +5,21 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇶 IQ 01 - xiaohe
-  server: 193.56.135.137
+  server: 188.114.96.9
+  port: 443
+  udp: true
+  type: vless
+  uuid: 2e305ebe-f6e6-4689-b32f-cd04ab5ff541
+  tls: true
+  servername: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /vl/9yvcoLdzdOXLUYfH7r5gwJhu1CHrjfp=chrome
+    headers:
+      Host: idb8onmvbntuyt5t7t6cejfw8vlrb.pages.dev
+- name: 🇮🇶 IQ 02 - xiaohe
+  server: 193.56.135.233
   port: 9543
   udp: true
   type: vless
@@ -23,11 +37,13 @@ proxy-groups:
   proxies:
   - AUTO
   - 🇮🇶 IQ 01 - xiaohe
+  - 🇮🇶 IQ 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇮🇶 IQ 01 - xiaohe
+  - 🇮🇶 IQ 02 - xiaohe
 rules:
 - MATCH,PROXIES
