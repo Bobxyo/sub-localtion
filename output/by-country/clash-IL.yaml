@@ -42,9 +42,9 @@ proxies:
     public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
     short-id: db46e2946fc466fd
   servername: deepl.com
-  client-fingerprint: random
+  client-fingerprint: safari
 - name: 🇮🇱 以色列 (Israel) 04 - xiaohe
-  server: platform118.golnamakcert.top
+  server: 64.177.65.132
   port: 80
   udp: true
   type: vless
@@ -55,7 +55,7 @@ proxies:
     headers:
       Host: platform118.halalkhor.info
 - name: 🇮🇱 以色列 (Israel) 05 - xiaohe
-  server: platform113.golnamakcert.top
+  server: 64.176.164.173
   port: 80
   udp: true
   type: vless
@@ -66,28 +66,17 @@ proxies:
     headers:
       Host: platform113.halalkhor.info
 - name: 🇮🇱 以色列 (Israel) 06 - xiaohe
-  server: platform115.golnamakcert.top
+  server: 64.177.71.188
   port: 80
   udp: true
   type: vless
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   network: ws
   ws-opts:
-    path: /platform115
+    path: /platform117
     headers:
-      Host: platform115.halalkhor.info
+      Host: platform117.halalkhor.info
 - name: 🇮🇱 以色列 (Israel) 07 - xiaohe
-  server: platform102.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform102
-    headers:
-      Host: platform102.halalkhor.info
-- name: 🇮🇱 以色列 (Israel) 08 - xiaohe
   server: platform101.golnamakcert.top
   port: 80
   udp: true
@@ -98,15 +87,28 @@ proxies:
     path: /platform101
     headers:
       Host: platform101.halalkhor.info
-- name: 🇮🇱 以色列 (Israel) 09 - xiaohe
-  server: platform117.golnamakcert.top
+- name: 🇮🇱 以色列 (Israel) 08 - xiaohe
+  server: 64.177.66.183
   port: 80
   udp: true
   type: vless
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   network: ws
   ws-opts:
-    path: /platform117
+    path: /platform115
+    headers:
+      Host: platform115.halalkhor.info
+- name: 🇮🇱 以色列 (Israel) 09 - xiaohe
+  server: platform102.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform102
+    headers:
+      Host: platform102.halalkhor.info
 proxy-groups:
 - name: PROXIES
   type: select

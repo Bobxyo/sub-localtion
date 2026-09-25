@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇱 智利 (Chile) 01 - xiaohe
-  server: platform108.golnamakcert.top
+  server: 64.176.21.237
   port: 80
   udp: true
   type: vless
