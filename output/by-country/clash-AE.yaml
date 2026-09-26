@@ -5,19 +5,18 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇪 阿联酋 (UAE) 01 - xiaohe
-  server: 172.67.221.230
-  port: 443
+  server: 151.242.160.153
+  port: 10443
   udp: true
   type: vless
-  uuid: ee556a4f-d9f6-44de-af02-42c51659416a
+  uuid: e327401a-0897-4d45-8d5a-af685c7ee363
+  flow: xtls-rprx-vision
   tls: true
-  servername: novantunnel.tech
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /Novan-AE9
-    headers:
-      Host: novantunnel.tech
+  reality-opts:
+    public-key: eWyasLSR__8dXzVzs6PZz2eSXRIcgbw0OAJwNWn6al0
+    short-id: b1
+  servername: www.bmw.com
+  client-fingerprint: safari
 - name: 🇦🇪 阿联酋 (UAE) 02 - xiaohe
   server: 130.49.161.70
   port: 443
@@ -40,21 +39,8 @@ proxies:
     public-key: Rp0WaupRP9LtJ-dd4vjKwuvSzqo_ZqIZPZWDEbSoIAo
     short-id: 98096455d963bdbb
   servername: www.booking.com
-  client-fingerprint: chrome
+  client-fingerprint: firefox
 - name: 🇦🇪 阿联酋 (UAE) 04 - xiaohe
-  server: 151.242.160.153
-  port: 10443
-  udp: true
-  type: vless
-  uuid: e327401a-0897-4d45-8d5a-af685c7ee363
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: eWyasLSR__8dXzVzs6PZz2eSXRIcgbw0OAJwNWn6al0
-    short-id: b1
-  servername: www.bmw.com
-  client-fingerprint: safari
-- name: 🇦🇪 阿联酋 (UAE) 05 - xiaohe
   server: 94.183.224.45
   port: 443
   udp: true
@@ -66,17 +52,17 @@ proxies:
     public-key: SibLV5WBGdljTiUCmKx77KhHQfErCwjDMD_ZLoha3js
     short-id: a1b2c3d4e5f67890
   servername: dzen.ru
-  client-fingerprint: edge
-- name: 🇦🇪 阿联酋 (UAE) 06 - xiaohe
-  server: 85.204.107.172
+  client-fingerprint: firefox
+- name: 🇦🇪 阿联酋 (UAE) 05 - xiaohe
+  server: 85.204.107.175
   port: 8080
   udp: true
   type: hysteria2
   password: Jz40_mIJ934vK0_k9D3jz92_Vx48q_GHa1_sz0
   sni: hopp-romania-new.roxa.org
   skip-cert-verify: true
-- name: 🇦🇪 阿联酋 (UAE) 07 - xiaohe
-  server: 84.235.244.108
+- name: 🇦🇪 阿联酋 (UAE) 06 - xiaohe
+  server: uae.unixzone.us
   port: 22573
   udp: true
   type: vless
@@ -86,7 +72,7 @@ proxies:
     path: /
     headers:
       Host: uae.unixzone.us
-- name: 🇦🇪 阿联酋 (UAE) 08 - xiaohe
+- name: 🇦🇪 阿联酋 (UAE) 07 - xiaohe
   server: 146.70.102.82
   port: 443
   udp: true
@@ -98,7 +84,7 @@ proxies:
     public-key: GDer6NQYXdbccrFI0tLn2671PjCvrcSy0R7TKY8vG1k
     short-id: 002fb4ec7b3088cc
   servername: www.datadoghq.com
-  client-fingerprint: firefox
+  client-fingerprint: random
 proxy-groups:
 - name: PROXIES
   type: select
@@ -111,7 +97,6 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 05 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 06 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 07 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -124,6 +109,5 @@ proxy-groups:
   - 🇦🇪 阿联酋 (UAE) 05 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 06 - xiaohe
   - 🇦🇪 阿联酋 (UAE) 07 - xiaohe
-  - 🇦🇪 阿联酋 (UAE) 08 - xiaohe
 rules:
 - MATCH,PROXIES
