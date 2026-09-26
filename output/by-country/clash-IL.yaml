@@ -16,7 +16,7 @@ proxies:
     public-key: 8eXftARun6KH38UZhuqIfPR1VF2DLS9RMBZEnF5k6To
     short-id: a3a578ab
   servername: www.apple.com
-  client-fingerprint: chrome
+  client-fingerprint: random
 - name: 🇮🇱 以色列 (Israel) 02 - xiaohe
   server: 185.95.231.233
   port: 443
@@ -29,9 +29,9 @@ proxies:
     public-key: r4Dp3mztZaizbDk28rEOkLikk7erR9dzzc-Jrsgraho
     short-id: a1b2c3d4
   servername: store.steampowered.com
-  client-fingerprint: chrome
+  client-fingerprint: random
 - name: 🇮🇱 以色列 (Israel) 03 - xiaohe
-  server: 193.202.10.2
+  server: arcturus.yokkastars.com
   port: 40443
   udp: true
   type: vless
@@ -42,73 +42,7 @@ proxies:
     public-key: w4AYHvQnQS6olDqoG9ptLOtgehaWOsv9HQhDax5bLA4
     short-id: db46e2946fc466fd
   servername: deepl.com
-  client-fingerprint: safari
-- name: 🇮🇱 以色列 (Israel) 04 - xiaohe
-  server: 64.177.65.132
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform118
-    headers:
-      Host: platform118.halalkhor.info
-- name: 🇮🇱 以色列 (Israel) 05 - xiaohe
-  server: 64.176.164.173
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform113
-    headers:
-      Host: platform113.halalkhor.info
-- name: 🇮🇱 以色列 (Israel) 06 - xiaohe
-  server: 64.177.71.188
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform117
-    headers:
-      Host: platform117.halalkhor.info
-- name: 🇮🇱 以色列 (Israel) 07 - xiaohe
-  server: platform101.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform101
-    headers:
-      Host: platform101.halalkhor.info
-- name: 🇮🇱 以色列 (Israel) 08 - xiaohe
-  server: 64.177.66.183
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform115
-    headers:
-      Host: platform115.halalkhor.info
-- name: 🇮🇱 以色列 (Israel) 09 - xiaohe
-  server: platform102.golnamakcert.top
-  port: 80
-  udp: true
-  type: vless
-  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
-  network: ws
-  ws-opts:
-    path: /platform102
-    headers:
-      Host: platform102.halalkhor.info
+  client-fingerprint: ios
 proxy-groups:
 - name: PROXIES
   type: select
@@ -117,12 +51,6 @@ proxy-groups:
   - 🇮🇱 以色列 (Israel) 01 - xiaohe
   - 🇮🇱 以色列 (Israel) 02 - xiaohe
   - 🇮🇱 以色列 (Israel) 03 - xiaohe
-  - 🇮🇱 以色列 (Israel) 04 - xiaohe
-  - 🇮🇱 以色列 (Israel) 05 - xiaohe
-  - 🇮🇱 以色列 (Israel) 06 - xiaohe
-  - 🇮🇱 以色列 (Israel) 07 - xiaohe
-  - 🇮🇱 以色列 (Israel) 08 - xiaohe
-  - 🇮🇱 以色列 (Israel) 09 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -131,11 +59,5 @@ proxy-groups:
   - 🇮🇱 以色列 (Israel) 01 - xiaohe
   - 🇮🇱 以色列 (Israel) 02 - xiaohe
   - 🇮🇱 以色列 (Israel) 03 - xiaohe
-  - 🇮🇱 以色列 (Israel) 04 - xiaohe
-  - 🇮🇱 以色列 (Israel) 05 - xiaohe
-  - 🇮🇱 以色列 (Israel) 06 - xiaohe
-  - 🇮🇱 以色列 (Israel) 07 - xiaohe
-  - 🇮🇱 以色列 (Israel) 08 - xiaohe
-  - 🇮🇱 以色列 (Israel) 09 - xiaohe
 rules:
 - MATCH,PROXIES
