@@ -16,7 +16,7 @@ proxies:
     public-key: QLjTpkXRB453R9fXhJzKkc_q_gSm2MZrIOuxW4uW-mI
     short-id: 221873918e0bb74d
   servername: www.cloudflare.com
-  client-fingerprint: edge
+  client-fingerprint: chrome
 - name: 🇮🇳 印度 (India) 02 - xiaohe
   server: 194.61.31.126
   port: 2053
