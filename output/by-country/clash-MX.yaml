@@ -5,11 +5,17 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇲🇽 墨西哥 (Mexico) 01 - xiaohe
-  server: 45.164.20.114
-  port: 10226
+  server: 34.51.29.171
+  port: 443
   udp: true
   type: vless
-  uuid: 9aab8f39-ccb3-44ea-acdc-a8aefe211287
+  uuid: 9ad81959-02c6-4679-a419-2af6a16ca07a
+  tls: true
+  reality-opts:
+    public-key: 8vHditYTXXNZ37iNTraU4w129svOplF0QUhZwX2n3FA
+    short-id: dcabbf24adf88abc
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
