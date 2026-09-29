@@ -48,21 +48,21 @@
     {
       "type": "vless",
       "tag": "🇮🇱 以色列 (Israel) 03 - xiaohe",
-      "server": "de2.dzvn.space",
-      "server_port": 2291,
-      "uuid": "25284368-40d5-4abe-9f56-54a07e88a7af",
+      "server": "193.169.229.145",
+      "server_port": 443,
+      "uuid": "46b3a70b-b99f-4c6e-aa83-df6d842bb954",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "de2.dzvn.space",
+        "server_name": "isr.vpnskyline.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "firefox"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "tLWqTzKtCCMxxOzSskvSwDB2an1bxxZ706kcNDqGNWg",
-          "short_id": "50ace5ab34f6df9b"
+          "public_key": "2CwgJn1lc23uxQjAdGphQl4SSRmd1amunSpYXxgCgCM",
+          "short_id": "7e13fde9"
         }
       }
     },
