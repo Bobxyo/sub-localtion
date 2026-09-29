@@ -13,18 +13,18 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇮🇹 意大利 (Italy) 02 - xiaohe
-  server: 204.216.216.23
-  port: 10086
-  udp: true
-  type: vless
-  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
-- name: 🇮🇹 意大利 (Italy) 03 - xiaohe
   server: 185.164.175.81
   port: 19999
   udp: true
   type: ss
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
+- name: 🇮🇹 意大利 (Italy) 03 - xiaohe
+  server: 204.216.216.23
+  port: 10086
+  udp: true
+  type: vless
+  uuid: 9f0285ee-20ca-4953-bcdb-86a920652923
 - name: 🇮🇹 意大利 (Italy) 04 - xiaohe
   server: 57.131.48.45
   port: 8388
@@ -41,11 +41,11 @@ proxies:
   password: Sn5B7jTqr76aCJT8
 - name: 🇮🇹 意大利 (Italy) 06 - xiaohe
   server: 91.201.65.122
-  port: 9053
+  port: 9070
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: SBM7R883jBmnqe6C
+  password: bf7v334KKDV3YDhH
 - name: 🇮🇹 意大利 (Italy) 07 - xiaohe
   server: 91.201.65.122
   port: 9050
@@ -55,47 +55,40 @@ proxies:
   password: FG5ddLsMPbV5CutE
 - name: 🇮🇹 意大利 (Italy) 08 - xiaohe
   server: 91.201.65.122
-  port: 9065
+  port: 9074
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: PeHSHm5SqEjBuEXE
+  password: p5wSkb2uM3pKSS3j
 - name: 🇮🇹 意大利 (Italy) 09 - xiaohe
-  server: 91.201.65.122
-  port: 9092
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: TyNkGmp9hs6eGpDK
-- name: 🇮🇹 意大利 (Italy) 10 - xiaohe
-  server: 91.201.65.122
-  port: 9059
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: 9XwYyZsK8SNzQDtY
-- name: 🇮🇹 意大利 (Italy) 11 - xiaohe
   server: 91.201.65.122
   port: 9002
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: b8KkNDjEd5QqFyRm
+- name: 🇮🇹 意大利 (Italy) 10 - xiaohe
+  server: 91.201.65.122
+  port: 9092
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: TyNkGmp9hs6eGpDK
+- name: 🇮🇹 意大利 (Italy) 11 - xiaohe
+  server: 91.201.65.122
+  port: 9053
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: SBM7R883jBmnqe6C
 - name: 🇮🇹 意大利 (Italy) 12 - xiaohe
   server: 91.201.65.122
-  port: 9074
+  port: 9059
   udp: true
   type: ss
   cipher: aes-256-cfb
-  password: p5wSkb2uM3pKSS3j
+  password: 9XwYyZsK8SNzQDtY
 - name: 🇮🇹 意大利 (Italy) 13 - xiaohe
-  server: 91.201.65.122
-  port: 9039
-  udp: true
-  type: ss
-  cipher: aes-256-cfb
-  password: qYEN5HX4JKeVCdEC
-- name: 🇮🇹 意大利 (Italy) 14 - xiaohe
   server: 57.131.38.163
   port: 2053
   udp: true
@@ -107,7 +100,21 @@ proxies:
     short-id: 5b8a942318178e7b
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇮🇹 意大利 (Italy) 14 - xiaohe
+  server: 91.201.65.122
+  port: 9039
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: qYEN5HX4JKeVCdEC
 - name: 🇮🇹 意大利 (Italy) 15 - xiaohe
+  server: 91.201.65.122
+  port: 9065
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: PeHSHm5SqEjBuEXE
+- name: 🇮🇹 意大利 (Italy) 16 - xiaohe
   server: 82.118.16.187
   port: 443
   udp: true
@@ -120,7 +127,19 @@ proxies:
     short-id: cd6065902eea7a02
   servername: www.cloudflare.com
   client-fingerprint: firefox
-- name: 🇮🇹 意大利 (Italy) 16 - xiaohe
+- name: 🇮🇹 意大利 (Italy) 17 - xiaohe
+  server: it.d1.starzone.ir
+  port: 29247
+  udp: true
+  type: vless
+  uuid: 82944947-de0f-4c1e-a0a0-a6d7ecc09d0c
+  tls: true
+  reality-opts:
+    public-key: NpgXDQ6jl_HGPdHAHFeiBl5Ym7bywxmw_EYovmFjVQs
+    short-id: 9af7c9c0334675be
+  servername: ajax.googleapis.com
+  client-fingerprint: edge
+- name: 🇮🇹 意大利 (Italy) 18 - xiaohe
   server: 204.216.216.23
   port: 1114
   udp: true
@@ -133,19 +152,14 @@ proxies:
     short-id: 79a1e14b
   servername: yahoo.com
   client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 17 - xiaohe
-  server: 82.118.16.189
-  port: 443
+- name: 🇮🇹 意大利 (Italy) 19 - xiaohe
+  server: us4.xiaoliyu.cyou
+  port: 18333
   udp: true
-  type: vless
-  uuid: d5e5f5a1-0f23-4c49-af9f-4be445bf9d8e
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: SjGkzJQ9I6ZZjC3V73atcPMczhMm0oiTrB8mUQXz1HY
-    short-id: 37fbf155c7a9f3ff
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+  type: hysteria2
+  password: 19f72087-4591-4d72-930b-2697078ec2be
+  sni: us4.xiaoliyu.cyou
+  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
@@ -168,6 +182,8 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 15 - xiaohe
   - 🇮🇹 意大利 (Italy) 16 - xiaohe
   - 🇮🇹 意大利 (Italy) 17 - xiaohe
+  - 🇮🇹 意大利 (Italy) 18 - xiaohe
+  - 🇮🇹 意大利 (Italy) 19 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -190,5 +206,7 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 15 - xiaohe
   - 🇮🇹 意大利 (Italy) 16 - xiaohe
   - 🇮🇹 意大利 (Italy) 17 - xiaohe
+  - 🇮🇹 意大利 (Italy) 18 - xiaohe
+  - 🇮🇹 意大利 (Italy) 19 - xiaohe
 rules:
 - MATCH,PROXIES
