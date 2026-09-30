@@ -19,7 +19,7 @@ proxies:
   cipher: aes-256-gcm
   password: AxIYWtskJWIIaefW
 - name: 🇸🇪 瑞典 (Sweden) 03 - xiaohe
-  server: 51.20.72.15
+  server: 51.20.86.152
   port: 443
   udp: true
   type: ss
@@ -33,7 +33,7 @@ proxies:
   cipher: aes-256-cfb
   password: amazonskr05
 - name: 🇸🇪 瑞典 (Sweden) 05 - xiaohe
-  server: 13.62.228.76
+  server: 13.60.213.145
   port: 443
   udp: true
   type: ss
@@ -53,7 +53,14 @@ proxies:
   servername: surstreming.vvzzkontaktezzvv.garden
   client-fingerprint: chrome
 - name: 🇸🇪 瑞典 (Sweden) 07 - xiaohe
-  server: 79.141.174.147
+  server: 13.49.76.55
+  port: 443
+  udp: true
+  type: ss
+  cipher: aes-256-cfb
+  password: amazonskr05
+- name: 🇸🇪 瑞典 (Sweden) 08 - xiaohe
+  server: 193.42.39.10
   port: 33743
   udp: true
   type: vless
@@ -62,18 +69,18 @@ proxies:
   reality-opts:
     public-key: wGMBs7bvzyzA0-OUiwSkOOTDEMdxEOsSdRzxiP8GGQY
   servername: www.google.com
-  client-fingerprint: chrome
+  client-fingerprint: qq
   network: grpc
   grpc-opts:
     grpc-service-name: TunService
-- name: 🇸🇪 瑞典 (Sweden) 08 - xiaohe
+- name: 🇸🇪 瑞典 (Sweden) 09 - xiaohe
   server: 51.20.96.231
   port: 443
   udp: true
   type: ss
   cipher: aes-256-cfb
   password: amazonskr05
-- name: 🇸🇪 瑞典 (Sweden) 09 - xiaohe
+- name: 🇸🇪 瑞典 (Sweden) 10 - xiaohe
   server: 62.60.159.81
   port: 2053
   udp: true
@@ -84,11 +91,11 @@ proxies:
     public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
     short-id: d0ea1847066af5a6
   servername: www.samsung.com
-  client-fingerprint: chrome
+  client-fingerprint: safari
   network: grpc
   grpc-opts:
     grpc-service-name: grpce5bb9e71
-- name: 🇸🇪 瑞典 (Sweden) 10 - xiaohe
+- name: 🇸🇪 瑞典 (Sweden) 11 - xiaohe
   server: 2.27.14.218
   port: 2096
   udp: true
@@ -103,8 +110,8 @@ proxies:
     path: /cdn/v3/live
     headers:
       Host: stf7697.rumedia-cdn.com
-- name: 🇸🇪 瑞典 (Sweden) 11 - xiaohe
-  server: 13.60.213.145
+- name: 🇸🇪 瑞典 (Sweden) 12 - xiaohe
+  server: 13.62.228.76
   port: 443
   udp: true
   type: ss
@@ -126,6 +133,7 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 09 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 10 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 11 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 12 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -142,5 +150,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 09 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 10 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 11 - xiaohe
+  - 🇸🇪 瑞典 (Sweden) 12 - xiaohe
 rules:
 - MATCH,PROXIES
