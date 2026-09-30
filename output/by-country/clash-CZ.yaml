@@ -1,0 +1,51 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: rule
+log-level: info
+proxies:
+- name: 🇨🇿 捷克 (Czech) 01 - xiaohe
+  server: 104.17.148.22
+  port: 443
+  udp: true
+  type: vless
+  uuid: 513beae3-56e7-4954-a17e-930e06237b27
+  tls: true
+  servername: cfoi-2fx16g3-8ry2kdxmcj.wjesv2ila3rxbuhpc2nsugrachgawk.workers.dev
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /vl/3wSAeuGJbrGHwJ45DA6ircvHC6?ed=2560
+    headers:
+      Host: cfoi-2fx16g3-8ry2kdxmcj.wjesv2ila3rxbuhpc2nsugrachgawk.workers.dev
+- name: 🇨🇿 捷克 (Czech) 02 - xiaohe
+  server: 195.133.66.229
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4abdfe42-aec7-4b66-974d-3f891e2e8184
+  tls: true
+  reality-opts:
+    public-key: Zl6Fe6WYQuaFe_QNUB4qU7nRkGujy7LqjoQ96GO3jUc
+  servername: nlll.gaz-service.shop
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc
+proxy-groups:
+- name: PROXIES
+  type: select
+  proxies:
+  - AUTO
+  - 🇨🇿 捷克 (Czech) 01 - xiaohe
+  - 🇨🇿 捷克 (Czech) 02 - xiaohe
+- name: AUTO
+  type: url-test
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  proxies:
+  - 🇨🇿 捷克 (Czech) 01 - xiaohe
+  - 🇨🇿 捷克 (Czech) 02 - xiaohe
+rules:
+- MATCH,PROXIES
