@@ -14,15 +14,6 @@ proxies:
   skip-cert-verify: true
 - name: 🇪🇪 爱沙尼亚 (Estonia) 02 - xiaohe
   server: 94.183.170.135
-  port: 443
-  udp: true
-  type: vless
-  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
-  network: ws
-  ws-opts:
-    path: /
-- name: 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
-  server: 94.183.170.135
   port: 8443
   udp: true
   type: vless
@@ -31,8 +22,17 @@ proxies:
   servername: estproxy4.lockdwn.com
   skip-cert-verify: false
   client-fingerprint: chrome
+- name: 🇪🇪 爱沙尼亚 (Estonia) 03 - xiaohe
+  server: 94.183.170.135
+  port: 443
+  udp: true
+  type: vless
+  uuid: 06c4e938-2954-478f-a870-ca1b163e30e9
+  network: ws
+  ws-opts:
+    path: /
 - name: 🇪🇪 爱沙尼亚 (Estonia) 04 - xiaohe
-  server: ee10.zazazuza.ru
+  server: 194.26.141.148
   port: 8443
   udp: true
   type: vless
@@ -40,7 +40,7 @@ proxies:
   tls: true
   servername: fdghyt.com
   skip-cert-verify: false
-  client-fingerprint: chrome
+  client-fingerprint: firefox
   network: ws
   ws-opts:
     path: /vpn-wss/fluxor/59011/

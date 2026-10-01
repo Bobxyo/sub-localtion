@@ -13,23 +13,7 @@ proxies:
   alterId: 0
   cipher: auto
 - name: 🇹🇭 泰国 (Thailand) 02 - xiaohe
-  server: th1.zestapp778.com
-  port: 443
-  udp: true
-  type: trojan
-  password: Trojan@82164024
-  sni: th1.zestapp778.com
-  skip-cert-verify: true
-- name: 🇹🇭 泰国 (Thailand) 03 - xiaohe
-  server: 36.133.78.37
-  port: 50017
-  udp: true
-  type: vmess
-  uuid: 1b30f413-2865-4d40-9146-4207778718cd
-  alterId: 0
-  cipher: auto
-- name: 🇹🇭 泰国 (Thailand) 04 - xiaohe
-  server: 104.16.10.9
+  server: 104.16.10.2
   port: 443
   udp: true
   type: vless
@@ -42,8 +26,8 @@ proxies:
     path: /ws
     headers:
       Host: v2ray.simspeedup.com
-- name: 🇹🇭 泰国 (Thailand) 05 - xiaohe
-  server: v2ray.simspeedup.com
+- name: 🇹🇭 泰国 (Thailand) 03 - xiaohe
+  server: 103.86.49.57
   port: 80
   udp: true
   type: vless
@@ -52,7 +36,7 @@ proxies:
   ws-opts:
     path: /ws
     headers:
-      Host: v2ray.simspeedup.com
+      Host: aIs.SpEeDtEsT.nEt
 proxy-groups:
 - name: PROXIES
   type: select
@@ -61,8 +45,6 @@ proxy-groups:
   - 🇹🇭 泰国 (Thailand) 01 - xiaohe
   - 🇹🇭 泰国 (Thailand) 02 - xiaohe
   - 🇹🇭 泰国 (Thailand) 03 - xiaohe
-  - 🇹🇭 泰国 (Thailand) 04 - xiaohe
-  - 🇹🇭 泰国 (Thailand) 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -71,7 +53,5 @@ proxy-groups:
   - 🇹🇭 泰国 (Thailand) 01 - xiaohe
   - 🇹🇭 泰国 (Thailand) 02 - xiaohe
   - 🇹🇭 泰国 (Thailand) 03 - xiaohe
-  - 🇹🇭 泰国 (Thailand) 04 - xiaohe
-  - 🇹🇭 泰国 (Thailand) 05 - xiaohe
 rules:
 - MATCH,PROXIES
