@@ -5,24 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🌐 其他地区 (Other) 01 - xiaohe",
-      "server": "172.67.153.156",
+      "tag": "🇳🇱 荷兰 (Netherlands) 01 (移动家宽) - xiaohe",
+      "server": "31.77.114.212",
       "server_port": 443,
-      "uuid": "8be461cb-a0df-47cf-bc0d-4d9e6a22fa74",
+      "uuid": "af2bf319-ba88-4fec-8317-2b6a8cee96d1",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "ccs2g.pai50288.uk",
-        "insecure": false,
+        "server_name": "aken.nightfall.best",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/pai50288",
-        "headers": {
-          "Host": "ccs2g.pai50288.uk"
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "Zli2oz4Y11pvkrGK71XDcbp1OWIPzK2FYhUXQvl1yiI",
+          "short_id": ""
         }
       }
     },
@@ -31,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 其他地区 (Other) 01 - xiaohe"
+        "🇳🇱 荷兰 (Netherlands) 01 (移动家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 其他地区 (Other) 01 - xiaohe"
+        "🇳🇱 荷兰 (Netherlands) 01 (移动家宽) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
