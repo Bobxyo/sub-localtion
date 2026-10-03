@@ -18,7 +18,7 @@ proxies:
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: https%3a%2f%2ft.me%2foneclickvpnkeys
+  sni: https
   skip-cert-verify: true
 - name: 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
   server: vpn-tw-002.fastervpn.world
@@ -26,7 +26,7 @@ proxies:
   udp: true
   type: hysteria2
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: css.rbxcdn.com
+  sni: www.bing.com
   skip-cert-verify: true
 - name: 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
   server: 60.248.219.78
@@ -42,22 +42,6 @@ proxies:
     path: /81574b6b-c9d7-44a0-b83d-dad56e8cb530
     headers:
       Host: ty986gfazs.cainiaohub.xyz
-- name: 🇹🇼 中国台湾 (Taiwan) 05 - xiaohe
-  server: sbgfgov.vip24.wogacnmnagfwgov.com
-  port: 11224
-  udp: true
-  type: vmess
-  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
-  alterId: 2
-  cipher: auto
-- name: 🇹🇼 中国台湾 (Taiwan) 06 - xiaohe
-  server: sbgfgov.vip23.wogacnmnagfwgov.com
-  port: 11223
-  udp: true
-  type: vmess
-  uuid: 605956ee-544d-308e-8b90-51e67c6ea8da
-  alterId: 2
-  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -67,8 +51,6 @@ proxy-groups:
   - 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 05 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -78,7 +60,5 @@ proxy-groups:
   - 🇹🇼 中国台湾 (Taiwan) 02 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 03 - xiaohe
   - 🇹🇼 中国台湾 (Taiwan) 04 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 05 - xiaohe
-  - 🇹🇼 中国台湾 (Taiwan) 06 - xiaohe
 rules:
 - MATCH,PROXIES

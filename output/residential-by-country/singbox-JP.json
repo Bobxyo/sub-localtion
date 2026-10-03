@@ -1,0 +1,50 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 01 (家宽) - xiaohe",
+      "server": "57.129.130.57",
+      "server_port": 52014,
+      "uuid": "3ab412c8-fe1a-44a2-a1c3-8b6d916cbc29",
+      "tls": {
+        "enabled": true,
+        "server_name": "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/@Marisa_kristi",
+        "headers": {
+          "Host": "3t1yvbyla-rj740g.28m7r63dttya6gazmhoo.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇯🇵 日本 (Japan) 01 (家宽) - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇯🇵 日本 (Japan) 01 (家宽) - xiaohe"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

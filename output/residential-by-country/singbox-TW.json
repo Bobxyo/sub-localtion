@@ -24,24 +24,13 @@
       }
     },
     {
-      "type": "trojan",
+      "type": "vmess",
       "tag": "🇹🇼 中国台湾 (Taiwan) 02 (家宽) - xiaohe",
-      "server": "ttww11.bpca2026.top",
-      "server_port": 443,
-      "password": "9efd3f19-c7cb-4fa9-8d66-0598043597dc",
-      "tls": {
-        "enabled": true,
-        "server_name": "ttww11.bpca2026.top",
-        "insecure": false,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/images"
-      }
+      "server": "sbgfgov.vip23.wogacnmnagfwgov.com",
+      "server_port": 11223,
+      "uuid": "605956ee-544d-308e-8b90-51e67c6ea8da",
+      "security": "auto",
+      "alter_id": 2
     },
     {
       "type": "selector",

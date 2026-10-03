@@ -5,25 +5,23 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇸🇦 沙特 (Saudi Arabia) 01 - xiaohe",
-      "server": "81.208.170.142",
-      "server_port": 1500,
-      "uuid": "e332f028-d343-5b44-8016-b3130f39e133",
+      "tag": "🇺🇦 乌克兰 (Ukraine) 01 - xiaohe",
+      "server": "83.147.18.75",
+      "server_port": 443,
+      "uuid": "5de0c218-0138-45d8-94d2-c2c3f37a1a6d",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.ebay.com",
+        "server_name": "www.bing.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
-          "public_key": "VQxVgczORkbSNdDrkNOYs6zMBINpViztTKDuWCeQsVE",
-          "short_id": "775eb6408888248e"
+          "public_key": "tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc",
+          "short_id": "7f1e29593aa94ad1"
         }
-      },
-      "transport": {
-        "type": "grpc"
       }
     },
     {
@@ -31,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇸🇦 沙特 (Saudi Arabia) 01 - xiaohe"
+        "🇺🇦 乌克兰 (Ukraine) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇸🇦 沙特 (Saudi Arabia) 01 - xiaohe"
+        "🇺🇦 乌克兰 (Ukraine) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

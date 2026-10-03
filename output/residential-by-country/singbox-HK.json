@@ -6,34 +6,26 @@
     {
       "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe",
-      "server": "e86088da-tmm5c0-tqbai3-1hpo0.hk3.hyhuawei.com",
+      "server": "39c981a4-tmm5c0-u093mf-1mina.hk3.hyhuawei.com",
       "server_port": 443,
-      "password": "c3dc8d26-ab2b-11ec-a8bf-f23c91cfbbc9",
+      "password": "367e233c-2f54-11ee-9ae1-f23c9164ca5d",
       "tls": {
         "enabled": true,
-        "server_name": "e86088da-tmm5c0-tqbai3-1hpo0.hk3.hyhuawei.com",
+        "server_name": "39c981a4-tmm5c0-u093mf-1mina.hk3.hyhuawei.com",
         "insecure": true
       }
     },
     {
       "type": "hysteria2",
       "tag": "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe",
-      "server": "62a43558-tmm5c0-trdynx-1rk9y.nw4.hyhuawei.com",
+      "server": "b3dfb3ed-tmm5c0-trg4wh-z65w.nw4.hyhuawei.com",
       "server_port": 443,
-      "password": "88f6e3c4-1d01-11ef-812c-f23c91cfbbc9",
+      "password": "a2313fba-74a6-11ed-a8bf-f23c91cfbbc9",
       "tls": {
         "enabled": true,
-        "server_name": "62a43558-tmm5c0-trdynx-1rk9y.nw4.hyhuawei.com",
+        "server_name": "b3dfb3ed-tmm5c0-trg4wh-z65w.nw4.hyhuawei.com",
         "insecure": true
       }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇭🇰 中国香港 (Hong Kong) 03 (移动家宽) - xiaohe",
-      "server": "zfd-hkv2.kunlun01dns.com",
-      "server_port": 16115,
-      "uuid": "0802ac03-7973-39ef-a019-ba02de6c01e1",
-      "security": "auto"
     },
     {
       "type": "selector",
@@ -41,8 +33,7 @@
       "outbounds": [
         "auto",
         "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe",
-        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe",
-        "🇭🇰 中国香港 (Hong Kong) 03 (移动家宽) - xiaohe"
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe"
       ]
     },
     {
@@ -50,8 +41,7 @@
       "tag": "auto",
       "outbounds": [
         "🇭🇰 中国香港 (Hong Kong) 01 (家宽) - xiaohe",
-        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe",
-        "🇭🇰 中国香港 (Hong Kong) 03 (移动家宽) - xiaohe"
+        "🇭🇰 中国香港 (Hong Kong) 02 (家宽) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
