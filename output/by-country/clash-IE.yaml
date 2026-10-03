@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇪 爱尔兰 (Ireland) 01 - xiaohe
-  server: ie.tronsg.com
+  server: 3.255.76.207
   port: 443
   udp: true
   type: trojan

@@ -25,17 +25,6 @@ proxies:
   servername: www.cloudflare.com
   client-fingerprint: random
 - name: 🇮🇩 印尼 (Indonesia) 03 - xiaohe
-  server: 104.18.32.87
-  port: 443
-  udp: true
-  type: trojan
-  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
-  sni: id1.nathaya.web.id
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /trojan
-- name: 🇮🇩 印尼 (Indonesia) 04 - xiaohe
   server: 103.172.197.2
   port: 29172
   udp: true
@@ -46,7 +35,18 @@ proxies:
   reality-opts:
     public-key: pff94OJwuKXnF7_3SJ8KKJuAN4GJtInBlR-kg-4mwzQ
   servername: aws.amazon.com
-  client-fingerprint: edge
+  client-fingerprint: firefox
+- name: 🇮🇩 印尼 (Indonesia) 04 - xiaohe
+  server: 104.21.70.21
+  port: 443
+  udp: true
+  type: trojan
+  password: 018b8e7b-7813-4dcb-84a5-3c98f1521e00
+  sni: id1.nathaya.web.id
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /trojan
 proxy-groups:
 - name: PROXIES
   type: select

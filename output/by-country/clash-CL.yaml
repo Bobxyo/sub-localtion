@@ -5,16 +5,14 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇱 智利 (Chile) 01 - xiaohe
-  server: platform101.golnamakcert.top
+  server: platform115.golnamakcert.top
   port: 80
   udp: true
   type: vless
   uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
   network: ws
   ws-opts:
-    path: /platform101
-    headers:
-      Host: platform101.halalkhor.info
+    path: /platform115
 - name: 🇨🇱 智利 (Chile) 02 - xiaohe
   server: platform107.golnamakcert.top
   port: 80
@@ -35,9 +33,29 @@ proxies:
   network: ws
   ws-opts:
     path: /platform106
-    headers:
-      Host: platform106.halalkhor.info
 - name: 🇨🇱 智利 (Chile) 04 - xiaohe
+  server: platform108.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform108
+    headers:
+      Host: platform108.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 05 - xiaohe
+  server: platform117.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform117
+    headers:
+      Host: platform117.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 06 - xiaohe
   server: platform103.golnamakcert.top
   port: 80
   udp: true
@@ -48,7 +66,18 @@ proxies:
     path: /platform103
     headers:
       Host: platform103.halalkhor.info
-- name: 🇨🇱 智利 (Chile) 05 - xiaohe
+- name: 🇨🇱 智利 (Chile) 07 - xiaohe
+  server: platform113.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform113
+    headers:
+      Host: platform113.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 08 - xiaohe
   server: platform109.golnamakcert.top
   port: 80
   udp: true
@@ -57,9 +86,27 @@ proxies:
   network: ws
   ws-opts:
     path: /platform109
+- name: 🇨🇱 智利 (Chile) 09 - xiaohe
+  server: platform118.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform118
+- name: 🇨🇱 智利 (Chile) 10 - xiaohe
+  server: platform101.golnamakcert.top
+  port: 80
+  udp: true
+  type: vless
+  uuid: e13cf851-b4fd-413b-8d49-146e6eb8e5d4
+  network: ws
+  ws-opts:
+    path: /platform101
     headers:
-      Host: '[''platform109.halalkhor.info'']'
-- name: 🇨🇱 智利 (Chile) 06 - xiaohe
+      Host: platform101.halalkhor.info
+- name: 🇨🇱 智利 (Chile) 11 - xiaohe
   server: platform102.golnamakcert.top
   port: 80
   udp: true
@@ -68,7 +115,7 @@ proxies:
   network: ws
   ws-opts:
     path: /platform102
-- name: 🇨🇱 智利 (Chile) 07 - xiaohe
+- name: 🇨🇱 智利 (Chile) 12 - xiaohe
   server: 64.176.2.21
   port: 8388
   udp: true
@@ -87,6 +134,11 @@ proxy-groups:
   - 🇨🇱 智利 (Chile) 05 - xiaohe
   - 🇨🇱 智利 (Chile) 06 - xiaohe
   - 🇨🇱 智利 (Chile) 07 - xiaohe
+  - 🇨🇱 智利 (Chile) 08 - xiaohe
+  - 🇨🇱 智利 (Chile) 09 - xiaohe
+  - 🇨🇱 智利 (Chile) 10 - xiaohe
+  - 🇨🇱 智利 (Chile) 11 - xiaohe
+  - 🇨🇱 智利 (Chile) 12 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -99,5 +151,10 @@ proxy-groups:
   - 🇨🇱 智利 (Chile) 05 - xiaohe
   - 🇨🇱 智利 (Chile) 06 - xiaohe
   - 🇨🇱 智利 (Chile) 07 - xiaohe
+  - 🇨🇱 智利 (Chile) 08 - xiaohe
+  - 🇨🇱 智利 (Chile) 09 - xiaohe
+  - 🇨🇱 智利 (Chile) 10 - xiaohe
+  - 🇨🇱 智利 (Chile) 11 - xiaohe
+  - 🇨🇱 智利 (Chile) 12 - xiaohe
 rules:
 - MATCH,PROXIES
