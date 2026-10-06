@@ -4,8 +4,22 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "vless",
       "tag": "🇧🇷 巴西 (Brazil) 01 - xiaohe",
+      "server": "181.214.1.30",
+      "server_port": 8880,
+      "uuid": "6202b230-417c-4d8e-b624-0f71afa9c75d",
+      "transport": {
+        "type": "ws",
+        "path": "/",
+        "headers": {
+          "Host": "vms.lifetime39.workers.dev"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇧🇷 巴西 (Brazil) 02 - xiaohe",
       "server": "89.39.161.157",
       "server_port": 443,
       "uuid": "03fcc618-b93d-6796-6aed-8a38c975d581",
@@ -17,7 +31,10 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/linkvws"
+        "path": "/linkvws",
+        "headers": {
+          "Host": "aksai.org"
+        }
       }
     },
     {
@@ -25,14 +42,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇧🇷 巴西 (Brazil) 01 - xiaohe"
+        "🇧🇷 巴西 (Brazil) 01 - xiaohe",
+        "🇧🇷 巴西 (Brazil) 02 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇧🇷 巴西 (Brazil) 01 - xiaohe"
+        "🇧🇷 巴西 (Brazil) 01 - xiaohe",
+        "🇧🇷 巴西 (Brazil) 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
