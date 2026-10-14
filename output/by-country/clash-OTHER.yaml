@@ -5,34 +5,68 @@ mode: rule
 log-level: info
 proxies:
 - name: 🌐 其他地区 (Other) 01 - xiaohe
-  server: 172.67.153.156
+  server: tongue-expects-begins-old.trycloudflare.com
   port: 443
   udp: true
   type: vless
-  uuid: 8be461cb-a0df-47cf-bc0d-4d9e6a22fa74
+  uuid: c01391fa-7bd3-4b9d-b2db-4829b75e30da
   tls: true
-  servername: ccs2g.pai50288.uk
+  servername: tongue-expects-begins-old.trycloudflare.com
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /
+- name: 🌐 其他地区 (Other) 02 - xiaohe
+  server: 188.114.97.6
+  port: 443
+  udp: true
+  type: vless
+  uuid: efe19c5a-0ea1-4666-8a4c-4a33f4670775
+  tls: true
+  servername: luminouspetal.cyou
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /pai50288
+    path: /raccoonwsvless
     headers:
-      Host: ccs2g.pai50288.uk
-- name: 🌐 其他地区 (Other) 02 - xiaohe
-  server: 104.19.164.155
-  port: 443
+      Host: luminouspetal.cyou
+- name: 🌐 其他地区 (Other) 03 - xiaohe
+  server: freesocks.work
+  port: 2053
   udp: true
   type: vless
-  uuid: c4edb87e-8544-4fa4-bd1c-b0cda9a34b46
+  uuid: 26769ac3-b34c-430a-87f8-e1de14619d25
   tls: true
-  servername: a.cwvps.eu.org
+  servername: uwu.blueknightnet.qzz.io
   skip-cert-verify: false
   network: ws
   ws-opts:
-    path: /ws
+    path: /@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net--@BlueKnight_net
     headers:
-      Host: a.cwvps.eu.org
+      Host: uwu.blueknightnet.qzz.io
+- name: 🌐 其他地区 (Other) 04 - xiaohe
+  server: 104.21.65.43
+  port: 2052
+  udp: true
+  type: vless
+  uuid: aa5d861a-7799-41a7-bdf4-7a6414cf98fd
+  network: ws
+  ws-opts:
+    path: /@BlueKnight_net--@BlueKnight_net
+    headers:
+      Host: uwu.blueknightnet.qzz.io
+- name: 🌐 其他地区 (Other) 05 - xiaohe
+  server: 104.21.65.43
+  port: 2052
+  udp: true
+  type: vless
+  uuid: aa5d861a-7799-41a7-bdf4-7a6414cf98fd
+  network: ws
+  ws-opts:
+    path: /@BlueKnight_net--@BlueKnight_net
+    headers:
+      Host: uwu.blueknightnet.qzz.io
 proxy-groups:
 - name: PROXIES
   type: select
@@ -40,6 +74,9 @@ proxy-groups:
   - AUTO
   - 🌐 其他地区 (Other) 01 - xiaohe
   - 🌐 其他地区 (Other) 02 - xiaohe
+  - 🌐 其他地区 (Other) 03 - xiaohe
+  - 🌐 其他地区 (Other) 04 - xiaohe
+  - 🌐 其他地区 (Other) 05 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -47,5 +84,8 @@ proxy-groups:
   proxies:
   - 🌐 其他地区 (Other) 01 - xiaohe
   - 🌐 其他地区 (Other) 02 - xiaohe
+  - 🌐 其他地区 (Other) 03 - xiaohe
+  - 🌐 其他地区 (Other) 04 - xiaohe
+  - 🌐 其他地区 (Other) 05 - xiaohe
 rules:
 - MATCH,PROXIES
