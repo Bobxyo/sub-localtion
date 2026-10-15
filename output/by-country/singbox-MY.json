@@ -18,7 +18,7 @@
     {
       "type": "vmess",
       "tag": "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe",
-      "server": "172.67.205.213",
+      "server": "104.21.23.80",
       "server_port": 443,
       "uuid": "f5f0babe-aea2-4f07-a1fc-3c9820253f49",
       "security": "auto",

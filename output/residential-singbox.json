@@ -4,8 +4,50 @@
   },
   "outbounds": [
     {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
+      "server": "188.114.97.6",
+      "server_port": 443,
+      "uuid": "3ccba794-1c6d-48a8-acf2-f5caf0e69d86",
+      "tls": {
+        "enabled": true,
+        "server_name": "all.speedtest03.ccwu.cc",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/fp=unsafe",
+        "headers": {
+          "Host": "all.speedtest03.ccwu.cc"
+        }
+      }
+    },
+    {
       "type": "vmess",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe",
+      "tag": "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - xiaohe",
+      "server": "206.1.102.64",
+      "server_port": 8080,
+      "uuid": "184a0393-5c9e-403c-9be6-427b066308e1",
+      "security": "auto"
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇰🇷 韩国 (South Korea) 03 (家宽) - xiaohe",
+      "server": "p141.panda001.net",
+      "server_port": 4652,
+      "method": "aes-256-cfb",
+      "password": "qwerREWQ@@"
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇷 土耳其 (Turkey) 04 (移动家宽) - xiaohe",
+      "server": "test.keoplentuio.xyz",
+      "server_port": 2053,
+      "uuid": "9ef61079-6f7d-4911-9608-943da85d8e6f"
+    },
+    {
+      "type": "vmess",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - xiaohe",
       "server": "fujrdt.d6f54hd1j.cc",
       "server_port": 443,
       "uuid": "d877dc6f-7323-4b47-a7dd-14228cbae854",
@@ -28,14 +70,22 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe"
+        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - xiaohe",
+        "🇰🇷 韩国 (South Korea) 03 (家宽) - xiaohe",
+        "🇹🇷 土耳其 (Turkey) 04 (移动家宽) - xiaohe",
+        "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe"
+        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
+        "🇹🇷 土耳其 (Turkey) 02 (移动家宽) - xiaohe",
+        "🇰🇷 韩国 (South Korea) 03 (家宽) - xiaohe",
+        "🇹🇷 土耳其 (Turkey) 04 (移动家宽) - xiaohe",
+        "🇹🇼 中国台湾 (Taiwan) 05 (家宽) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
