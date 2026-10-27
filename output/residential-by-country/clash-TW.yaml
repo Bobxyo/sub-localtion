@@ -5,21 +5,16 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe
-  server: fujrdt.d6f54hd1j.cc
+  server: 125.227.86.45
   port: 443
   udp: true
-  type: vmess
-  uuid: d877dc6f-7323-4b47-a7dd-14228cbae854
-  alterId: 0
-  cipher: auto
-  tls: true
-  servername: fujrdt.d6f54hd1j.cc
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: fujrdt.d6f54hd1j.cc
+  type: trojan
+  password: 0a9f1f5a397bd427
+  sni: TG.freecodes
+  skip-cert-verify: true
+  network: grpc
+  grpc-opts:
+    grpc-service-name: db
 proxy-groups:
 - name: PROXIES
   type: select

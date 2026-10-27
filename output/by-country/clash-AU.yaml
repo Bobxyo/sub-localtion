@@ -5,29 +5,44 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
-  server: vpn-au-001.fastervpn.world
+  server: 152.67.115.203
   port: 443
   udp: true
   type: hysteria2
-  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
-  sni: vpn-au-001.fastervpn.world
+  password: 633bc3be486b646190661ac2387c150a
+  sni: www.bing.com
   skip-cert-verify: true
+  obfs: salamander
+  obfs-password: 850a3fb1cd33a28f12d837578ae1a2e7
 - name: 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
-  server: 172.67.195.146
+  server: 51.161.204.242
   port: 443
   udp: true
-  type: vmess
-  uuid: f5f0babe-aea2-4f07-a1fc-3c9820253f49
-  alterId: 0
-  cipher: auto
+  type: vless
+  uuid: a14b736b-a92a-48d6-a596-5d31f7378ded
+  flow: xtls-rprx-vision
   tls: true
-  servername: aus.lovehk.xyz
+  reality-opts:
+    public-key: a2qGjvUPq6Nz5FTbn_MSHp-055q2h8YXqIL5VIJ5zwE
+    short-id: d15c17cef9b2e456
+  servername: www.cloudflare.com
+  client-fingerprint: chrome
+- name: 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
+  server: au.tronsg.com
+  port: 443
+  udp: true
+  type: trojan
+  password: Trojan@82164024
+  sni: au.tronsg.com
   skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /Sydney3
-    headers:
-      Host: aus.lovehk.xyz
+- name: 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
+  server: 45.63.30.142
+  port: 443
+  udp: true
+  type: trojan
+  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
+  sni: connectwithemployerstohireyouridealteam.com
+  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -35,6 +50,8 @@ proxy-groups:
   - AUTO
   - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -42,5 +59,7 @@ proxy-groups:
   proxies:
   - 🇦🇺 澳大利亚 (Australia) 01 - xiaohe
   - 🇦🇺 澳大利亚 (Australia) 02 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 03 - xiaohe
+  - 🇦🇺 澳大利亚 (Australia) 04 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -4,23 +4,22 @@
   },
   "outbounds": [
     {
-      "type": "vmess",
+      "type": "trojan",
       "tag": "🇹🇼 中国台湾 (Taiwan) 01 (家宽) - xiaohe",
-      "server": "fujrdt.d6f54hd1j.cc",
+      "server": "125.227.86.45",
       "server_port": 443,
-      "uuid": "d877dc6f-7323-4b47-a7dd-14228cbae854",
-      "security": "auto",
+      "password": "0a9f1f5a397bd427",
       "tls": {
         "enabled": true,
-        "server_name": "fujrdt.d6f54hd1j.cc",
-        "insecure": false
+        "server_name": "TG.freecodes",
+        "insecure": true,
+        "alpn": [
+          "h2"
+        ]
       },
       "transport": {
-        "type": "ws",
-        "path": "/",
-        "headers": {
-          "Host": "fujrdt.d6f54hd1j.cc"
-        }
+        "type": "grpc",
+        "service_name": "db"
       }
     },
     {

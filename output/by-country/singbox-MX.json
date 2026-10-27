@@ -4,22 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇺🇸 美国 (United States) 01 (家宽) - xiaohe",
-      "server": "188.114.97.6",
+      "type": "trojan",
+      "tag": "🇲🇽 墨西哥 (Mexico) 01 - xiaohe",
+      "server": "216.238.80.100",
       "server_port": 443,
-      "uuid": "3ccba794-1c6d-48a8-acf2-f5caf0e69d86",
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "all.speedtest03.ccwu.cc",
+        "server_name": "connectwithtopemployersandfindidealjobs.com",
         "insecure": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/fp=unsafe",
-        "headers": {
-          "Host": "all.speedtest03.ccwu.cc"
-        }
       }
     },
     {
@@ -27,14 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe"
+        "🇲🇽 墨西哥 (Mexico) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇸 美国 (United States) 01 (家宽) - xiaohe"
+        "🇲🇽 墨西哥 (Mexico) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

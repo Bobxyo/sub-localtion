@@ -5,26 +5,69 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇸🇪 瑞典 (Sweden) 01 - xiaohe
-  server: 70.34.212.124
-  port: 8388
-  udp: true
-  type: ss
-  cipher: aes-256-gcm
-  password: AxIYWtskJWIIaefW
-- name: 🇸🇪 瑞典 (Sweden) 02 - xiaohe
-  server: se3.h1cloud.net
-  port: 25119
+  server: 191.44.114.154
+  port: 8443
   udp: true
   type: vless
-  uuid: f90b7d43-69e2-4b46-a672-8029bc6796a2
+  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: szPq4a3cvxfBOmGyg-UJCV3d1Jqjnj7YR3gaxyYtnk4
-    short-id: 10f517
-  servername: www.samsung.com
-  client-fingerprint: chrome
+    public-key: ndQzAcG4g-2OhvFb8EjFnZyxJ2lhawiulTLJOZrK8lY
+    short-id: c4359f3827231250
+  servername: www.wikipedia.org
+  client-fingerprint: firefox
+- name: 🇸🇪 瑞典 (Sweden) 02 - xiaohe
+  server: 191.44.114.179
+  port: 8443
+  udp: true
+  type: vless
+  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: WEHGKyXsOD5i2kNCJ3GrjeNZQBsrzH76OrPDJ7x2YwY
+  servername: www.wikipedia.org
+  client-fingerprint: firefox
 - name: 🇸🇪 瑞典 (Sweden) 03 - xiaohe
+  server: promo.betust.net
+  port: 443
+  udp: true
+  type: hysteria2
+  password: d4ca9415f0eac7897472e1e5b86d2e96
+  sni: promo.betust.net
+  skip-cert-verify: true
+- name: 🇸🇪 瑞典 (Sweden) 04 - xiaohe
+  server: 191.44.114.179
+  port: 2096
+  udp: true
+  type: vless
+  uuid: d1641bc6-3757-43db-815a-9b3f4d9b0d7e
+  tls: true
+  servername: st33614.rumedia-cdn.com
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /cdn/v3/live
+    headers:
+      Host: st33614.rumedia-cdn.com
+- name: 🇸🇪 瑞典 (Sweden) 05 - xiaohe
+  server: se1-cl3.vless-fiberstasis.top
+  port: 443
+  udp: true
+  type: vless
+  uuid: 4b1be712-774c-4b65-8491-a3339e124a70
+  tls: true
+  reality-opts:
+    public-key: qJja_3vaCxm3As6alnqjpIIThwGm4e4m_MOluQBNFgo
+    short-id: 11d37dd92940329e
+  servername: se1-cl3.vless-fiberstasis.top
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: grpc-se-3
+- name: 🇸🇪 瑞典 (Sweden) 06 - xiaohe
   server: 5.178.109.174
   port: 14430
   udp: true
@@ -35,66 +78,6 @@ proxies:
     path: /vless
     headers:
       Host: 5.178.109.174
-- name: 🇸🇪 瑞典 (Sweden) 04 - xiaohe
-  server: 46.246.125.153
-  port: 443
-  udp: true
-  type: vless
-  uuid: a16a3e32-8d63-4dec-8c67-1361388a64ca
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: ftglT-Ghp2FPiPlwyEAldfiAE1IL_AJ9UCkfCj0zk2I
-    short-id: a83b77e064761e3c
-  servername: res.cdn.office.net
-  client-fingerprint: chrome
-- name: 🇸🇪 瑞典 (Sweden) 05 - xiaohe
-  server: 62.60.159.81
-  port: 2053
-  udp: true
-  type: vless
-  uuid: fc00adfb-232a-46ce-8b93-0c70e516aa8a
-  tls: true
-  reality-opts:
-    public-key: ygmJxS-Mc7g0buNSUTVGhazT-FoBjyYtLLfUYIQxFTw
-    short-id: d0ea1847066af5a6
-  servername: www.samsung.com
-  client-fingerprint: firefox
-  network: grpc
-  grpc-opts:
-    grpc-service-name: grpce5bb9e71
-- name: 🇸🇪 瑞典 (Sweden) 06 - xiaohe
-  server: se1.h1cloud.net
-  port: 26100
-  udp: true
-  type: vless
-  uuid: 68c3d665-b2b5-4ffb-9f37-9f3d8c47324d
-  tls: true
-  reality-opts:
-    public-key: 1uuvuG2Jl_o6yoVvOYm3hEboArh2Znu7zCy4Tqj36TI
-    short-id: 8045087bda646f1b
-  servername: www.icloud.com
-  client-fingerprint: random
-- name: 🇸🇪 瑞典 (Sweden) 07 - xiaohe
-  server: 94.143.231.146
-  port: 443
-  udp: true
-  type: vless
-  uuid: 6e05822a-e9da-4135-a9db-71aa07a944af
-  tls: true
-  servername: sub.merky.top
-  skip-cert-verify: false
-  network: ws
-  ws-opts:
-    path: /merky-connect/de6/
-- name: 🇸🇪 瑞典 (Sweden) 08 - xiaohe
-  server: sweedenqfds777.qcloud.surf
-  port: 21223
-  udp: true
-  type: hysteria2
-  password: 408c51e8-9246-483d-ba73-34ab4e202eb9
-  sni: sweedenqfds777.qcloud.surf
-  skip-cert-verify: false
 proxy-groups:
 - name: PROXIES
   type: select
@@ -106,8 +89,6 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 04 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 05 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 06 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 07 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 08 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -119,7 +100,5 @@ proxy-groups:
   - 🇸🇪 瑞典 (Sweden) 04 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 05 - xiaohe
   - 🇸🇪 瑞典 (Sweden) 06 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 07 - xiaohe
-  - 🇸🇪 瑞典 (Sweden) 08 - xiaohe
 rules:
 - MATCH,PROXIES
