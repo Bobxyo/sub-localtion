@@ -4,15 +4,8 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe",
-      "server": "171.22.119.74",
-      "server_port": 8447,
-      "uuid": "6aed42ba-cd2d-4671-87d9-c949b6876888"
-    },
-    {
       "type": "trojan",
-      "tag": "🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe",
+      "tag": "🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe",
       "server": "171.22.119.74",
       "server_port": 8446,
       "password": "Pass-Client-1",
@@ -27,15 +20,24 @@
       }
     },
     {
-      "type": "hysteria2",
-      "tag": "🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe",
-      "server": "hys-eu.letsconnectpoint.com",
+      "type": "vless",
+      "tag": "🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe",
+      "server": "92.51.23.133",
       "server_port": 443,
-      "password": "4b1be712-774c-4b65-8491-a3339e124a70",
+      "uuid": "26f751bc-2edc-4338-9c3f-abeb32aba3b7",
+      "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "hys-eu.letsconnectpoint.com",
-        "insecure": false
+        "server_name": "zjlavrpl7kwo.staticpool.store",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "fJnm6-PhJGSwHaAdJOzXkYOfCPPCWSlaZrtfm1XsqhA",
+          "short_id": ""
+        }
       }
     },
     {
@@ -44,8 +46,7 @@
       "outbounds": [
         "auto",
         "🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe",
-        "🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe",
-        "🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe"
+        "🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe"
       ]
     },
     {
@@ -53,8 +54,7 @@
       "tag": "auto",
       "outbounds": [
         "🇨🇾 塞浦路斯 (Cyprus) 01 - xiaohe",
-        "🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe",
-        "🇨🇾 塞浦路斯 (Cyprus) 03 - xiaohe"
+        "🇨🇾 塞浦路斯 (Cyprus) 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
