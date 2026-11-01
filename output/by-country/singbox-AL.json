@@ -5,22 +5,22 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇲🇨 MC 01 - xiaohe",
-      "server": "104.194.148.125",
+      "tag": "🇦🇱 AL 01 - xiaohe",
+      "server": "151.123.187.198",
       "server_port": 443,
-      "uuid": "167539f8-88ff-46b3-955c-4c8f7bf0f296",
+      "uuid": "b24ad12f-f6ce-4f0b-a264-d58a76104026",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "suffolkprimarycare.uk",
+        "server_name": "al2.magazinnarubeva.ru",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "5Xgf3UO6yZb7gCK3R3GULk8jyNIp7Sr-26YXZfSW71c",
-          "short_id": "13975a8e0bd50e7c"
+          "public_key": "trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI",
+          "short_id": "8718c58d3d51db59"
         }
       }
     },
@@ -29,14 +29,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇨 MC 01 - xiaohe"
+        "🇦🇱 AL 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇨 MC 01 - xiaohe"
+        "🇦🇱 AL 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

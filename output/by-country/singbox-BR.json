@@ -12,7 +12,7 @@
       "tls": {
         "enabled": true,
         "server_name": "br001.zestapp778.com",
-        "insecure": false,
+        "insecure": true,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
@@ -28,7 +28,11 @@
       "tls": {
         "enabled": true,
         "server_name": "findtemporaryworkandfreelancerprojectsonlineplatform.com",
-        "insecure": false
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
       }
     },
     {

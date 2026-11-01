@@ -5,7 +5,7 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇨🇳 CN 01 - xiaohe
-  server: 188.114.98.0
+  server: 172.67.166.188
   port: 443
   udp: true
   type: vless
@@ -32,8 +32,6 @@ proxies:
   network: ws
   ws-opts:
     path: /vlessws
-    headers:
-      Host: vpn.cintaku.qzz.io
 proxy-groups:
 - name: PROXIES
   type: select

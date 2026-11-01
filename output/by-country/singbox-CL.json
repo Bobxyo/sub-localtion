@@ -4,19 +4,15 @@
   },
   "outbounds": [
     {
-      "type": "hysteria2",
-      "tag": "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - xiaohe",
-      "server": "206.1.96.108",
-      "server_port": 7443,
-      "password": "M8LP9DztTr3znqCkmf-r08CQLBLLFK1r",
+      "type": "trojan",
+      "tag": "🇨🇱 智利 (Chile) 01 - xiaohe",
+      "server": "64.176.7.205",
+      "server_port": 443,
+      "password": "0ab6c98dae3b48e8b9c4a776b6c9c19a",
       "tls": {
         "enabled": true,
-        "server_name": "me17.msjia8844.site",
+        "server_name": "advanceyouremploymentskillsandcareerdevelopmenthub.com",
         "insecure": false
-      },
-      "obfs": {
-        "type": "salamander",
-        "password": "u3Soh9_Ui0UmcuY6vk0ug8Lq"
       }
     },
     {
@@ -24,14 +20,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - xiaohe"
+        "🇨🇱 智利 (Chile) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇹🇷 土耳其 (Turkey) 01 (移动家宽) - xiaohe"
+        "🇨🇱 智利 (Chile) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

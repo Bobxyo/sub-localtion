@@ -5,22 +5,21 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇲🇩 摩尔多瓦 (Moldova) 01 - xiaohe",
-      "server": "5.252.179.15",
-      "server_port": 443,
-      "uuid": "0ab273e4-cea6-41d0-bbab-41071d2fc455",
-      "flow": "xtls-rprx-vision",
+      "tag": "🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe",
+      "server": "ee.h1cloud.net",
+      "server_port": 25895,
+      "uuid": "f90b7d43-69e2-4b46-a672-8029bc6796a2",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
+        "server_name": "www.samsung.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "random"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "XQB2zIgrhD8AtxgYFM8UiiWYt1sLVBLhMg1M4-sGMAY",
-          "short_id": "296f27de82dad7ff"
+          "public_key": "jOVKSP-bS9OkILJ8Epz8hadh6qhavCrOiJYeF0NCn0k",
+          "short_id": "a73f0410d728c823"
         }
       }
     },
@@ -29,14 +28,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇲🇩 摩尔多瓦 (Moldova) 01 - xiaohe"
+        "🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇲🇩 摩尔多瓦 (Moldova) 01 - xiaohe"
+        "🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
