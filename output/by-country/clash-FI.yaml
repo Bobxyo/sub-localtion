@@ -28,34 +28,18 @@ proxies:
     headers:
       Host: 45.144.234.157
 - name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
-  server: 146.103.118.189
+  server: 199.232.8.223
   port: 443
   udp: true
-  type: vless
-  uuid: ce698f0c-a8ec-474a-b5d8-3be8032deeb8
-  tls: true
-  servername: nl2.574ck.xyz
-  skip-cert-verify: false
+  type: trojan
+  password: TtI1G9ChUwNxRuPgOxiPNwAd6FN4BlBJ
+  sni: community.fastly.steamstatic.com
+  skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /574ck-finland
-    headers:
-      Host: nl2.574ck.xyz
+    path: /
 - name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
-  server: 89.144.53.4
-  port: 8445
-  udp: true
-  type: vless
-  uuid: 5c32201a-6c0e-451b-8f0a-24b4bd40df59
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: kBTMVLCNE0jjwuJF6H5-65l5Pe0QToS0Hg-9Tmaa7Sk
-    short-id: 1a2b3c4d
-  servername: videos.porsche.com
-  client-fingerprint: firefox
-- name: 🇫🇮 芬兰 (Finland) 05 - xiaohe
-  server: 104.18.0.1
+  server: 188.114.96.3
   port: 2053
   udp: true
   type: trojan
@@ -65,14 +49,6 @@ proxies:
   network: ws
   ws-opts:
     path: /
-- name: 🇫🇮 芬兰 (Finland) 06 - xiaohe
-  server: 65.108.240.210
-  port: 39018
-  udp: true
-  type: vmess
-  uuid: 77fb7a80-4724-4e33-9558-4f20c1634c5a
-  alterId: 0
-  cipher: auto
 proxy-groups:
 - name: PROXIES
   type: select
@@ -82,8 +58,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02 - xiaohe
   - 🇫🇮 芬兰 (Finland) 03 - xiaohe
   - 🇫🇮 芬兰 (Finland) 04 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 05 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -93,7 +67,5 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 02 - xiaohe
   - 🇫🇮 芬兰 (Finland) 03 - xiaohe
   - 🇫🇮 芬兰 (Finland) 04 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 05 - xiaohe
-  - 🇫🇮 芬兰 (Finland) 06 - xiaohe
 rules:
 - MATCH,PROXIES
