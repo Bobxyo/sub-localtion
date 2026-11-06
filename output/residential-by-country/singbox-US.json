@@ -4,23 +4,18 @@
   },
   "outbounds": [
     {
-      "type": "vless",
-      "tag": "🇦🇱 AL 01 - xiaohe",
-      "server": "151.123.187.198",
-      "server_port": 443,
-      "uuid": "b24ad12f-f6ce-4f0b-a264-d58a76104026",
-      "flow": "xtls-rprx-vision",
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe",
+      "server": "130.94.19.95",
+      "server_port": 57277,
+      "password": "5t6i121em5lkmsmk",
       "tls": {
         "enabled": true,
-        "server_name": "al2.magazinnarubeva.ru",
+        "server_name": "us001.zestapp778.com",
+        "insecure": false,
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "trN5x0amt2YuVzF2vZnK294YBAuh_zl5QkZjPyWz-TI",
-          "short_id": "8718c58d3d51db59"
+          "fingerprint": "firefox"
         }
       }
     },
@@ -29,14 +24,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇱 AL 01 - xiaohe"
+        "🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇱 AL 01 - xiaohe"
+        "🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
