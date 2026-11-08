@@ -6,19 +6,7 @@
     {
       "type": "vmess",
       "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 01 - xiaohe",
-      "server": "38.107.234.57",
-      "server_port": 80,
-      "uuid": "567f4be5-12ab-42e1-b8d9-db6fd1fdd31c",
-      "security": "auto",
-      "transport": {
-        "type": "ws",
-        "path": "/vmess/"
-      }
-    },
-    {
-      "type": "vmess",
-      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe",
-      "server": "38.107.234.57",
+      "server": "3h-kazakhstan1.09vpn.com",
       "server_port": 80,
       "uuid": "567f4be5-12ab-42e1-b8d9-db6fd1fdd31c",
       "security": "auto",
@@ -26,29 +14,39 @@
         "type": "ws",
         "path": "/vmess/",
         "headers": {
-          "Host": "38.107.234.57"
+          "Host": "3h-kazakhstan1.09vpn.com"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 02 - xiaohe",
+      "server": "3h-kazakhstan1.09vpn.com",
+      "server_port": 80,
+      "uuid": "567f4be5-12ab-42e1-b8d9-db6fd1fdd31c",
+      "security": "auto",
+      "transport": {
+        "type": "ws",
+        "path": "/vmess/",
+        "headers": {
+          "Host": "3h-kazakhstan1.09vpn.com"
         }
       }
     },
     {
       "type": "vless",
       "tag": "🇰🇿 哈萨克斯坦 (Kazakhstan) 03 - xiaohe",
-      "server": "95.57.50.87",
-      "server_port": 443,
-      "uuid": "db80088c-32a1-4cb8-a907-0f3cb7844152",
-      "flow": "xtls-rprx-vision",
+      "server": "38.107.234.57",
+      "server_port": 8443,
+      "uuid": "2424febb-43cb-488d-bdd1-401e923c8e48",
       "tls": {
         "enabled": true,
-        "server_name": "kz1.japancase.site",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "eV6ewGF7oTHf2pTQHKYvwJt-vU8hUC-1CjiUl20HtXE",
-          "short_id": "4000cdda6278d236"
-        }
+        "server_name": "3h-kazakhstan1.09vpn.com",
+        "insecure": true
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vless/"
       }
     },
     {
