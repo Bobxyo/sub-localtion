@@ -12,7 +12,7 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇨🇭 瑞士 (Switzerland) 02 - xiaohe
-  server: 186.190.215.251
+  server: 23.166.88.189
   port: 19999
   udp: true
   type: ss
@@ -26,7 +26,7 @@ proxies:
   cipher: aes-256-gcm
   password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
 - name: 🇨🇭 瑞士 (Switzerland) 04 - xiaohe
-  server: 23.166.88.189
+  server: 186.190.215.251
   port: 19999
   udp: true
   type: ss
@@ -41,63 +41,58 @@ proxies:
   sni: www.bing.com
   skip-cert-verify: true
 - name: 🇨🇭 瑞士 (Switzerland) 06 - xiaohe
-  server: 94.26.35.217
-  port: 443
-  udp: true
-  type: vless
-  uuid: 54066259-28a1-47dc-b0f7-e7715f27918e
-  tls: true
-  reality-opts:
-    public-key: LHkKUZNBp93VjTHD9fpoj44-4WB-TQbDpa5A929nSwE
-    short-id: e368a430524df0fa
-  servername: 537df6t.ch5.h1clayd.click
-  client-fingerprint: firefox
-- name: 🇨🇭 瑞士 (Switzerland) 07 - xiaohe
-  server: 45.90.59.15
-  port: 443
-  udp: true
-  type: vless
-  uuid: 3950b45e-740d-4dca-ac95-505ec8534592
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: P7S4UPFlQbmiBr4txyy8NZIMTrmO3UdxyH16WBU-YzY
-    short-id: 19253fae84102271
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇭 瑞士 (Switzerland) 08 - xiaohe
-  server: 208.69.78.158
-  port: 443
-  udp: true
-  type: trojan
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: api.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: false
-- name: 🇨🇭 瑞士 (Switzerland) 09 - xiaohe
-  server: 62.109.1.5
-  port: 2058
-  udp: true
-  type: vless
-  uuid: 4ad9f982-b56a-444a-9684-35ce51307a36
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: lJBsn9ndieTIUBzXkJUhf6O0OE8pm29_z1fUtARwL0s
-    short-id: 937255313d6ce673
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
-- name: 🇨🇭 瑞士 (Switzerland) 10 - xiaohe
   server: 208.69.78.217
-  port: 2053
+  port: 21090
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 07 - xiaohe
+  server: 74.161.152.237
+  port: 2083
   udp: true
   type: vless
-  uuid: c0dd6d59-1573-43af-8b70-1470b2632a6d
+  uuid: 52a5a29f-c162-411a-8a37-a3f11b0dc537
+  flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: A49ue7zXSusJZdErPAewg3jqGdUFIO1a9xOunEKJfC0
-    short-id: ad86e2d52ff40ebd
+    public-key: WbgtxLlo2gmTzB4Wzxgh_U7G97d4ENTS10fYIoujET4
+    short-id: 0123456789abcdef
   servername: www.apple.com
   client-fingerprint: chrome
+- name: 🇨🇭 瑞士 (Switzerland) 08 - xiaohe
+  server: 208.69.78.217
+  port: 21021
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 09 - xiaohe
+  server: 208.69.78.217
+  port: 21158
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
+- name: 🇨🇭 瑞士 (Switzerland) 10 - xiaohe
+  server: 208.69.78.217
+  port: 21054
+  udp: true
+  type: hysteria2
+  password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
+  sni: vpn.local
+  skip-cert-verify: true
+  obfs: salamander
+  obfs-password: mbQXP2ASuHbF6ZPq
 - name: 🇨🇭 瑞士 (Switzerland) 11 - xiaohe
   server: 208.69.78.208
   port: 443
@@ -107,16 +102,16 @@ proxies:
   sni: resources.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
 - name: 🇨🇭 瑞士 (Switzerland) 12 - xiaohe
-  server: 208.69.78.222
+  server: 208.69.78.19
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: yourultimateprofessionalcareerhub.com
+  sni: www.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
 - name: 🇨🇭 瑞士 (Switzerland) 13 - xiaohe
   server: 208.69.78.217
-  port: 21154
+  port: 21080
   udp: true
   type: hysteria2
   password: capadm96216165:nXUv9sPkKFsDMmhZ7jbE28sw
@@ -125,20 +120,20 @@ proxies:
   obfs: salamander
   obfs-password: mbQXP2ASuHbF6ZPq
 - name: 🇨🇭 瑞士 (Switzerland) 14 - xiaohe
-  server: 208.69.78.29
+  server: 208.69.78.33
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: learn.yourultimateprofessionalcareerhub.com
-  skip-cert-verify: true
+  sni: courses.yourultimateprofessionalcareerhub.com
+  skip-cert-verify: false
 - name: 🇨🇭 瑞士 (Switzerland) 15 - xiaohe
-  server: 208.69.78.19
+  server: 208.69.78.60
   port: 443
   udp: true
   type: trojan
   password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  sni: www.yourultimateprofessionalcareerhub.com
+  sni: cdn.yourultimateprofessionalcareerhub.com
   skip-cert-verify: false
 proxy-groups:
 - name: PROXIES

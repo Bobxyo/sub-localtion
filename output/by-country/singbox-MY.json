@@ -5,43 +5,43 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇺🇦 乌克兰 (Ukraine) 01 - xiaohe",
-      "server": "83.147.18.75",
-      "server_port": 443,
-      "uuid": "5de0c218-0138-45d8-94d2-c2c3f37a1a6d",
+      "tag": "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe",
+      "server": "23.95.72.244",
+      "server_port": 50174,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
+        "server_name": "api.adidas.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "qq"
         },
         "reality": {
           "enabled": true,
-          "public_key": "tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc",
-          "short_id": "7f1e29593aa94ad1"
+          "public_key": "tmlOT7vvbKwBuucRKRm33TqocfvHfgDAstvca5Yy-gU",
+          "short_id": "8b10495bdb"
         }
       }
     },
     {
       "type": "vless",
-      "tag": "🇺🇦 乌克兰 (Ukraine) 02 - xiaohe",
-      "server": "104.253.216.227",
-      "server_port": 443,
-      "uuid": "317bc783-340f-453c-afb5-b6bf637c0b23",
+      "tag": "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe",
+      "server": "23.95.72.244",
+      "server_port": 50684,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.tradingview.com",
+        "server_name": "api.adidas.com",
         "utls": {
           "enabled": true,
           "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "FjcEZNQ8t5E4R04_11T6ghsOutdqwKKrelkuadakoQg",
-          "short_id": "fc994ae7eb10"
+          "public_key": "F9djf8t16xjf7WRVmek0OWg_Q6OvmsZdI3rR9xiz2jI",
+          "short_id": "39c553a45e5649d9"
         }
       }
     },
@@ -50,16 +50,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇺🇦 乌克兰 (Ukraine) 01 - xiaohe",
-        "🇺🇦 乌克兰 (Ukraine) 02 - xiaohe"
+        "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe",
+        "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇺🇦 乌克兰 (Ukraine) 01 - xiaohe",
-        "🇺🇦 乌克兰 (Ukraine) 02 - xiaohe"
+        "🇲🇾 马来西亚 (Malaysia) 01 - xiaohe",
+        "🇲🇾 马来西亚 (Malaysia) 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

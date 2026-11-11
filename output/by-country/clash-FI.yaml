@@ -5,14 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇫🇮 芬兰 (Finland) 01 - xiaohe
-  server: 177.202.75.56
-  port: 443
-  udp: true
-  type: hysteria2
-  password: 146d567c-6335-4e63-a8aa-7ec068642440
-  sni: fi1.obxodvpn.us
-  skip-cert-verify: false
-- name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
   server: 45.144.234.157
   port: 14430
   udp: true
@@ -23,43 +15,66 @@ proxies:
     path: /vless
     headers:
       Host: 45.144.234.157
+- name: 🇫🇮 芬兰 (Finland) 02 - xiaohe
+  server: 169.40.34.41
+  port: 443
+  udp: true
+  type: vless
+  uuid: 622654a4-b666-000b-9260-fb717e05154f
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: 6VMgXXhZdJCiOG05EyK_zTHh00kpFGrZJeZIEPgqhjY
+    short-id: 1c3e8241a8743df9
+  servername: key-master-saver.com
+  client-fingerprint: chrome
 - name: 🇫🇮 芬兰 (Finland) 03 - xiaohe
-  server: 217.144.188.185
+  server: 177.202.75.56
   port: 443
   udp: true
-  type: vless
-  uuid: 8d954cbe-7ca9-402d-bfaf-aca6c92c04c3
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: _ZRqqX7UVPTq--m8Lk8YHhrfElad2dIIpTh3D59f8zk
-  servername: www.nordea.fi
-  client-fingerprint: chrome
+  type: hysteria2
+  password: 146d567c-6335-4e63-a8aa-7ec068642440
+  sni: fi1.obxodvpn.us
+  skip-cert-verify: false
 - name: 🇫🇮 芬兰 (Finland) 04 - xiaohe
-  server: 5.129.249.155
+  server: 213.176.92.168
+  port: 14430
+  udp: true
+  type: vless
+  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: 213.176.92.168
+- name: 🇫🇮 芬兰 (Finland) 05 - xiaohe
+  server: 146.103.118.189
   port: 443
   udp: true
   type: vless
-  uuid: 7ad63b26-bf70-4872-8fab-ebaf73a1e19d
+  uuid: ce698f0c-a8ec-474a-b5d8-3be8032deeb8
+  tls: true
+  servername: nl2.574ck.xyz
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: ws
+  ws-opts:
+    path: /574ck-finland
+    headers:
+      Host: nl2.574ck.xyz
+- name: 🇫🇮 芬兰 (Finland) 06 - xiaohe
+  server: 213.176.92.168
+  port: 10444
+  udp: true
+  type: vless
+  uuid: ba52cc43-700d-4040-9444-29214c98e6e0
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: LEziyH-E4k9hehGRJkVi1FadVObB_NZJy8U7oUCVWXU
-    short-id: b9120cd53ffd7bba
-  servername: assets-59.topp-con.xyz
-  client-fingerprint: chrome
-- name: 🇫🇮 芬兰 (Finland) 05 - xiaohe
-  server: 95.216.27.15
-  port: 2053
-  udp: true
-  type: vless
-  uuid: b79d736d-0f10-4169-b626-362059d18204
-  tls: true
-  reality-opts:
-    public-key: aiHdxKOzcFZDILKj3MIPrMsyT0XxMy_O6xoxnz6MIWs
-    short-id: 10351b07c712d2a2
-  servername: www.cloudflare.com
-  client-fingerprint: chrome
+    public-key: 0oTkcqwLTUNLnSOP-VUWErmy6usAIg-biBE6ioZO-Vo
+    short-id: 8debcf36f1cc69ff
+  servername: video.yandex.ru
+  client-fingerprint: safari
 proxy-groups:
 - name: PROXIES
   type: select
@@ -70,6 +85,7 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 03 - xiaohe
   - 🇫🇮 芬兰 (Finland) 04 - xiaohe
   - 🇫🇮 芬兰 (Finland) 05 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 06 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -80,5 +96,6 @@ proxy-groups:
   - 🇫🇮 芬兰 (Finland) 03 - xiaohe
   - 🇫🇮 芬兰 (Finland) 04 - xiaohe
   - 🇫🇮 芬兰 (Finland) 05 - xiaohe
+  - 🇫🇮 芬兰 (Finland) 06 - xiaohe
 rules:
 - MATCH,PROXIES

@@ -1,0 +1,282 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "outbounds": [
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe",
+      "server": "130.94.19.95",
+      "server_port": 57277,
+      "password": "5t6i121em5lkmsmk",
+      "tls": {
+        "enabled": true,
+        "server_name": "us001.zestapp778.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        }
+      }
+    },
+    {
+      "type": "trojan",
+      "tag": "🇺🇸 美国 (United States) 02 (移动家宽) - xiaohe",
+      "server": "130.94.20.17",
+      "server_port": 57277,
+      "password": "5t6i121em5lkmsmk",
+      "tls": {
+        "enabled": true,
+        "server_name": "us001.zestapp778.com",
+        "insecure": false,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 03 (移动家宽) - xiaohe",
+      "server": "23.95.72.244",
+      "server_port": 5467,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.adidas.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "wMLrAweVXsOzwV-Uc_7t7OZBycbjVrgPp0ukPjuXA2U",
+          "short_id": "6e47891d"
+        }
+      }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇰🇷 韩国 (South Korea) 04 (家宽) - xiaohe",
+      "server": "49.254.204.133",
+      "server_port": 1774,
+      "method": "aes-256-cfb",
+      "password": "1234!@#$"
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 05 (家宽) - xiaohe",
+      "server": "23.95.72.244",
+      "server_port": 2096,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.amazonalexa.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "ios"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "71OwuN_2X-et_42RLIteY2parqX2cARuv-718eg_VD4",
+          "short_id": "b88b4ed92599c16a"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - xiaohe",
+      "server": "23.95.72.244",
+      "server_port": 10000,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "sellercentral.amazon.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "safari"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "zbxwe24LRKKKjXccD1t_yJ3WDFXXY_y9j7SqbkPMIRw",
+          "short_id": "99aa2eb4f2c77af5"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - xiaohe",
+      "server": "23.95.72.244",
+      "server_port": 5462,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.adidas.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "biUjzfAfxrbE_4GNfOCbSG-YW5tDUlqZTeyhJb6OG30",
+          "short_id": "4b7a508fcd3ef1a1"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 08 (家宽) - xiaohe",
+      "server": "23.95.72.244",
+      "server_port": 5463,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.adidas.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "8kZm9gW7saiRPuqXppCTlOAx_dIsqZUbNOBERMvMDVw",
+          "short_id": "be33ecc1975c"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇯🇵 日本 (Japan) 09 (家宽) - xiaohe",
+      "server": "23.95.72.244",
+      "server_port": 52541,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.adidas.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "_DBQoND5nxcCxxCU0tO0b-h0E10ZFtPTwSp8CJ-f-gs",
+          "short_id": "ce5793a7ad9594"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇺🇸 美国 (United States) 10 (移动家宽) - xiaohe",
+      "server": "23.95.72.244",
+      "server_port": 5466,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.adidas.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "vr-C-6JEfZhnEVO2NDzUIlRhr0LCXFx9BoOBb31AsSg",
+          "short_id": "fb16a20a0815"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 11 (家宽) - xiaohe",
+      "server": "23.95.72.244",
+      "server_port": 5455,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.adidas.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "firefox"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "57RM7KBz_R-RMNj9BbOXK8yYz0e8Mjv7iA8FvKGbnXU",
+          "short_id": "bb32911d6c"
+        }
+      }
+    },
+    {
+      "type": "vless",
+      "tag": "🇰🇷 韩国 (South Korea) 12 (家宽) - xiaohe",
+      "server": "23.95.72.244",
+      "server_port": 50135,
+      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "server_name": "api.adidas.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "ugirklnmY9hUeY9BQ9rdeVbu29iGblEM8N2_HHA8Rk4",
+          "short_id": "8cd0eddfb0"
+        }
+      }
+    },
+    {
+      "type": "selector",
+      "tag": "select",
+      "outbounds": [
+        "auto",
+        "🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe",
+        "🇺🇸 美国 (United States) 02 (移动家宽) - xiaohe",
+        "🇺🇸 美国 (United States) 03 (移动家宽) - xiaohe",
+        "🇰🇷 韩国 (South Korea) 04 (家宽) - xiaohe",
+        "🇰🇷 韩国 (South Korea) 05 (家宽) - xiaohe",
+        "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - xiaohe",
+        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - xiaohe",
+        "🇹🇼 中国台湾 (Taiwan) 08 (家宽) - xiaohe",
+        "🇯🇵 日本 (Japan) 09 (家宽) - xiaohe",
+        "🇺🇸 美国 (United States) 10 (移动家宽) - xiaohe",
+        "🇰🇷 韩国 (South Korea) 11 (家宽) - xiaohe",
+        "🇰🇷 韩国 (South Korea) 12 (家宽) - xiaohe"
+      ]
+    },
+    {
+      "type": "urltest",
+      "tag": "auto",
+      "outbounds": [
+        "🇺🇸 美国 (United States) 01 (移动家宽) - xiaohe",
+        "🇺🇸 美国 (United States) 02 (移动家宽) - xiaohe",
+        "🇺🇸 美国 (United States) 03 (移动家宽) - xiaohe",
+        "🇰🇷 韩国 (South Korea) 04 (家宽) - xiaohe",
+        "🇰🇷 韩国 (South Korea) 05 (家宽) - xiaohe",
+        "🇭🇰 中国香港 (Hong Kong) 06 (家宽) - xiaohe",
+        "🇹🇼 中国台湾 (Taiwan) 07 (家宽) - xiaohe",
+        "🇹🇼 中国台湾 (Taiwan) 08 (家宽) - xiaohe",
+        "🇯🇵 日本 (Japan) 09 (家宽) - xiaohe",
+        "🇺🇸 美国 (United States) 10 (移动家宽) - xiaohe",
+        "🇰🇷 韩国 (South Korea) 11 (家宽) - xiaohe",
+        "🇰🇷 韩国 (South Korea) 12 (家宽) - xiaohe"
+      ],
+      "url": "https://www.gstatic.com/generate_204"
+    },
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ]
+}

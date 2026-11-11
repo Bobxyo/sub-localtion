@@ -5,17 +5,20 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇸 冰岛 (Iceland) 01 - xiaohe
-  server: 93.95.226.159
-  port: 28150
+  server: 191.44.112.170
+  port: 443
   udp: true
   type: vless
-  uuid: b4e69d67-9d41-417c-b465-ebf1591fb792
+  uuid: 46d221fa-e9b4-748c-4eae-019a88e42991
   tls: true
-  reality-opts:
-    public-key: KQW_o2BlCjMC8aH5lkNkO_rmMCAUykQIQCCIIehhsAo
-    short-id: '06'
-  servername: google.com
-  client-fingerprint: firefox
+  servername: orbylume.my.to
+  skip-cert-verify: false
+  client-fingerprint: chrome
+  network: ws
+  ws-opts:
+    path: /tvpn-tor/is
+    headers:
+      Host: orbylume.my.to
 proxy-groups:
 - name: PROXIES
   type: select
