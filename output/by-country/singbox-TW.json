@@ -6,7 +6,7 @@
     {
       "type": "shadowsocks",
       "tag": "🇹🇼 中国台湾 (Taiwan) 01 - xiaohe",
-      "server": "amasoid.ddns.net",
+      "server": "35.236.180.222",
       "server_port": 14514,
       "method": "2022-blake3-aes-128-gcm",
       "password": "b7I6g7l7fJhBaMInJ+zkzw=="
@@ -19,7 +19,7 @@
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "off",
+        "server_name": "160.187.100.109",
         "insecure": true
       }
     },
@@ -31,34 +31,13 @@
       "password": "H7mP2xY9kJ4nQ8wR5tF6vB3z",
       "tls": {
         "enabled": true,
-        "server_name": "https%3a%2f%2ft.me%2fwangcai2%f0%9f%87%a8%f0%9f%87%b3",
+        "server_name": "https://t.me/wangcai2",
         "insecure": true
       }
     },
     {
       "type": "vless",
       "tag": "🇹🇼 中国台湾 (Taiwan) 04 - xiaohe",
-      "server": "23.95.72.244",
-      "server_port": 4443,
-      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "business.amazon.co.uk",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "E6XD__G0KCmX1LibW4qwafvYXID5zci_bcwKueuhEA8",
-          "short_id": "807c3fa325465508"
-        }
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 05 - xiaohe",
       "server": "83.147.13.74",
       "server_port": 8443,
       "uuid": "eb8c97f7-a154-4442-91b0-54c0d055ad0b",
@@ -77,23 +56,18 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇹🇼 中国台湾 (Taiwan) 06 - xiaohe",
-      "server": "23.95.72.244",
-      "server_port": 54387,
-      "uuid": "9a5e7b1c-bf39-4b1f-891f-ac87824ee38f",
-      "flow": "xtls-rprx-vision",
+      "type": "trojan",
+      "tag": "🇹🇼 中国台湾 (Taiwan) 05 - xiaohe",
+      "server": "161.114.15.215",
+      "server_port": 30502,
+      "password": "5KdDtpoJI58OTsoG0PwEYunqB0mkAEDm",
       "tls": {
         "enabled": true,
-        "server_name": "api.adidas.com",
+        "server_name": "www.cloudflare.com",
+        "insecure": true,
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "qqb-vrDIPSrFIithw497zM-LmGUEcTo-dqAjhHi6kyY",
-          "short_id": "f810"
+          "fingerprint": "chrome"
         }
       }
     },
@@ -106,8 +80,7 @@
         "🇹🇼 中国台湾 (Taiwan) 02 - xiaohe",
         "🇹🇼 中国台湾 (Taiwan) 03 - xiaohe",
         "🇹🇼 中国台湾 (Taiwan) 04 - xiaohe",
-        "🇹🇼 中国台湾 (Taiwan) 05 - xiaohe",
-        "🇹🇼 中国台湾 (Taiwan) 06 - xiaohe"
+        "🇹🇼 中国台湾 (Taiwan) 05 - xiaohe"
       ]
     },
     {
@@ -118,8 +91,7 @@
         "🇹🇼 中国台湾 (Taiwan) 02 - xiaohe",
         "🇹🇼 中国台湾 (Taiwan) 03 - xiaohe",
         "🇹🇼 中国台湾 (Taiwan) 04 - xiaohe",
-        "🇹🇼 中国台湾 (Taiwan) 05 - xiaohe",
-        "🇹🇼 中国台湾 (Taiwan) 06 - xiaohe"
+        "🇹🇼 中国台湾 (Taiwan) 05 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
