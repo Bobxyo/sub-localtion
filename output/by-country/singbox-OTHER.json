@@ -6,12 +6,12 @@
     {
       "type": "vless",
       "tag": "🌐 其他地区 (Other) 01 - xiaohe",
-      "server": "104.18.10.66",
+      "server": "172.67.187.219",
       "server_port": 443,
-      "uuid": "2874e26b-45e3-4d12-9e01-3f5a1c6a7105",
+      "uuid": "a25a71d1-10ed-4383-855a-f269a34ca691",
       "tls": {
         "enabled": true,
-        "server_name": "dietary-forms-begun-orientation.trycloudflare.com",
+        "server_name": "ave-qualifications-choices-populations.trycloudflare.com",
         "insecure": false,
         "utls": {
           "enabled": true,
@@ -20,9 +20,29 @@
       },
       "transport": {
         "type": "ws",
-        "path": "/d9fb7b4f14c1",
+        "path": "/a8b8606819ef",
         "headers": {
-          "Host": "dietary-forms-begun-orientation.trycloudflare.com"
+          "Host": "ave-qualifications-choices-populations.trycloudflare.com"
+        }
+      }
+    },
+    {
+      "type": "vmess",
+      "tag": "🌐 其他地区 (Other) 02 - xiaohe",
+      "server": "172.67.167.78",
+      "server_port": 8443,
+      "uuid": "60441548-b68e-43b2-8191-e3b884be4b3c",
+      "security": "auto",
+      "tls": {
+        "enabled": true,
+        "server_name": "v2ray1.dozapp.xyz",
+        "insecure": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/lMnsZUN4/",
+        "headers": {
+          "Host": "v2ray1.dozapp.xyz"
         }
       }
     },
@@ -31,14 +51,16 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🌐 其他地区 (Other) 01 - xiaohe"
+        "🌐 其他地区 (Other) 01 - xiaohe",
+        "🌐 其他地区 (Other) 02 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🌐 其他地区 (Other) 01 - xiaohe"
+        "🌐 其他地区 (Other) 01 - xiaohe",
+        "🌐 其他地区 (Other) 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

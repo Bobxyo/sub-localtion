@@ -5,31 +5,49 @@ mode: rule
 log-level: info
 proxies:
 - name: 🌐 其他地区 (Other) 01 - xiaohe
-  server: 104.18.10.66
+  server: 172.67.187.219
   port: 443
   udp: true
   type: vless
-  uuid: 2874e26b-45e3-4d12-9e01-3f5a1c6a7105
+  uuid: a25a71d1-10ed-4383-855a-f269a34ca691
   tls: true
-  servername: dietary-forms-begun-orientation.trycloudflare.com
+  servername: ave-qualifications-choices-populations.trycloudflare.com
   skip-cert-verify: false
   client-fingerprint: chrome
   network: ws
   ws-opts:
-    path: /d9fb7b4f14c1
+    path: /a8b8606819ef
     headers:
-      Host: dietary-forms-begun-orientation.trycloudflare.com
+      Host: ave-qualifications-choices-populations.trycloudflare.com
+- name: 🌐 其他地区 (Other) 02 - xiaohe
+  server: 172.67.167.78
+  port: 8443
+  udp: true
+  type: vmess
+  uuid: 60441548-b68e-43b2-8191-e3b884be4b3c
+  alterId: 0
+  cipher: auto
+  tls: true
+  servername: v2ray1.dozapp.xyz
+  skip-cert-verify: false
+  network: ws
+  ws-opts:
+    path: /lMnsZUN4/
+    headers:
+      Host: v2ray1.dozapp.xyz
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🌐 其他地区 (Other) 01 - xiaohe
+  - 🌐 其他地区 (Other) 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🌐 其他地区 (Other) 01 - xiaohe
+  - 🌐 其他地区 (Other) 02 - xiaohe
 rules:
 - MATCH,PROXIES
