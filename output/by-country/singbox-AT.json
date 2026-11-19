@@ -25,34 +25,12 @@
       }
     },
     {
-      "type": "vless",
-      "tag": "🇦🇹 奥地利 (Austria) 03 - xiaohe",
-      "server": "67.159.17.252",
-      "server_port": 443,
-      "uuid": "955d8dc7-5e3b-40ac-b2bb-bd8aa20fc7e6",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "sdfsdfsf.wey-land.net",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "edge"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "ZSxFQHVt_avgBDW1Rbbn0SBDidOEftqHgAF9NH565kM",
-          "short_id": ""
-        }
-      }
-    },
-    {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
         "🇦🇹 奥地利 (Austria) 01 - xiaohe",
-        "🇦🇹 奥地利 (Austria) 02 - xiaohe",
-        "🇦🇹 奥地利 (Austria) 03 - xiaohe"
+        "🇦🇹 奥地利 (Austria) 02 - xiaohe"
       ]
     },
     {
@@ -60,8 +38,7 @@
       "tag": "auto",
       "outbounds": [
         "🇦🇹 奥地利 (Austria) 01 - xiaohe",
-        "🇦🇹 奥地利 (Austria) 02 - xiaohe",
-        "🇦🇹 奥地利 (Austria) 03 - xiaohe"
+        "🇦🇹 奥地利 (Austria) 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

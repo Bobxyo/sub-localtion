@@ -5,23 +5,26 @@
   "outbounds": [
     {
       "type": "vless",
-      "tag": "🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe",
-      "server": "5.129.202.80",
+      "tag": "🇮🇶 IQ 01 - xiaohe",
+      "server": "79.182.70.220",
       "server_port": 443,
-      "uuid": "7ad63b26-bf70-4872-8fab-ebaf73a1e19d",
-      "flow": "xtls-rprx-vision",
+      "uuid": "cda0862a-0f87-4be9-8ed8-1d0c9e382839",
       "tls": {
         "enabled": true,
-        "server_name": "mirror-50.topp-con.xyz",
+        "server_name": "15b171g.nl7.h1clayd.click",
         "utls": {
           "enabled": true,
-          "fingerprint": "chrome"
+          "fingerprint": "firefox"
         },
         "reality": {
           "enabled": true,
-          "public_key": "NY2bvH4IFKTstWkBWwyU5MmlzuKk0nU08cBoHlti2S8",
-          "short_id": "2ef2b10d5143d798"
+          "public_key": "zbz--PMjcIC4Ggr3j-ibDf0fzXRTj0lM_HzjPJyMkVE",
+          "short_id": "50a749f0eccb628c"
         }
+      },
+      "transport": {
+        "type": "grpc",
+        "service_name": "5b79e8a94241"
       }
     },
     {
@@ -29,14 +32,14 @@
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe"
+        "🇮🇶 IQ 01 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇪🇪 爱沙尼亚 (Estonia) 01 - xiaohe"
+        "🇮🇶 IQ 01 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },
