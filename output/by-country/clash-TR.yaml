@@ -17,12 +17,24 @@ proxies:
   servername: tr1-r.bankai.party
   client-fingerprint: chrome
 - name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
-  server: tr.subscriptionservice.ir
-  port: 2089
+  server: 185.246.155.91
+  port: 10103
   udp: true
-  type: ss
-  cipher: chacha20-ietf-poly1305
-  password: lZZzfo1mqH7PqnloAogdi2XBhlgiofMy
+  type: vless
+  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
+  flow: xtls-rprx-vision
+  tls: true
+  reality-opts:
+    public-key: obQkp5VlQpnlt1hRLQ3VfHISYiiISZJyJZAMaIdjCko
+    short-id: 6859f5b59e55aa30
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇹🇷 土耳其 (Turkey) 03 - xiaohe
+  server: 87.76.154.28
+  port: 57231
+  udp: true
+  type: vless
+  uuid: c34a41b6-598f-46ac-bea3-8b39a906f922
 proxy-groups:
 - name: PROXIES
   type: select
@@ -30,6 +42,7 @@ proxy-groups:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
@@ -37,5 +50,6 @@ proxy-groups:
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
   - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
+  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
 rules:
 - MATCH,PROXIES
