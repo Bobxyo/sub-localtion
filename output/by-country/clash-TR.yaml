@@ -5,51 +5,29 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇹🇷 土耳其 (Turkey) 01 - xiaohe
-  server: 77.83.245.79
+  server: 188.225.36.219
   port: 443
   udp: true
   type: vless
-  uuid: a346c521-7a7f-452b-9356-a4893feb5982
-  flow: xtls-rprx-vision
+  uuid: 0b6a7fe0-206b-4071-9f96-cd397d1ec01a
   tls: true
-  reality-opts:
-    public-key: FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0
-  servername: tr1-r.bankai.party
-  client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 02 - xiaohe
-  server: 185.246.155.91
-  port: 10103
-  udp: true
-  type: vless
-  uuid: dbf3f074-3b18-43f3-b82a-debd8c879c69
-  flow: xtls-rprx-vision
-  tls: true
-  reality-opts:
-    public-key: obQkp5VlQpnlt1hRLQ3VfHISYiiISZJyJZAMaIdjCko
-    short-id: 6859f5b59e55aa30
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇹🇷 土耳其 (Turkey) 03 - xiaohe
-  server: 87.76.154.28
-  port: 57231
-  udp: true
-  type: vless
-  uuid: c34a41b6-598f-46ac-bea3-8b39a906f922
+  servername: olvento.space
+  skip-cert-verify: false
+  client-fingerprint: firefox
+  network: grpc
+  grpc-opts:
+    grpc-service-name: olvento.sync.v1
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇹🇷 土耳其 (Turkey) 01 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 02 - xiaohe
-  - 🇹🇷 土耳其 (Turkey) 03 - xiaohe
 rules:
 - MATCH,PROXIES

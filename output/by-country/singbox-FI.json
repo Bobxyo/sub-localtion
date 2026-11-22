@@ -4,33 +4,33 @@
   },
   "outbounds": [
     {
-      "type": "vless",
+      "type": "shadowsocks",
       "tag": "🇫🇮 芬兰 (Finland) 01 - xiaohe",
-      "server": "138.124.80.29",
+      "server": "2.29.210.28",
+      "server_port": 25565,
+      "method": "chacha20-ietf-poly1305",
+      "password": "C8ZJ7R4p_HHJ32cst7ilT-0Zi2F22hAc"
+    },
+    {
+      "type": "vless",
+      "tag": "🇫🇮 芬兰 (Finland) 02 - xiaohe",
+      "server": "107.181.151.128",
       "server_port": 443,
-      "uuid": "a346c521-7a7f-452b-9356-a4893feb5982",
+      "uuid": "8cc7d0fc-1b83-4ee3-b51d-8a03a9b19435",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "fin1-r.bankai.party",
+        "server_name": "www.microsoft.com",
         "utls": {
           "enabled": true,
-          "fingerprint": ""
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "FWitre1jinQR7qz5HQ0q2Q4Gg9xA9B0SyizCziN7Ch0",
-          "short_id": ""
+          "public_key": "zfsjt2A8ur0qHWIuCG7F9W4wZN3VTuL6fkTljC-9R0s",
+          "short_id": "87174b37ce3b"
         }
       }
-    },
-    {
-      "type": "shadowsocks",
-      "tag": "🇫🇮 芬兰 (Finland) 02 - xiaohe",
-      "server": "fn1s.sublinkplas.ir",
-      "server_port": 53731,
-      "method": "chacha20-ietf-poly1305",
-      "password": "6VxfNRMfOHIXLlOz_l46Efr0zIZoH2-K"
     },
     {
       "type": "hysteria2",
@@ -40,29 +40,8 @@
       "password": "549766c3-fa5f-471e-8031-ffc1f8d5064f",
       "tls": {
         "enabled": true,
-        "server_name": "lakes.blog-forme.ru",
-        "insecure": false
-      }
-    },
-    {
-      "type": "vless",
-      "tag": "🇫🇮 芬兰 (Finland) 04 - xiaohe",
-      "server": "196.196.204.148",
-      "server_port": 443,
-      "uuid": "63aa95e5-3b36-4e53-a86f-7df59652e994",
-      "flow": "xtls-rprx-vision",
-      "tls": {
-        "enabled": true,
-        "server_name": "4c980ft.fi15.h1clayd.click",
-        "utls": {
-          "enabled": true,
-          "fingerprint": "firefox"
-        },
-        "reality": {
-          "enabled": true,
-          "public_key": "-ZN1kT3JlPFxu1E906JRqLAGoQQucSmL6xPiuAyasTk",
-          "short_id": "597e1c279d224774"
-        }
+        "server_name": "94.183.164.119",
+        "insecure": true
       }
     },
     {
@@ -72,8 +51,7 @@
         "auto",
         "🇫🇮 芬兰 (Finland) 01 - xiaohe",
         "🇫🇮 芬兰 (Finland) 02 - xiaohe",
-        "🇫🇮 芬兰 (Finland) 03 - xiaohe",
-        "🇫🇮 芬兰 (Finland) 04 - xiaohe"
+        "🇫🇮 芬兰 (Finland) 03 - xiaohe"
       ]
     },
     {
@@ -82,8 +60,7 @@
       "outbounds": [
         "🇫🇮 芬兰 (Finland) 01 - xiaohe",
         "🇫🇮 芬兰 (Finland) 02 - xiaohe",
-        "🇫🇮 芬兰 (Finland) 03 - xiaohe",
-        "🇫🇮 芬兰 (Finland) 04 - xiaohe"
+        "🇫🇮 芬兰 (Finland) 03 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

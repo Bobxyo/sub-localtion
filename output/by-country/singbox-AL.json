@@ -6,37 +6,47 @@
     {
       "type": "vless",
       "tag": "🇦🇱 AL 01 - xiaohe",
-      "server": "94.183.234.245",
-      "server_port": 443,
-      "uuid": "5de0c218-0138-45d8-94d2-c2c3f37a1a6d",
+      "server": "31.171.152.222",
+      "server_port": 8443,
+      "uuid": "9a597d68-6688-4046-bf24-a5a541e115e0",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
-        "server_name": "www.bing.com",
+        "server_name": "www.apple.com",
         "utls": {
           "enabled": true,
-          "fingerprint": "qq"
+          "fingerprint": "chrome"
         },
         "reality": {
           "enabled": true,
-          "public_key": "tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc",
-          "short_id": "7f1e29593aa94ad1"
+          "public_key": "6FI4VM9WlQEGVjyCvLDQLz1jOkrzzhtfGl9eQTBn6HU",
+          "short_id": "f8d0271b4b5f9efc"
         }
       }
+    },
+    {
+      "type": "shadowsocks",
+      "tag": "🇦🇱 AL 02 - xiaohe",
+      "server": "dns22.m3hrzd.ir",
+      "server_port": 1348,
+      "method": "chacha20-ietf-poly1305",
+      "password": "pFlEjR_10osoxyR2CnNIhUMpAy4CzfXr"
     },
     {
       "type": "selector",
       "tag": "select",
       "outbounds": [
         "auto",
-        "🇦🇱 AL 01 - xiaohe"
+        "🇦🇱 AL 01 - xiaohe",
+        "🇦🇱 AL 02 - xiaohe"
       ]
     },
     {
       "type": "urltest",
       "tag": "auto",
       "outbounds": [
-        "🇦🇱 AL 01 - xiaohe"
+        "🇦🇱 AL 01 - xiaohe",
+        "🇦🇱 AL 02 - xiaohe"
       ],
       "url": "https://www.gstatic.com/generate_204"
     },

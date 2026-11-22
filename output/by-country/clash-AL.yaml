@@ -5,29 +5,38 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇦🇱 AL 01 - xiaohe
-  server: 94.183.234.245
-  port: 443
+  server: 31.171.152.222
+  port: 8443
   udp: true
   type: vless
-  uuid: 5de0c218-0138-45d8-94d2-c2c3f37a1a6d
+  uuid: 9a597d68-6688-4046-bf24-a5a541e115e0
   flow: xtls-rprx-vision
   tls: true
   reality-opts:
-    public-key: tfFzmbVByvoZxxIEUiHMv22_k0-nQz00L0XjU0bd_Fc
-    short-id: 7f1e29593aa94ad1
-  servername: www.bing.com
-  client-fingerprint: qq
+    public-key: 6FI4VM9WlQEGVjyCvLDQLz1jOkrzzhtfGl9eQTBn6HU
+    short-id: f8d0271b4b5f9efc
+  servername: www.apple.com
+  client-fingerprint: chrome
+- name: 🇦🇱 AL 02 - xiaohe
+  server: dns22.m3hrzd.ir
+  port: 1348
+  udp: true
+  type: ss
+  cipher: chacha20-ietf-poly1305
+  password: pFlEjR_10osoxyR2CnNIhUMpAy4CzfXr
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
   - 🇦🇱 AL 01 - xiaohe
+  - 🇦🇱 AL 02 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
   - 🇦🇱 AL 01 - xiaohe
+  - 🇦🇱 AL 02 - xiaohe
 rules:
 - MATCH,PROXIES
