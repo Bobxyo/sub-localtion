@@ -5,7 +5,15 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇻🇳 越南 (Vietnam) 01 - xiaohe
-  server: kir3.crackerbinam.org
+  server: xvxn1hkzf.mateflora.com
+  port: 443
+  udp: true
+  type: trojan
+  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
+  sni: xvxn1hkzf.mateflora.com
+  skip-cert-verify: false
+- name: 🇻🇳 越南 (Vietnam) 02 - xiaohe
+  server: Kir3.crackerbinam.org
   port: 56026
   udp: true
   type: vless
@@ -16,14 +24,6 @@ proxies:
     short-id: 99676967e6867063
   servername: www.cloudflare.com
   client-fingerprint: chrome
-- name: 🇻🇳 越南 (Vietnam) 02 - xiaohe
-  server: xvxn1hkzf.mateflora.com
-  port: 443
-  udp: true
-  type: trojan
-  password: 57beeeb0-03fc-4fc9-94da-7604488a7134
-  sni: xvxn1hkzf.mateflora.com
-  skip-cert-verify: true
 proxy-groups:
 - name: PROXIES
   type: select
