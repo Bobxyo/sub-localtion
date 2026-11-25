@@ -4,28 +4,28 @@ allow-lan: true
 mode: rule
 log-level: info
 proxies:
-- name: 🌐 其他地区 (Other) 01 - xiaohe
-  server: 172.64.150.43
-  port: 2052
+- name: 🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe
+  server: 170.114.45.6
+  port: 8080
   udp: true
   type: vless
-  uuid: 5744e593-1cc8-48fa-b8ca-57cd494fe35b
+  uuid: 990bf436-f1b9-4e7f-857d-14378acc4ae5
   network: ws
   ws-opts:
-    path: /rain1226
+    path: /
     headers:
-      Host: eu02.123450908.xyz
+      Host: free.nadun.store
 proxy-groups:
 - name: PROXIES
   type: select
   proxies:
   - AUTO
-  - 🌐 其他地区 (Other) 01 - xiaohe
+  - 🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🌐 其他地区 (Other) 01 - xiaohe
+  - 🇱🇰 斯里兰卡 (Sri Lanka) 01 - xiaohe
 rules:
 - MATCH,PROXIES
